@@ -1,0 +1,106 @@
+extends layout
+
+mixin gettingStarted
+  p Read the <a href="/getting-started">Getting Started</a> guide for instructions on using ceddl in your projects. Once you've done that, check out the <a href="/demo/index.html">demo application</a> and learn more about the <a href="/eventbus">eventbus</a> so you can hookup your services.
+
+block content
+  .container
+    .row-fluid
+      .span9.page
+        .hero-unit
+          .home-header
+            .title-header
+              span.grunt-name CEDDL-polyfill
+              span.tag-line The Dynamic Data Layer for the browser.
+
+          .why.pull-left
+            h2 What is the CEDDL?
+            p Customer Experience Digital Data Layer (CEDDL) is very first community effort to create a standard data layer. This means data layer implementation will remain independent of vendors and will not enforce specific data structures. Web Functionality will referece will reference standard data structure improving maintainebillity and quality, yield savings in terms of time and money. Read more on the <a href="https://www.w3.org/2013/12/ceddl-201312.pdf">ceddl spec</a>
+
+
+          .why.pull-right
+            h2 Why use CEDDL-polyfill?
+            p The polyfill implements a html attribute-based markup and javascript api you can use today for surfacing digital data on a web application intended for web analytics, website personalization and DMP implementations. Applying lessons learnt by many implementations and bringing this back into a specification that browser vendors can implement.
+
+          .technology
+            h2 Aditional inputs.
+            p Many of the inputs / data objects you need a web datalayer to have are not part of the spec. But it is nice to have plug and play inputs at an arms length. Please do not hesitate to provide us with an great input solution of your own at <a href="https://github.com/ceddl/ceddl-aditional-inputs">ceddl-aditional-inputs git repository.</a>
+            div
+              a.technology(href='https://github.com/ceddl/ceddl-aditional-inputs/blob/master/src/page-ready.js')
+                img(src='/img/input-page-ready.jpg', alt='page-ready', width='175', height='110')
+              a.technology(href='https://github.com/ceddl/ceddl-aditional-inputs/blob/master/src/page-metadata.js')
+                img(src='/img/input-page-metadata.jpg', alt='page-metadata', width='175', height='110')
+              a.technology(href='https://github.com/ceddl/ceddl-aditional-inputs/blob/master/src/performance-timing.js')
+                img(src='/img/input-performance-timing.jpg', alt='performance-timing', width='175', height='110')
+
+          .grunt-preview
+            h2 Here's a preview!
+            p While installing ceddl-polyfill is simple, it's slightly more involved to get it running on your project. To see what coding effort is required, take a look at  <a href="https://github.com/ceddl/ceddl-website-and-spec">the developement app code.</a>
+
+            p
+              img#demotease(src="/img/demoapp.png" alt="demo app")
+
+            p We have love for all the MV* and web components frameworks. Demo applications running on polymer, React, Vue, AngularJS are panned beginning 2019.
+
+          .sponsors
+            h2 Patreon Sponsors.
+            p With out sponsers we have the manpower for full stack support and delivery of web analytics, website personalization and Data management platform solutions. Including BI data stores and service personalization.
+                div
+                  a.technology(href='https://qnh.eu')
+                    img(src='/img/sponsors/logo-qnh.png', alt='QNH', width='175', height='110')
+
+          .sponsors
+            h2 Sponsor CEDDL Polyfill.
+
+            p CEDDL Polyfill is an MIT licensed open source project and completely free to use. However, the amount of effort needed to write specs, maintain, develop features for the project is not sustainable without proper financial backing.
+
+            p If you run a business and are using CEDDL Polyfill in a revenue-generating product, it makes business sense to sponsor development: it ensures the project that your product relies on stays healthy and end up being implemented in browsers. It can also help your exposure in the community and makes it easier to attract analytics and Data management platform developers and analists.
+
+            ul
+              li
+                <a href="https://www.patreon.com/ceddl" target="_blank"><b>Become a Supporter, Sponser or Gold Sponsor via Patreon</b></a>
+
+            p If you are an individual user and have enjoyed the productivity of using CEDDL polyfill, consider donating as a sign of appreciation.
+            div
+              a.support-link(href='https://www.paypal.me/ceddl', target='_blank')
+                img(src='/img/paypal.png', width='100px')
+
+          .how-get-started
+            h2 How do I get started?
+            +gettingStarted
+
+      .span3
+        .well.sidebar-nav
+          .latest-version
+            h3 Latest Version
+            ul
+              li Stable:
+                = ' '
+                a(href='https://www.npmjs.org/package/grunt') v1.0.3
+                span  (npm)
+              li Development:
+                = ' '
+                a(href='https://github.com/gruntjs/grunt') master
+                span  (GitHub)
+
+          .latest-news
+            h3 Latest News
+            ul
+              each article, i in news
+                if i < 3
+                  li
+                    a(href='/blog/' + article.url)
+                      span.title= article.title
+                      span.date= article.postDate
+
+          .getting-started
+            h3 Getting Started
+            +gettingStarted
+
+          .social
+            a.github(href='https://github.com/ceddl/', title='CEDDL-polyfill on GitHub')
+              span.icon-github
+            a.twitter(href='https://twitter.com/rbfrontend/', title='Roland on Twitter')
+              span.icon-twitter
+            a.feed(href='/rss', title='ceddl-polyfill blog RSS feed')
+              span.icon-rss

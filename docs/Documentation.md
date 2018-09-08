@@ -1,0 +1,1 @@
+Welcome to the ceddl polyfill documentation page. Here you can find helpful resources, links, and information to start using ceddl. The first step to perform to use the tool is [to install it](installing-ceddl-polyfilll) on your website.

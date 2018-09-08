@@ -1,0 +1,54 @@
+{
+  "name": "ceddl polyfill website and spec",
+  "description": "The source code for ceddlbyexample.com",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ceddl Polyfill Team",
+    "url": "https://ceddlbyexample.com/"
+  },
+  "repository": "https://github.com/ceddl/ceddl-polyfill",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "grunt",
+    "test": "grunt test",
+    "dev": "grunt dev"
+  },
+  "private": false,
+  "dependencies": {
+    "@ceddl/ceddl-aditional-inputs": "^0.9.0",
+    "@ceddl/ceddl-polyfill": "^0.9.0",
+    "async": "~2.4.1",
+    "body-parser": "~1.17.1",
+    "compression": "~1.6.1",
+    "date-utils": "~1.2.19",
+    "ent": "~2.2.0",
+    "errorhandler": "~1.5.0",
+    "express": "~4.15.2",
+    "grunt": "~1.0.1",
+    "grunt-autoprefixer": "~3.0.4",
+    "grunt-contrib-clean": "~1.1.0",
+    "grunt-contrib-copy": "~1.0.0",
+    "grunt-contrib-less": "~1.4.0",
+    "grunt-contrib-uglify": "~3.0.1",
+    "grunt-sitemap": "~1.2.1",
+    "highlight.js": "~9.11.0",
+    "less-plugin-clean-css": "~1.5.1",
+    "lodash": "~4.17.4",
+    "marked": "https://github.com/vladikoff/marked/tarball/master",
+    "matchdep": "~1.0.1",
+    "method-override": "~2.3.5",
+    "node-schedule": "~1.2.0",
+    "pug": "~2.0.0-beta4",
+    "request": "~2.81.0"
+  },
+  "devDependencies": {
+    "grunt-concurrent": "~2.3.0",
+    "grunt-contrib-jshint": "~1.1.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-html": "~8.4.0",
+    "grunt-nodemon": "~0.4.1",
+    "grunt-open": "~0.2.3",
+    "grunt-puglint": "~1.0.0"
+  }
+}

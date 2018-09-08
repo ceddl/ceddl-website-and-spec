@@ -1,0 +1,20 @@
+footer.grunt-footer
+  .inner
+    .container
+      ul.pull-right
+        li
+          a(href='/blog') Blog
+        li
+          a(href='/contributing') Contributing
+        li.social
+          a(href='https://github.com/ceddl/', title='CEDDL-polyfill on GitHub')
+            span.icon-github
+        li.social
+          a(href='https://twitter.com/rbfrontend/', title='Roland on Twitter')
+            span.icon-twitter
+        li.social
+          a(href='/rss', title='ceddl-polyfill blog RSS feed')
+            span.icon-rss
+
+if locals.page === 'plugins'
+  script(src='/js/plugins.js', async)
