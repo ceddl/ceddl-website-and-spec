@@ -42,7 +42,7 @@ app.use(function (req, res, next) {
 /**
  * Server configuration
  */
-var port = process.env.PORT || 5678;
+var port = process.env.PORT || 8090;
 app.listen(port);
 console.log('Starting a server on port: ' + port);
 

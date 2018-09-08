@@ -157,7 +157,7 @@ module.exports = function(grunt) {
           required: false,
           trailingSlash: false
         },
-        homepage: 'https://gruntjs.com/',
+        homepage: 'https://www.ceddlbyexample.com/',
         pattern: ['build/**/*.html'],
         siteRoot: './build'
       }
