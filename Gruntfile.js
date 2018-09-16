@@ -165,7 +165,7 @@ module.exports = function(grunt) {
 
     open: {
       dev: {
-        path: 'http://localhost:5678/'
+        path: 'http://localhost:8090/'
       }
     },
 

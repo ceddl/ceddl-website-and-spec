@@ -7,6 +7,7 @@ Development Version: **master**
 ## Documentation
 * [[Getting Started]]
 * [[Eventbus]]
+* [[Bennefits]]
 
 ### Advanced
 * [[API]]
@@ -19,3 +20,4 @@ Development Version: **master**
 * [[ceddl.config]]
 
 ### Other
+

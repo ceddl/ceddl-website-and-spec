@@ -1,6 +1,6 @@
 /* jshint browser:true, jquery:true, node:false */
 
-(function ($) {
+(function () {
   'use strict';
 
-})(jQuery);
+})();
