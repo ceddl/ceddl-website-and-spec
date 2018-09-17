@@ -6,11 +6,14 @@ Development Version: **master**
 
 ## Documentation
 * [[Getting Started]]
+* [[Data Models]]
+* [[HTML Interface]]
 * [[Eventbus]]
 * [[Bennefits]]
 
 ### Advanced
 * [[API]]
+* [[Single Page Applications]]
 
 ### Community
 * [[Contributing]]

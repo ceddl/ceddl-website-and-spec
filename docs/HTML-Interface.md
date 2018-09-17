@@ -1,0 +1,5 @@
+The choice for an HTML interface might sound a strange given how web development has a strong preference for JavaScript. Lets have a quick look at a definition of html attributes by firefox(mozilla): "Elements in HTML have attributes. These are additional values that configure the elements, add semantic value or adjust their behavior in various ways to meet the criteria the users want."
+
+If we look at this definition we find allot of simularities to what we aim to achive with the ceddl technical spec. With this in mind, Using attributes have benefits that are lost in a purely JavaScript solution. By enriching your existing DOM structure with data attributes you're adding semantic meaning and behavior to your elements, which should make it easier for your analytics and developer team to keep overview on what is being tracked and decouples tracking logic from the rest of the website in a way that html was indended to be used.
+
+A much larger example of the attribute stratagy can be seen in the wai-aria specification. A specification created by W3C and implemented by browser vendors to make the web more accessible to people with disabilities.
