@@ -32,14 +32,14 @@ CEDDL.eventbus.on('application:update', function(data, emitScope) {
 ```js
 CEDDL.eventbus.emit('update', {test: 'testdata'});
 
-CEDDL.eventbus.emit('application:update', {test: 'testdata'}, 'some application');
+CEDDL.eventbus.emit('application:update', {test: 'testdata'}, emitScope);
 ```
 
 ### Removing subscriptions
 ```js
-CEDDL.eventbus.on('checkout.age', updateAdditions);
+// Create listener
+CEDDL.eventbus.on('update', updateAdditions);
 
-CEDDL.eventbus.off('checkout.age', updateAdditions);
-
-CEDDL.eventbus.emit('checkout.age', {age: 53});
+// Remove listener
+CEDDL.eventbus.off('update', updateAdditions);
 ```

@@ -1,6 +1,6 @@
 CEDDL does not contain a fixed set of data structures. why?, Busines and application requirements for customer experience data can be verry different. Naming is communication. Bad names and structure prevent data from clearly communicating its intent. Instead a author can define the data structure that is applicable to the application.
 
-It is like setting up a database with tables, column names and column types inside the client. With this information the datalayer can help teams during developement and improve data quality overall. The ability to catch data issue's before they end up on a live server can be invaluable. the inspiration for the validation came from [html52] Client-side form validation.
+It is like setting up a database with tables, column names and column types inside the client. With this information the datalayer can help teams during developement and improve data quality overall. The ability to catch data issue's before they end up on a live server can be invaluable. The inspiration for the validation came from [html52] Client-side form validation.
 
 This section covers some of the key concepts for defining the structure of data in the datalayer. Building a properly structured database requires quite a bit of forethought. Plan for how data is going to be used later if possible.
 

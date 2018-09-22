@@ -1,8 +1,8 @@
 There are a number of Customer Experience Digital Data Layer polyfill projects.
 
-* [ceddl polyfill](https://github.com/ceddl/ceddl-polyfill) - the main ceddl project.
+* [ceddl polyfill](https://github.com/ceddl/ceddl-polyfill) - The main ceddl project.
 * [ceddl aditional inputs](https://github.com/ceddl/ceddl-aditional-inputs) - A collection of custom and essential aditional inputs for the ceddl-polyfill.
-* [ceddl website and specification](https://github.com/ceddl/ceddl-website-and-spec) - the ceddl-polyfill website and specification writing repository
+* [ceddl website and specification](https://github.com/ceddl/ceddl-website-and-spec) - The ceddl-polyfill website and specification writing repository
 
 # Experienced in creating a web standards proposal?
 
