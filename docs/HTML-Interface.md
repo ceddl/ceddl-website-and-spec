@@ -1,22 +1,22 @@
-The choice for an HTML interface might sound a strange given how web development has a strong preference for JavaScript. Lets have a quick look at a definition of html attributes by mozilla: "Elements in HTML have attributes. These are additional values that configure the elements, add semantic value or adjust their behavior in various ways to meet the criteria the users want."
+The choice for an HTML interface might sound strange given how web development has a strong preference for JavaScript. Let's have a quick look at a definition of HTML attributes by Mozilla: "Elements in HTML have attributes. These are additional values that configure the elements, add semantic value or adjust their behavior in various ways to meet the criteria the users want."
 
-If we look at this definition we find allot of simularities to what we aim to achive with the ceddl technical spec. With this in mind, Using attributes have benefits that are lost in a purely JavaScript solution. By enriching your existing DOM structure with data attributes you're adding semantic meaning and behavior to your elements, which in our experiance makes it easier for the analytics and developement team to keep overview on what is being tracked and decouples tracking logic from the rest of the website in a way that feels natural.
+If we look at this definition we find a lot of similarities to what we aim to achieve with the ceddl technical spec. With this in mind, Using attributes have benefits that are lost in a purely JavaScript solution. By enriching your existing DOM structure with data attributes you're adding semantic meaning and behavior to your elements, which in our experience makes it easier for the analytics and development team to keep an overview on what is being tracked and decouples tracking logic from the rest of the website in a way that feels natural.
 
-The polyfill will intoduce 3 new attributes. These attributes in combination with the HTML 5 data attributes will send data into the datalayer. If you have never used data-* attributes have a look at some tutorials online before you continue.
+The polyfill will introduce 3 new attributes. These attributes in combination with the HTML 5 data attributes will send data into the data layer. If you have never used data-* attributes have a look at some tutorials online before you continue.
 
-Html attribute that are used by ceddl:
+Html attributes that are used by ceddl:
 
-* **ceddl-observe**: observes the html and sends structured data to the predifined data models
-* **ceddl-click**: listenes for clicks and sends free format data to the events object.
-* **ceddl-submit**: listenes for submits and sends free format data to the events object.
+* **ceddl-observe**: observes the HTML and sends structured data to the predifined data models
+* **ceddl-click**: listeners for clicks and sends free format data to the events object.
+* **ceddl-submit**: listeners for submits and sends free format data to the events object.
 
 <div style="float:right">
 <a href="/img/docs/attribute-position.png" target="_blank"><img id="attribute_position" src="/img/docs/attribute-position.png" alt="example attribute position"></a>
 </div>
 
-### Setting and updating data in the datalayer
+### Setting and updating data in the data layer
 
-Where to place these atributes in the DOM? In almost all cases there is a visual element in the page that used a dataset to define the way is is displayed on a page. This would be the location to place the data atributes.
+Where to place these attributes in the DOM? In almost all cases there is a visual element in the page that used a dataset to define the way it is displayed on a page. This would be the location to place the data attributes.
 
 <div style="clear:both"></div>
 
@@ -38,7 +38,7 @@ Where to place these atributes in the DOM? In almost all cases there is a visual
 </div>
 ```
 
-When a data atribute is changed or the page loads this would yield the following event and payload:
+When a data attribute is changed or the page loads this would yield the following event and payload:
 
 ```js
 CEDDL.eventbus.on('user', function (data) {
@@ -61,11 +61,11 @@ CEDDL.eventbus.on('user', function (data) {
 
 ### Click Events
 
-Without any setup all clicks on anchor and button tags will trigger an event on the event bus with a default payload.
+Without any setup, all clicks on anchor and button tags will trigger an event on the event bus with a default payload.
 
 payload:
 
-* **xtag**: A string identyfing the exact element that was clicked. <a>read more</a>
+* **xtag**: A string identifying the exact element that was clicked using Xpath. <a href="https://www.w3.org/TR/1999/REC-xpath-19991116/">Read more</a>
 * **action**: The kind of action that triggered the event, which is always 'click' for click events.
 * **tag**: The tag that was clicked by the user.
 * **href**: If the clicked element contains a href attribute it is added to the event payload.
@@ -102,7 +102,7 @@ CEDDL.eventbus.on('addtocart', function (data) {
 
 ### Form Submit Events
 
-forms on the page that submitted will bepicked up by ceddl-polyfill, and in turn trigger an event on the event bus with some information about the event. Just like the click events is is possible to give the submit a namespace using the **cedd-submit** attribute
+Forms on the page that submitted will be picked up by ceddl-polyfill, and in turn trigger an event on the event bus with some information about the event. Just like the click events, it is possible to give the submit a namespace using the **cedd-submit** attribute
 
 
 ```html
@@ -116,7 +116,7 @@ forms on the page that submitted will bepicked up by ceddl-polyfill, and in turn
 ```
 
 
-Pressing enter on the form of Clicking the submit button would yield the following event and payload:
+Enter on the form of Clicking the submit button would yield the following event and payload:
 
 ```js
 CEDDL.eventbus.on('contactform', function (data) {
