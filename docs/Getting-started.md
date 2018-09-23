@@ -11,7 +11,7 @@ The current state of the polyfill is to incubate on ideas, assist in writing a t
 
 > Note:
 >
-> This guide currently assumes intermediate level knowledge of Web analytics, HTML, and JavaScript. If you are totally new to Web analytics development, it might not be the best idea to start at ceddl-polyfill as your first step - grasp the basics consepts used to send data to a analytics backend service, then come back!.
+> This guide currently assumes intermediate level knowledge of Web analytics, HTML, and JavaScript. If you are totally new to Web analytics development, it might not be the best idea to start at ceddl-polyfill as your first step - grasp the basics concepts used to send data to an analytics backend service, then come back!.
 
 ### Getting Started
 
@@ -57,7 +57,7 @@ We have already created our very first Implementation! The steps we took to get 
 
 ### The "dynamic" in dynamic Data Layer.
 
-Attributes are bound to the datalayer resulting in direct updates as soon as they are changed. Lets add a new modal that will a count of clicks on a button.
+Attributes are bound to the datalayer resulting in direct updates as soon as they are changed. Let's add a new modal that will a count of clicks on a button.
 
 ```js
 CEDDL.ModelFactory.create({
@@ -80,7 +80,7 @@ click here
 </button>
 ```
 
-Lets update the listener namespace to `ceddl:models` so that we get the full datalayer in the event callback
+Let's update the listener namespace to `ceddl:models` so that we get the full datalayer in the event callback
 
 ```js
 CEDDL.eventbus.on('ceddl:models', function(pageData) {
@@ -89,11 +89,11 @@ CEDDL.eventbus.on('ceddl:models', function(pageData) {
 ```
 You now have the <a href="https://codepen.io/broekema/pen/yxrvJV?editors=1010#0">dymanic hello world</a>.
 
-### Inprove and monitor data quality.
+### improve and monitor data quality.
 
-You may have noted we need to define the data structure the site will produce. Just like defining a table in a database. It will validate the data stream and report error's to the console and on the eventbus. This inproves testing your analytics suite and allows monitoring of errors on live systems.
+You may have noted we need to define the data structure the site will produce. Just like defining a table in a database. It will validate the data stream and report errors to the console and on the eventbus. This improves testing your analytics suite and allows monitoring of errors on live systems.
 
-Lets add a new required field names frameworkVersion to the page model and restrict the data entered.
+Let's add a new required field names frameworkVersion to the page model and restrict the data entered.
 
 ```js
     frameworkVersion: {
