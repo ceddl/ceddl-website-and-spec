@@ -196,6 +196,9 @@ CEDDL.ModelFactory.create({
 });
 ```
 
+<div class="text-right">
+<a style="display: inline-block; margin-bottom: 20px; line-height:20px;" href="/html-interface">HTML Interface <i class="icon-arrow-right"></i></a>
+</div>
 
 
 

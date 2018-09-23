@@ -14,7 +14,7 @@ We use an EventBus that allows publish-subscribe-style communication between com
 The EventBus enables 3rd-party scripts to communicate without a chance of creating errors while transferring the data. The eventbus makes it possible to upgrade 3rd-party scripts interdependently.
 
 ### Cleaner code
-Every marketing tool provides its own API for events and data tracking. While actually all of this marketing tags require the same data, but in a different format, ceddl-polyfill allows to collect customer data from attributes in your HTML or one Javascript API and send it to hundreds of tools for analytics, marketing, and data warehousing. This means that your analytics can be operating without the need for tagging code inside every app module.
+Every marketing tool provides its own API for events and data tracking. While actually all of this marketing tags require the same data, but in a different format, ceddl-polyfill allows to collect customer data from attributes in your HTML or one Javascript API and send it to many tools for analytics, marketing, and data warehousing. This means that your analytics can be operating without the need for tagging code inside every app module.
 
 ### Vendor independent with an easy migration path
 Replace any third-party system to another or run A/B test between them? Vendor migration will take you no more than 5 minutes. No change on the site server is required since all data stream is done through a standardized data layer.

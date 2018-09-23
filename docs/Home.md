@@ -14,6 +14,7 @@ Development Version: **master**
 ### Advanced
 * [[API]]
 * [[Single Page Applications]]
+* [[Additional Inputs]]
 
 ### Community
 * [[Contributing]]

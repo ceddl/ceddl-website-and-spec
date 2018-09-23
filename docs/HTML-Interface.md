@@ -138,3 +138,8 @@ CEDDL.eventbus.on('contactform', function (data) {
     }
  */
 ```
+
+
+<div class="text-right">
+<a style="display: inline-block; margin-bottom: 20px; line-height:20px;" href="/eventbus">Eventbus <i class="icon-arrow-right"></i></a>
+</div>

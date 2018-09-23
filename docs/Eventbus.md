@@ -43,3 +43,7 @@ CEDDL.eventbus.on('update', updateAdditions);
 // Remove listener
 CEDDL.eventbus.off('update', updateAdditions);
 ```
+
+<div class="text-right">
+<a style="display: inline-block; margin-bottom: 20px; line-height:20px;" href="/single-page-applications">Single Page Applications <i class="icon-arrow-right"></i></a>
+</div>
