@@ -3,6 +3,7 @@
 var express = require('express');
 var compression = require('compression');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var errorHandler = require('errorhandler');
 var app = express();
@@ -13,6 +14,25 @@ var schedule = require('node-schedule');
 schedule.scheduleJob('0 0 * * *', function() {
   console.log('some update for twitter or other feed here');
 });
+
+function uuidv4() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+function checkSession(req, res) {
+  if(!req.cookies.SESSIONID) {
+    res.cookie('SESSIONID', uuidv4(), { maxAge: 30 * 60 * 1000, httpOnly: true });
+  } else {
+    res.cookie('SESSIONID', req.cookies.SESSIONID, { maxAge: 30 * 60 * 1000, httpOnly: true });
+  }
+  if(!req.cookies.USERID) {
+    res.cookie('USERID', uuidv4(), { maxAge: 900 * 24 * 60 * 60 * 1000, httpOnly: true });
+  }
+}
+
 
 // enable express strict routing, see http://expressjs.com/api.html#app-settings
 // for more info
@@ -27,8 +47,11 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.set('views', path.join(__dirname, 'src', 'tmpl'));
 app.set('view engine', 'pug');
+
+
 
 // strip slashes
 app.use(function (req, res, next) {
@@ -50,6 +73,7 @@ console.log('Starting a server on port: ' + port);
  * express app router
  */
 app.get('/', function (req, res, next) {
+  checkSession(req, res);
   var filePath = 'build' + req.url + '.html';
   if (req.url === '/') {
     filePath = 'build/index.html';
@@ -66,6 +90,7 @@ app.get('/', function (req, res, next) {
 
 // api routes
 app.get('/api*', function (req, res, next) {
+  checkSession(req, res);
   req.url = req.url.toLowerCase();
   var filePath = 'build' + req.url + '.html';
 
@@ -86,6 +111,7 @@ app.get('/api*', function (req, res, next) {
 
 // news route
 app.get('/blog*', function (req, res, next) {
+  checkSession(req, res);
   var cleanUrl = req.url.split('?')[0];
   var filePath = 'build' + cleanUrl + '.html';
 
@@ -101,11 +127,6 @@ app.get('/blog*', function (req, res, next) {
       }
     });
   }
-});
-
-// plugins route
-app.get('/plugins*', function (req, res) {
-  res.sendFile('build/plugins.html', {root: __dirname});
 });
 
 // rss atom feed
@@ -126,6 +147,7 @@ app.get('*', function (req, res, next) {
   }
 
   fs.exists(filePath, function (exists) {
+    checkSession(req, res);
     if (exists) {
       res.sendFile(filePath, {root: __dirname});
     } else {

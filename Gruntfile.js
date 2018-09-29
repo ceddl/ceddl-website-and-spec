@@ -95,6 +95,15 @@ module.exports = function(grunt) {
         sourceMap: {
           includeSources: true
         }
+      },
+      bundle: {
+        src: [
+          'node_modules/@ceddl/ceddl-polyfill/dist/index.js',
+          'node_modules/@ceddl/ceddl-aditional-inputs/dist/page-metadata.js',
+          'node_modules/@ceddl/ceddl-aditional-inputs/dist/performance-timing.js',
+          'src/js/*.js'
+        ],
+        dest: 'build/js/bundle.js'
       }
     },
 
@@ -206,7 +215,7 @@ module.exports = function(grunt) {
     'copy',
     'docs',
     'blog',
-//    'uglify',
+    'uglify',
     'sitemap'
   ]);
   grunt.registerTask('default', 'Build the site, download plugins, production ready', [
