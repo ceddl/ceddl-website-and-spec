@@ -23,6 +23,7 @@ CEDDL.initialize();
 
     var pushPerformanceTiming = function(data) {
         data.indice = 'performanceTiming';
+        data.url = window.location.href;
         receiverSocket.send(JSON.stringify(data));
     };
 
