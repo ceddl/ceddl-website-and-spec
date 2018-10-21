@@ -27,19 +27,19 @@ The easiest way to try out ceddl-polyfill is using the <a href="https://codepen.
 <body ceddl-observe="page" data-framework="vanilla">
   <pre id="result" />
   <script>
-        CEDDL.ModelFactory.create({
+        ceddl.modelFactory.create({
             key: 'page',
             root: true,
             fields: {
                 framework: {
-                    type: CEDDL.ModelFactory.fields.StringField
+                    type: ceddl.modelFactory.fields.StringField
                 }
             }
         });
 
-        CEDDL.initialize();
+        ceddl.initialize();
 
-        CEDDL.eventbus.on('page', function(pageData) {
+        ceddl.eventbus.on('page', function(pageData) {
             var string = JSON.stringify(pageData, null, 4);
             document.querySelector('#result').innerHTML = string;
         });
@@ -60,12 +60,12 @@ We have already created our very first Implementation! The steps we took to get 
 Attributes are bound to the datalayer resulting in direct updates as soon as they are changed. Let's add a new modal that will a count of clicks on a button.
 
 ```js
-CEDDL.ModelFactory.create({
+ceddl.modelFactory.create({
     key: 'button',
     root: true,
     fields: {
         clicks: {
-            type: CEDDL.ModelFactory.fields.NumberField
+            type: ceddl.modelFactory.fields.NumberField
         }
     }
 });
@@ -83,13 +83,13 @@ click here
 Let's update the listener namespace to `ceddl:models` so that we get the full datalayer in the event callback
 
 ```js
-CEDDL.eventbus.on('ceddl:models', function(pageData) {
+ceddl.eventbus.on('ceddl:models', function(pageData) {
   ...
 });
 ```
 You now have the <a href="https://codepen.io/broekema/pen/yxrvJV?editors=1010#0">dymanic hello world</a>.
 
-### improve and monitor data quality.
+### Improve and monitor data quality.
 
 You may have noted we need to define the data structure the site will produce. Just like defining a table in a database. It will validate the data stream and report errors to the console and on the eventbus. This improves testing your analytics suite and allows monitoring of errors on live systems.
 
@@ -97,7 +97,7 @@ Let's add a new required field names frameworkVersion to the page model and rest
 
 ```js
     frameworkVersion: {
-      type: CEDDL.ModelFactory.fields.StringField,
+      type: ceddl.modelFactory.fields.StringField,
       required: true,
       pattern: '^(0\.9\.[1-9]|1)$',
     }
@@ -126,7 +126,7 @@ Events Allow more free data flow. There is no data model or validation involved.
 To listen for the click event we can listen to all the events with namespace `ceddl:events` or listen to the single event named `myclick`
 
 ```js
-CEDDL.eventbus.on('myclick', function(pageData) {
+ceddl.eventbus.on('myclick', function(pageData) {
   ...
 });
 ```

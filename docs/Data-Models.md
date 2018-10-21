@@ -12,20 +12,20 @@ To start our user needs a "username", "id" and "type". It will be manditory to f
 Note, we define user as a root object. This means that the datalayer will be looking for this data structure in the HTML of the webpage.
 
 ```js
-CEDDL.ModelFactory.create({
+ceddl.modelFactory.create({
     key: 'user', // name of the object
     root: true, // Is the basis / root of a data structure
     fields: {
         username: {
-            type: CEDDL.ModelFactory.fields.String,
+            type: ceddl.modelFactory.fields.String,
             required: true,
         },
         id: {
-            type: CEDDL.ModelFactory.fields.Number,
+            type: ceddl.modelFactory.fields.Number,
             required: true,
         },
         type: {
-            type: CEDDL.ModelFactory.fields.String,
+            type: ceddl.modelFactory.fields.String,
             pattern: '^(business|consumer)$',
             required: true,
         }
@@ -39,23 +39,23 @@ CEDDL.ModelFactory.create({
 We could technically add longitude, latitude, country, state/province to the user directly. Location feels like a separate logical data grouping that could be reused someware else. With that in mind lets define a location as a separate model.
 
 ```js
-CEDDL.ModelFactory.create({
+ceddl.modelFactory.create({
     key: 'location',
     fields: {
         longitude: {
-            type: CEDDL.ModelFactory.fields.Number,
+            type: ceddl.modelFactory.fields.Number,
             required: false,
         },
         latitude: {
-            type: CEDDL.ModelFactory.fields.Number,
+            type: ceddl.modelFactory.fields.Number,
             required: false,
         },
         country: {
-            type: CEDDL.ModelFactory.fields.String,
+            type: ceddl.modelFactory.fields.String,
             required: true,
         },
         stateProvince: {
-            type: CEDDL.ModelFactory.fields.String,
+            type: ceddl.modelFactory.fields.String,
             required: false,
         }
     }
@@ -64,25 +64,25 @@ CEDDL.ModelFactory.create({
 Next step is to connect the user and location by adding a relation to the user. The user model will now look like:
 
 ```js
-CEDDL.ModelFactory.create({
+ceddl.modelFactory.create({
     key: 'user', // name of the object
     root: true, // Is the basis / root of a data structure
     fields: {
         username: {
-            type: CEDDL.ModelFactory.fields.String,
+            type: ceddl.modelFactory.fields.String,
             required: true,
         },
         id: {
-            type: CEDDL.ModelFactory.fields.Number,
+            type: ceddl.modelFactory.fields.Number,
             required: true,
         },
         type: {
-            type: CEDDL.ModelFactory.fields.String,
+            type: ceddl.modelFactory.fields.String,
             pattern: '^(business|consumer)$',
             required: true,
         },
         location: {
-            type: CEDDL.ModelFactory.fields.Model, // Note the ModelField type here
+            type: ceddl.modelFactory.fields.Model, // Note the ModelField type here
             foreignModel: 'location', // Reference to the key of the sub model
             required: false,
         }
@@ -95,15 +95,15 @@ CEDDL.ModelFactory.create({
 Next challange is the user groups. There can be multiple for a single user and they will consist of id, type.
 
 ```js
-CEDDL.ModelFactory.create({
+ceddl.modelFactory.create({
     key: 'usergroup',
     fields: {
         id: {
-            type: CEDDL.ModelFactory.fields.NumberField,
+            type: ceddl.modelFactory.fields.NumberField,
             required: true,
         },
         type: {
-            type: CEDDL.ModelFactory.fields.StringField,
+            type: ceddl.modelFactory.fields.StringField,
             required: true,
         }
     }
@@ -113,30 +113,30 @@ CEDDL.ModelFactory.create({
 Next step is to add a list of usergroup to the user. We will assign the list to a different name (group_list) as it comunicates the content more clearly. The user model will now look like:
 
 ```js
-CEDDL.ModelFactory.create({
+ceddl.modelFactory.create({
     key: 'user',
     root: true, // Is the basis / root of a data structure
     fields: {
         username: {
-            type: CEDDL.ModelFactory.fields.StringField,
+            type: ceddl.modelFactory.fields.StringField,
             required: true,
         },
         id: {
-            type: CEDDL.ModelFactory.fields.NumberField,
+            type: ceddl.modelFactory.fields.NumberField,
             required: true,
         },
         type: {
-            type: CEDDL.ModelFactory.fields.String,
+            type: ceddl.modelFactory.fields.String,
             pattern: 'business|consumer',
             required: true,
         },
         location: {
-            type: CEDDL.ModelFactory.fields.Model,
+            type: ceddl.modelFactory.fields.Model,
             foreignModel: 'location',
             required: false,
         },
         usergroups: {
-            type: CEDDL.ModelFactory.fields.List, // Note the ListField type here
+            type: ceddl.modelFactory.fields.List, // Note the ListField type here
             foreignModel: 'usergroup', // Reference to the key of the sub model
             required: true,
         }
@@ -179,17 +179,17 @@ Filling the modal yields the following JSON result:
 In the admin part of the website the author would like to track if the administrator is allowed to create new users and if they have completed the training. To allow for this we would like to have manditory fields inside the admin part of the website without changing the normal user model. To achieve this we will create a new model extending the user we created above.
 
 ```js
-CEDDL.ModelFactory.create({
+ceddl.modelFactory.create({
     key: 'admin_user',
     extends: 'user', // we are extending the user model here!
     root: true,
     fields: {
         trainingComplete: {
-            type: CEDDL.ModelFactory.fields.BooleanField, // Note BooleanField
+            type: ceddl.modelFactory.fields.BooleanField, // Note BooleanField
             required: true,
         },
         userCreateAuthorization: {
-            type: CEDDL.ModelFactory.fields.BooleanField,
+            type: ceddl.modelFactory.fields.BooleanField,
             required: true,
         }
     }

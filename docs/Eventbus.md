@@ -13,15 +13,15 @@ Some important thing to note:
 
 ### Subscribing to events
 ```js
-CEDDL.eventbus.on('update', function(data) {
+ceddl.eventbus.on('update', function(data) {
     console.log(data);
 });
 
-CEDDL.eventbus.once('update', function(data) {
+ceddl.eventbus.once('update', function(data) {
    console.log('once', data);
 });
 
-CEDDL.eventbus.on('application:update', function(data, emitScope) {
+ceddl.eventbus.on('application:update', function(data, emitScope) {
    console.log('data', data);
    console.log('originalScope', this);
    console.log('emitScope', emitScope);
@@ -30,18 +30,18 @@ CEDDL.eventbus.on('application:update', function(data, emitScope) {
 
 ### Publishing
 ```js
-CEDDL.eventbus.emit('update', {test: 'testdata'});
+ceddl.eventbus.emit('update', {test: 'testdata'});
 
-CEDDL.eventbus.emit('application:update', {test: 'testdata'}, emitScope);
+ceddl.eventbus.emit('application:update', {test: 'testdata'}, emitScope);
 ```
 
 ### Removing subscriptions
 ```js
 // Create listener
-CEDDL.eventbus.on('update', updateAdditions);
+ceddl.eventbus.on('update', updateAdditions);
 
 // Remove listener
-CEDDL.eventbus.off('update', updateAdditions);
+ceddl.eventbus.off('update', updateAdditions);
 ```
 
 <div class="text-right">

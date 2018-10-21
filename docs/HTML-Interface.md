@@ -41,7 +41,7 @@ Where to place these attributes in the DOM? In almost all cases there is a visua
 When a data attribute is changed or the page loads this would yield the following event and payload:
 
 ```js
-CEDDL.eventbus.on('user', function (data) {
+ceddl.eventbus.on('user', function (data) {
     console.log(data);
 });
 /* Logs:
@@ -85,12 +85,12 @@ Adding a click event on a tag and using a custom event namespace is possible by 
 Clicking on the addtocart would yield the following event and payload:
 
 ```js
-CEDDL.eventbus.on('addtocart', function (data) {
+ceddl.eventbus.on('addtocart', function (data) {
     console.log(data);
 });
 /* Logs:
  * {
- *     xtag:  "//*[@id="klaas"]",
+ *     xtag:  "//*[@id="176-73-black"]",
  *     action: "click",
  *     tag: "div",
  *     id: "176-73-black",
@@ -119,7 +119,7 @@ Forms on the page that submitted will be picked up by ceddl-polyfill, and in tur
 Enter on the form of Clicking the submit button would yield the following event and payload:
 
 ```js
-CEDDL.eventbus.on('contactform', function (data) {
+ceddl.eventbus.on('contactform', function (data) {
     console.log(data);
 });
 /* Logs:

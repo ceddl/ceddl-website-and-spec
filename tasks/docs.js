@@ -70,8 +70,8 @@ module.exports = function (grunt) {
               }
             } else {
               items.push({
-                name: item,
-                url: url.replace(/ /g, '-').toLowerCase()
+                name: item.replace(/\[\]/g, '.'),
+                url: url.replace(/ /g, '-').replace(/\[\]/g, '#').toLowerCase()
               });
             }
           }

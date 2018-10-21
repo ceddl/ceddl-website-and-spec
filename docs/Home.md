@@ -21,7 +21,14 @@ Development Version: **master**
 
 ## API
 * [[ceddl]]
-* [[ceddl.config]]
+* [[ceddl[]initialize]]
+* [[ceddl[]emitEvent]]
+* [[ceddl[]emitModel]]
+* [[ceddl[]getEvents]]
+* [[ceddl[]getModels]]
+* [[ceddl[]eventbus]]
+* [[ceddl[]modelFactory]]
 
 ### Other
-
+* [[Single Page Applications]]
+* [[Additional Inputs]]
