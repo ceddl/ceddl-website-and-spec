@@ -1,6 +1,6 @@
-/* jshint browser:true, jquery:true, node:false */
-/* globals CEDDL */
-CEDDL.initialize();
+/* jshint browser:true, jquery:false, node:false */
+/* globals ceddl */
+ceddl.initialize();
 
 (function () {
   'use strict';
@@ -33,15 +33,15 @@ CEDDL.initialize();
     };
 
     receiverSocket.onopen = function() {
-        CEDDL.eventbus.on('pageMetadata', pushPageMetadata);
-        CEDDL.eventbus.on('performanceTiming', pushPerformanceTiming);
-        CEDDL.eventbus.on('click', pushClick);
+        ceddl.eventbus.on('pageMetadata', pushPageMetadata);
+        ceddl.eventbus.on('performanceTiming', pushPerformanceTiming);
+        ceddl.eventbus.on('click', pushClick);
     };
 
     receiverSocket.onclose = function() {
-        CEDDL.eventbus.off('pageMetadata', pushPageMetadata);
-        CEDDL.eventbus.off('performanceTiming', pushPerformanceTiming);
-        CEDDL.eventbus.off('click', pushClick);
+        ceddl.eventbus.off('pageMetadata', pushPageMetadata);
+        ceddl.eventbus.off('performanceTiming', pushPerformanceTiming);
+        ceddl.eventbus.off('click', pushClick);
     };
 
 })();
