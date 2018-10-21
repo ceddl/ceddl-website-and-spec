@@ -1,7 +1,7 @@
 {
   "name": "@ceddl/ceddl-polyfill-website-and-spec",
   "description": "The source code for ceddlbyexample.com",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Ceddl Polyfill Team",
     "url": "https://ceddlbyexample.com/"
@@ -16,8 +16,8 @@
   },
   "private": false,
   "dependencies": {
-    "@ceddl/ceddl-aditional-inputs": "0.9.2",
-    "@ceddl/ceddl-polyfill": "0.9.2",
+    "@ceddl/ceddl-aditional-inputs": "0.9.3",
+    "@ceddl/ceddl-polyfill": "0.9.3",
     "async": "~2.4.1",
     "body-parser": "~1.17.1",
     "compression": "~1.6.1",
