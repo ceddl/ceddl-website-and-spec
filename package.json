@@ -1,5 +1,6 @@
 {
   "name": "@ceddl/ceddl-polyfill-website-and-spec",
+  "shortName": "ceddl-polyfill-website-and-spec",
   "description": "The source code for ceddlbyexample.com",
   "version": "1.0.2",
   "author": {
@@ -12,7 +13,13 @@
     "start": "node server.js",
     "postinstall": "grunt",
     "test": "grunt test",
-    "dev": "grunt dev"
+    "dev": "grunt dev",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version minor",
+    "push": "bin/push.sh $shortName:$npm_package_version",
+    "deploy-clean": "bin/deploy-clean.sh $npm_package_shortName",
+    "deploy": "bin/deploy.sh $npm_package_shortName:$npm_package_version"
   },
   "private": false,
   "dependencies": {
