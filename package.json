@@ -2,7 +2,7 @@
   "name": "@ceddl/ceddl-polyfill-website-and-spec",
   "shortName": "ceddl-polyfill-website-and-spec",
   "description": "The source code for ceddlbyexample.com",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": {
     "name": "Ceddl Polyfill Team",
     "url": "https://ceddlbyexample.com/"
