@@ -17,7 +17,7 @@
     "patch": "npm version patch",
     "minor": "npm version minor",
     "major": "npm version minor",
-    "push": "bin/push.sh $$npm_package_shortName:$npm_package_version",
+    "push": "bin/push.sh $npm_package_shortName:$npm_package_version",
     "deploy-clean": "bin/deploy-clean.sh $npm_package_shortName",
     "deploy": "bin/deploy.sh $npm_package_shortName:$npm_package_version"
   },
