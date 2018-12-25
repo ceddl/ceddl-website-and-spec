@@ -14,7 +14,7 @@ ceddl.initialize();
     wsUri += '//' + loc.host;
     wsUri += '/connector';
 
-    var receiverSocket = new WebSocket(wsUri);
+    var receiverSocket = new WebSocket('ws://localhost:8092/');
 
     var pushPageMetadata = function(data) {
         data.indice = 'pageReady';

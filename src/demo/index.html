@@ -84,15 +84,11 @@
                       </form>
                     </div>
                 </article>
-                <article class="tile is-child notification is-info">
-                    <p class="title">Info</p>
-                    <p class="subtitle">Documentation links</p>
-                </article>
             </div>
             <div class="tile is-vertical is-8">
                 <div class="tile">
                     <div class="tile is-parent is-vertical">
-                        <article class="tile is-child notification is-info">
+                        <article class="tile is-child notification is-info" id="shop">
                             <p class="title">Products</p>
                             <div ceddl-observe="products" class="content js-product-container">
 
@@ -122,6 +118,8 @@
                             <p class="title">Cart</p>
                             <div class="content js-cart-container">
 
+
+
                             </div>
                           </div>
 
@@ -129,14 +127,8 @@
                     </div>
                 </div>
                 <div class="tile is-parent">
-                    <article class="tile is-child">
-                        <div class="message is-success">
-                          <p class="message-header">Results</p>
-                          <div class="message-body">
-                              <pre class="js-data-object" ></pre>
-                              <pre class="js-event-object" ></pre>
-                          </div>
-                        </div>
+                    <article class="tile is-child" id="results">
+                      <div class="json-container-wrap" id="json-container"></div>
                     </article>
                 </div>
             </div>
@@ -287,6 +279,7 @@
 </script>
 
 <script src="js/lodash.js" ></script>
+<script src="js/json-viewer.js" ></script>
 <script src="js/cart.js" ></script>
 <script src="js/products.js" ></script>
 <script src="js/app.js" ></script>

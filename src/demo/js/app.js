@@ -1,6 +1,9 @@
 var demo = demo? demo : {};
 
 (function() {
+
+    var Jview = new JsonViewer(document.getElementById('json-container'));
+
     function setListeners() {
         document.querySelector('.js-clear-cart').addEventListener('click', function() {
             demo.cart.clearCart();
@@ -14,7 +17,7 @@ var demo = demo? demo : {};
             setTimeout(function(){
                 var allData = ceddl.getModels();
                 allData.events = ceddl.getEvents();
-                document.querySelector('.js-event-object').innerHTML = 'events:' + JSON.stringify(allData, null, 4);
+                Jview.set(allData);
                 rendering = false;
             }, 150);
         }
