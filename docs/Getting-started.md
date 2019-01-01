@@ -93,7 +93,7 @@ You now have the <a href="https://codepen.io/broekema/pen/yxrvJV?editors=1010#0"
 
 You may have noted we need to define the data structure the site will produce. Just like defining a table in a database. It will validate the data stream and report errors to the console and on the eventbus. This improves testing your analytics suite and allows monitoring of errors on live systems.
 
-Let's add a new required field names frameworkVersion to the page model and restrict the data entered.
+Let's add a new required field called frameworkVersion to the page model and restrict the data entered.
 
 ```js
     frameworkVersion: {
@@ -114,8 +114,7 @@ Add the data attribute to the page and make sure that the data-framework-version
 Events Allow more free data flow. There is no data model or validation involved. Add the `ceddl-click` atribute to the button with a value of `myclick`
 
 ```HTML
-  <button ceddl-observe="button"
-          ceddl-click="myclick"
+  <button ceddl-click="myclick"
           data-clicks="0"
           id="myclick"
           onclick="this.setAttribute('data-clicks', Number(this.getAttribute('data-clicks')) + 1);">

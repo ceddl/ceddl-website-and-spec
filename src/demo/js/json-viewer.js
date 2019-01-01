@@ -23,7 +23,7 @@ window.JsonViewer = function(Elm){
 
         setTimeout(function() {
             myElm.parentElement.classList.add('json-container-update');
-        }, 5);
+        }, 30);
     }
 
     function json2html(json) {
