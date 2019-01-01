@@ -57,6 +57,7 @@
     "grunt-html": "~8.4.0",
     "grunt-nodemon": "~0.4.1",
     "grunt-open": "~0.2.3",
-    "grunt-puglint": "~1.0.0"
+    "grunt-puglint": "~1.0.0",
+    "grunt-regex-replace": "^0.4.0"
   }
 }

@@ -172,6 +172,21 @@ module.exports = function(grunt) {
       }
     },
 
+
+    "regex-replace": {
+      dist: { //specify a target with any name
+          src: ['build/sitemap.xml'],
+          actions: [
+              {
+                  name: 'bar',
+                  search: '&',
+                  replace: '&amp;',
+                  flags: 'g'
+              }
+          ]
+      }
+    },
+
     open: {
       dev: {
         path: 'http://localhost:8090/'
@@ -216,7 +231,8 @@ module.exports = function(grunt) {
     'docs',
     'blog',
     'uglify',
-    'sitemap'
+    'sitemap',
+    'regex-replace'
   ]);
   grunt.registerTask('default', 'Build the site, download plugins, production ready', [
     'build',
