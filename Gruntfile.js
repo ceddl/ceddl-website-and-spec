@@ -173,7 +173,7 @@ module.exports = function(grunt) {
     },
 
 
-    "regex-replace": {
+    'regex-replace': {
       dist: { //specify a target with any name
           src: ['build/sitemap.xml'],
           actions: [
