@@ -13,16 +13,17 @@ ceddl.initialize();
     }
     wsUri += '//' + loc.host;
     wsUri += '/connector';
+    wsUri += '?key=Y2VkZGxieWV4YW1wbGUuY29tOk9ubGluZTFNb25pdG9yaW5n';
 
     var receiverSocket = new WebSocket(wsUri);
 
     var pushPageMetadata = function(data) {
-        data.indice = 'pageReady';
+        data.indice = 'page_ready';
         receiverSocket.send(JSON.stringify(data));
     };
 
     var pushPerformanceTiming = function(data) {
-        data.indice = 'performanceTiming';
+        data.indice = 'performance_timing';
         data.url = window.location.href;
         receiverSocket.send(JSON.stringify(data));
     };
