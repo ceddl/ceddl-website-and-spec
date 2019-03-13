@@ -5,7 +5,8 @@ ceddl.initialize();
 (function () {
   'use strict';
 
-    var loc = window.location, wsUri;
+    var loc = window.location;
+    var wsUri;
     if (loc.protocol === 'https:') {
         wsUri = 'wss:';
     } else {
