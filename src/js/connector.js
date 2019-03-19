@@ -40,10 +40,36 @@ ceddl.initialize();
         ceddl.eventbus.on('click', pushClick);
     };
 
-    receiverSocket.onclose = function() {
+
+    receiverSocket.onmessage = function(event) {
+        try {
+            var myobj = JSON.parse(event.data);
+            if(myobj.statusCode) {
+                console.log('connector error:', myobj);
+            }
+        }
+        catch(err) {
+            // do nothing
+        }
+    };
+
+
+    receiverSocket.onclose = function(event) {
+        console.log(event.code);
+        try {
+            var myobj = JSON.parse(event.reason);
+            if(myobj.statusCode) {
+                console.log('connector error:', myobj);
+            }
+        }
+        catch(err) {
+            // do nothing
+        }
         ceddl.eventbus.off('pageMetadata', pushPageMetadata);
         ceddl.eventbus.off('performanceTiming', pushPerformanceTiming);
         ceddl.eventbus.off('click', pushClick);
     };
+
+
 
 })();
