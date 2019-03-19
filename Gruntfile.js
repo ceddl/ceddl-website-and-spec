@@ -103,7 +103,7 @@ module.exports = function(grunt) {
           'node_modules/@ceddl/ceddl-aditional-inputs/dist/performance-timing.js',
           'src/js/*.js'
         ],
-        dest: 'build/js/bundle.js'
+        dest: 'build/js/bundle' + grunt.file.readJSON('package.json').version.replace(/\./g, '') + '.js'
       }
     },
 

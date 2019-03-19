@@ -14,6 +14,7 @@ module.exports = function (grunt) {
   var highlighter = require('highlight.js');
   var marked = require('marked');
   var blog = require('./lib/blog').init(grunt);
+  var bundleVersion = require('../package.json').version.replace(/\./g, '');
 
   /**
    * Custom task to generate the ceddl blog
@@ -79,6 +80,7 @@ module.exports = function (grunt) {
             postRawDate: postDate,
             articleList: articleList,
             content: marked(src),
+            bundleVersion: bundleVersion,
             rawSrc: src
           };
           shortList.push(templateData);
@@ -105,7 +107,8 @@ module.exports = function (grunt) {
       page: 'blog',
       title: 'The ceddl Blog',
       content: shortList,
-      articleList: articleList
+      articleList: articleList,
+      bundleVersion: bundleVersion
     });
     grunt.file.write('build/blog.html', blogOut);
 
@@ -136,7 +139,8 @@ module.exports = function (grunt) {
     var indexTpl = 'src/tmpl/index.pug';
     var indexOut = pug.compile(grunt.file.read(indexTpl), {filename: indexTpl})({
       page: 'index',
-      news: shortList.splice(0, 5)
+      news: shortList.splice(0, 5),
+      bundleVersion: bundleVersion
     });
     grunt.file.write('build/index.html', indexOut);
   });

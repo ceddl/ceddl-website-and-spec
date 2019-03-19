@@ -14,6 +14,7 @@ module.exports = function (grunt) {
   var pug = require('pug');
   var highlighter = require('highlight.js');
   var docs = require('./lib/docs').init(grunt);
+  var bundleVersion = require('../package.json').version.replace(/\./g, '');
   var marked = require('marked');
 
   /**
@@ -111,7 +112,8 @@ module.exports = function (grunt) {
                   pageSegment: segment,
                   title: title,
                   content: docs.anchorFilter(marked(docs.wikiAnchors(src))),
-                  sidebars: sidebars
+                  sidebars: sidebars,
+                  bundleVersion: bundleVersion
                 };
                 return pug.compile(grunt.file.read(file), {filename: file})(templateData);
               } catch (e) {
@@ -157,7 +159,8 @@ module.exports = function (grunt) {
                   pageSegment: name.toLowerCase(),
                   title: name.replace(/-/g, ' '),
                   content: docs.anchorFilter(marked(docs.wikiAnchors(src))),
-                  sidebars: sidebars
+                  sidebars: sidebars,
+                  bundleVersion: bundleVersion
                 };
 
                 return pug.compile(grunt.file.read(file), {filename: file})(templateData);
