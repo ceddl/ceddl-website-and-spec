@@ -11,6 +11,10 @@ html(lang='en', prefix='og: http://ogp.me/ns#', itemscope, itemtype='http://sche
     include includes/favicons
     include includes/social
     link(href='/rss', rel='alternate', title='CEDDL Blog Feed', type='application/atom+xml')
+    script(src='/js/@ceddl/ceddl-polyfill/index.js')
+    script(src='/js/@ceddl/ceddl-aditional-inputs/page-metadata.js')
+    script(src='/js/@ceddl/ceddl-aditional-inputs/performance-timing.js')
+
   body(class=locals.page ? 'page-' + locals.page + (locals.page === 'index' ? '' : ' page-secondary') : '')
     include blocks/header
     .content
