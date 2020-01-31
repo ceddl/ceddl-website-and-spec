@@ -3,16 +3,10 @@
 var express = require('express');
 var compression = require('compression');
 var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
 var errorHandler = require('errorhandler');
 var app = express();
 var fs = require('fs');
 var path = require('path');
-var schedule = require('node-schedule');
-
-schedule.scheduleJob('0 0 * * *', function() {
-  console.log('some update for twitter or other feed here');
-});
 
 // enable express strict routing, see http://expressjs.com/api.html#app-settings
 // for more info
@@ -22,7 +16,6 @@ app.enable('strict routing');
  * express app configuration
  */
 app.use(compression());
-app.use(methodOverride());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -148,3 +141,15 @@ app.use(errorHandler({
   dumpExceptions: false,
   showStack: false
 }));
+
+function restart() {
+   console.log("Clearing /app/ module cache from server")
+    Object.keys(require.cache).forEach(function(id) {
+      if (/[\/\\]app[\/\\]/.test(id)) delete require.cache[id]
+    })
+}
+
+
+module.exports = {
+  restart: restart
+} 
