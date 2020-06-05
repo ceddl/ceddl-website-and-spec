@@ -51,7 +51,7 @@ ceddl.initialize();
      */
     var checkReceiverSocket = function(data, callback) {
         // Success call and moove on.
-        if(eceiverSocket.readyState === receiverSocket.OPEN) {
+        if(receiverSocket.readyState === receiverSocket.OPEN) {
             callback(data);
             return;
         }
