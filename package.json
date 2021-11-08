@@ -33,7 +33,7 @@
     "highlight.js": "~9.11.0",
     "lodash": "^4.17.15",
     "marked": "https://github.com/vladikoff/marked/tarball/master",
-    "pug": "~2.0.4"
+    "pug": "~3.0.1"
   },
   "devDependencies": {
     "chokidar": "^3.3.1",
