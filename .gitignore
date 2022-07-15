@@ -4,3 +4,4 @@ tmp/
 npm-debug.log
 bin/
 .idea
+resources/_gen
