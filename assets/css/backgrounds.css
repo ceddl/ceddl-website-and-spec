@@ -3,3 +3,23 @@
     border-top-style: solid;
     border-image: linear-gradient(139deg, theme('colors.yellow.400'), theme('colors.orange.500'), theme('colors.green.500'), theme('colors.yellow.600')) 3;
 }
+
+.invite-background {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+    z-index: -1;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        transform: rotate(180deg);
+        fill: theme('colors.orange.500');
+    }
+
+    g, rect {
+        height: 100%;
+        width: 100%;
+    }
+}

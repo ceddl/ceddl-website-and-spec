@@ -1,6 +1,7 @@
 {{ define "main" }}
-<article class="text-center text-gray-700">
-    <h1 class="font-big font-extralight text-5xl welcome-headline">{{ .Title }}</h1>
-    {{ .Content }}
+<article class="flex flex-col text-white relative text-center">
+  {{ partial "app-background.html" . }}
+  <h1 class="font-big font-extralight text-5xl welcome-headline pt-8">{{ .Title }}</h1>
+  {{ .Content }}
 </article>
 {{ end }}
