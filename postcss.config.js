@@ -18,6 +18,8 @@ module.exports = {
         require('postcss-import'),
         require('postcss-nested'),
         require('tailwindcss')('tailwind.config.js'),
-        ...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
+        ...(process.env.HUGO_ENVIRONMENT === 'production' ? [] : [])
     ]
 }
+
+// ...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
