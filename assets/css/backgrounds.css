@@ -1,25 +1,66 @@
-.top-border {
-    border-width: 10px 0 0;
-    border-top-style: solid;
-    border-image: linear-gradient(139deg, theme('colors.yellow.400'), theme('colors.orange.500'), theme('colors.green.500'), theme('colors.yellow.600')) 3;
+.header-back {
+    background:rgba(0,0,0, 0.1);
+    height: 5rem;
+}
+
+.default-back {
+    background: linear-gradient(100deg,  theme('colors.yellow.500') -20%, theme('colors.green.700') 25%, theme('colors.yellow.700') 75%, theme('colors.yellow.500') 120%);
 }
 
 .invite-background {
+    overflow: hidden;
+    position: absolute;
     display: flex;
     width: 100%;
-    height: 100%;
-    min-height: 800px;
+    height: calc(100% + 14rem);
     z-index: -1;
-
-    svg {
-        width: 100%;
-        height: 100%;
-        transform: rotate(180deg);
-        fill: theme('colors.orange.500');
-    }
-
-    g, rect {
+    margin-top: -5rem;
+    .hero {
         height: 100%;
         width: 100%;
+        background: theme('colors.yellow.700');
+        background: linear-gradient(100deg,  theme('colors.yellow.500') -20%, theme('colors.green.700') 25%, theme('colors.yellow.700') 75%, theme('colors.yellow.500') 120%);
+
+        .w {
+            position: absolute;
+            top: 100%;
+            left: -25vw;
+            right: 0px;
+            background: url(/img/backgrounds/wave.svg);
+            background-position: center;
+        }
+
+        .wave {
+            height: 200px;
+            transform: translateY(-40px);
+        }
+
+        .wave2 {
+            height: 240px;
+            transform: translateY(-80px);
+            background-size: 960px 240px;
+            opacity: 0.5;
+            left: -80vw;
+            right: -5vw;
+        }
+
+        .wave3 {
+            height: 220px;
+            transform: translateY(-120px);
+            background-size: 880px 220px;
+            opacity: 0.33;
+            left: 0vw;
+            right: -20vw;
+        }
+
+        .wave4 {
+            height: 280px;
+            transform: translateY(-160px);
+            background-size: 1120px 280px;
+            opacity: 0.1;
+            left: 0vw;
+            right: -40vw;
+        }
+
     }
 }
