@@ -2,13 +2,12 @@
 <html lang='{{ .Site.LanguageCode }}'>
 {{ partial "head.html" . }}
 
-<body class="font-small flex flex-col min-h-screen">
+<body class="font-small flex flex-col min-h-screen text-gray-600">
 {{- partial "header.html" . -}}
 <main>
   {{- block "main" . }}{{- end }}
 </main>
 {{- partial "footer.html" . -}}
-{{- partial "dev/dev-tools.html" . -}}
 </body>
 
 </html>

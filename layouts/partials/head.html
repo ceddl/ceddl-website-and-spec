@@ -15,6 +15,10 @@
     {{ end -}}
     {{ hugo.Generator }}
 
+    {{ "<!-- Web Components -->" | safeHTML }}
+    {{ $webComponent := resources.Get "js/web-components.js" | js.Build }}
+    <script type="text/javascript" src="{{ $webComponent.RelPermalink }}" defer></script>
+
     {{ $styles := resources.Get "css/styles.css" }}
     {{ $styles = $styles | resources.PostCSS }}
     {{ if hugo.IsProduction }}

@@ -1,0 +1,46 @@
+ceddl-forms p {
+    @apply mt-2 text-sm;
+}
+
+ceddl-forms label {
+    @apply block mb-2 text-sm font-medium;
+}
+
+ceddl-forms .success p {
+    @apply text-green-600;
+}
+
+ceddl-forms .error p {
+    @apply text-orange-600;
+}
+
+ceddl-forms select:invalid,
+ceddl-forms select:required:invalid {
+    @apply text-gray-400;
+}
+
+ceddl-forms option {
+    @apply text-gray-800;
+}
+
+
+ceddl-forms input[type=text],
+ceddl-forms input[type=number],
+ceddl-forms textarea,
+ceddl-forms select {
+    @apply border text-sm rounded-lg block w-full p-2.5 bg-white;
+}
+
+ceddl-forms .success input[type=text],
+ceddl-forms .success input[type=number],
+ceddl-forms .success textarea,
+ceddl-forms .success select {
+    @apply border-green-600;
+}
+
+ceddl-forms .error input[type=text],
+ceddl-forms .error input[type=number],
+ceddl-forms .error textarea,
+ceddl-forms .error select {
+    @apply border-orange-600;
+}

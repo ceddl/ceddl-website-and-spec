@@ -26,6 +26,7 @@ module.exports = {
             '7xl': '5rem',
         },
         colors: {
+            'transparent': 'transparent',
             'white': {
                 DEFAULT: '#FFFFFF',
             },

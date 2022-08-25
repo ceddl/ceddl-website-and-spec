@@ -3,6 +3,16 @@
     height: 5rem;
 }
 
+.usp-back {
+    background-image: url(/img/backgrounds/uspback.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    box-shadow:
+            inset 0px 15px 10px -10px rgb(0 0 0 / 0.2),
+            inset 0px -15px 10px -10px rgb(0 0 0 / 0.2);
+}
+
 .default-back {
     background: linear-gradient(100deg,  theme('colors.yellow.500') -20%, theme('colors.green.700') 25%, theme('colors.yellow.700') 75%, theme('colors.yellow.500') 120%);
 }

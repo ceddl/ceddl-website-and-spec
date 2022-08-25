@@ -1,0 +1,80 @@
+.home-nav-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @apply text-2xl
+}
+
+.home-nav img {
+    transition-property: filter;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(1px 1px 10px rgb(0 0 0 / 0.2));
+}
+
+.home-nav a {
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform;
+}
+
+.home-nav a:hover {
+    transform: scale(97%);
+}
+
+.home-nav a:hover img {
+
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.2));
+}
+
+.home-nav-title span {
+    @apply block font-big font-bold text-gray-500;
+}
+
+#getting-started-main .home-nav-title {
+    top: 68%;
+    left: 47%;
+    transform-origin: center;
+    transform: rotate(1deg) translate(-50%, -50%);
+}
+
+#docs-main .home-nav-title {
+    top: 40%;
+    left: 48%;
+    transform-origin: center;
+    transform: rotate(-2deg) translate(-50%, -50%);
+    @apply leading-5 text-center;
+}
+
+#contact-main .home-nav-title {
+    top: 17%;
+    left: 42%;
+    transform: rotate(-11deg) translate(-50%, -50%);;
+    max-width: 125px;
+}
+
+#blog-main .home-nav-title {
+    top: 32%;
+    left: 29%;
+    max-width: 125px;
+    transform: rotate(-13deg) translate(-50%, -50%);
+    @apply leading-5 text-center;
+}
+
+
+#consult-main .home-nav-title {
+    top: 31%;
+    left: 48%;
+    max-width: 125px;
+    transform: rotate(-2deg) translate(-50%, -50%);
+    @apply leading-5 text-center;
+}
+
+#working-group-main .home-nav-title {
+    top: 25%;
+    left: 50%;
+    max-width: 125px;
+    @apply leading-5 text-center;
+}
+

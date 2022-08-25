@@ -1,5 +1,8 @@
 @import "tailwindcss/base";
 @import "assets/css/backgrounds.css";
+@import "assets/css/button.css";
+@import "assets/css/home-navigation.css";
+@import "assets/css/form.css";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
