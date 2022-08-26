@@ -78,3 +78,20 @@
     @apply leading-5 text-center;
 }
 
+.ceddl-fixed-nav.ceddl-fixed-nav--hidden {
+    transform: translateX(-150%);
+}
+
+.ceddl-fixed-nav.ceddl-fixed-nav--transitions {
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ceddl-local-nav {
+    @apply bg-white flex flex-grow w-full justify-between left-0 fixed border-b border-gray-200 px-6 content-center;
+}
+
+.ceddl-fixed-nav {
+    @apply bg-white lg:block fixed z-20 inset-0 left-[max(0px,calc(50%-45rem))] max-w-[90%] right-auto w-[19.5rem] pb-10 px-8 overflow-y-auto;
+}
