@@ -7,25 +7,25 @@
         linear-gradient(100deg, #FFF01B -20%, #93A400 25%, #B4A800 75%, #FFF01B 120%)
         <linearGradient id="linear-gradient" x1="-0.11" y1="2024.18" x2="1919.89" y2="2024.18"
                         gradientTransform="translate(0.22 -1024.18)" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#B4A800"/>
-            <stop offset="1" stop-color="#E7D800"/>
+            <stop offset="0" stop-color="#E6F0F9"/>
+            <stop offset="1" stop-color="#A4C6EB"/>
         </linearGradient>
         <linearGradient id="linear-gradient-2" x1="1771.41" y1="227.45" x2="-74" y2="1307.33"
                         gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#6A7600"/>
-            <stop offset="1" stop-color="#E7D800"/>
+            <stop offset="0" stop-color="#C5DBF2"/>
+            <stop offset="1" stop-color="#C5DBF2"/>
         </linearGradient>
         <linearGradient id="linear-gradient-3" x1="960" y1="1623.38" x2="960" y2="238.12"
                         xlink:href="#linear-gradient-2"/>
         <linearGradient id="linear-gradient-4" x1="1375.71" y1="953.21" x2="164.51" y2="2164.4"
                         gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#E7D800"/>
-            <stop offset="1" stop-color="#93A400"/>
+            <stop offset="0" stop-color="#E6F0F9"/>
+            <stop offset="1" stop-color="#A4C6EB"/>
         </linearGradient>
         <linearGradient id="linear-gradient-5" x1="0.11" y1="1529.43" x2="1920.11" y2="1529.43"
                         gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#B4A800"/>
-            <stop offset="1" stop-color="#6A7600"/>
+            <stop offset="0" stop-color="#E6F0F9"/>
+            <stop offset="1" stop-color="#A4C6EB"/>
         </linearGradient>
     </defs>
     <rect class="cls-1" x="0.11" width="1920" height="2000" transform="translate(1920.22 2000) rotate(180)"/>

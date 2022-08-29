@@ -11,11 +11,11 @@
 }
 
 .btn-primary {
-    @apply text-white bg-yellow-600 hover:bg-yellow-700;
+    @apply bg-yellow-500 hover:bg-yellow-500 hover:bg-yellow-600;
 }
 
 .btn-primary.btn-outline {
-    @apply text-yellow-600 border-2 border-yellow-600 bg-transparent hover:bg-yellow-600 hover:text-white;
+    @apply text-yellow-600 border-2 border-yellow-600 bg-transparent hover:bg-yellow-500 hover:text-gray-700;
 }
 
 .btn-secondary {

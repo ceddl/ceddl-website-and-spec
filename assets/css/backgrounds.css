@@ -1,5 +1,5 @@
 .header-back {
-    background:rgba(0,0,0, 0.1);
+    background:rgba(225, 225, 225, 0.2);
     height: 5rem;
 }
 
@@ -8,13 +8,10 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    box-shadow:
-            inset 0px 15px 10px -10px rgb(0 0 0 / 0.2),
-            inset 0px -15px 10px -10px rgb(0 0 0 / 0.2);
 }
 
 .default-back {
-    background: linear-gradient(100deg,  theme('colors.yellow.500') -20%, theme('colors.green.700') 25%, theme('colors.yellow.700') 75%, theme('colors.yellow.500') 120%);
+    background: linear-gradient(100deg,  theme('colors.green.500') -20%, theme('colors.green.700') 25%, theme('colors.green.700') 75%, theme('colors.green.500') 120%);
 }
 
 .invite-background {
@@ -28,8 +25,8 @@
     .hero {
         height: 100%;
         width: 100%;
-        background: theme('colors.yellow.700');
-        background: linear-gradient(100deg,  theme('colors.yellow.500') -20%, theme('colors.green.700') 25%, theme('colors.yellow.700') 75%, theme('colors.yellow.500') 120%);
+        background: theme('colors.green.700');
+        background: linear-gradient(100deg,  theme('colors.bluelight.200') -20%, theme('colors.bluelight.400') 25%, theme('colors.bluelight.400') 75%, theme('colors.bluelight.200') 120%);
 
         .w {
             position: absolute;
