@@ -24,7 +24,7 @@
 }
 
 .home-nav a:hover img {
-    
+
     /*filter: drop-shadow(1px 1px 2px rgb(0 0 0 / 0.2));*/
 }
 
@@ -89,7 +89,7 @@
 }
 
 .ceddl-local-nav {
-    @apply bg-white flex flex-grow w-full justify-between left-0 fixed border-b border-gray-200 px-6 content-center;
+    @apply bg-white flex flex-grow justify-center w-full left-0 fixed;
 }
 
 .ceddl-fixed-nav {

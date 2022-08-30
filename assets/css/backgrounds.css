@@ -1,5 +1,5 @@
 .header-back {
-    background:rgba(225, 225, 225, 0.2);
+    /*background:rgba(225, 225, 225, 0.2);*/
     height: 5rem;
 }
 
@@ -26,7 +26,7 @@
         height: 100%;
         width: 100%;
         background: theme('colors.green.700');
-        background: linear-gradient(100deg,  theme('colors.bluelight.200') -20%, theme('colors.bluelight.400') 25%, theme('colors.bluelight.400') 75%, theme('colors.bluelight.200') 120%);
+        background: linear-gradient(100deg,  theme('colors.green.600') -20%, theme('colors.green.700') 25%, theme('colors.green.600') 75%, theme('colors.green.700') 120%);
 
         .w {
             position: absolute;

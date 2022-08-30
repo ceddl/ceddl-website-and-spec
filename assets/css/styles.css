@@ -3,8 +3,13 @@
 @import "assets/css/button.css";
 @import "assets/css/home-navigation.css";
 @import "assets/css/form.css";
+@import "assets/css/themify-icons.css";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+a:hover {
+    color: theme('colors.green.500')
+}
 
 /* poppins-600 - latin */
 @font-face {

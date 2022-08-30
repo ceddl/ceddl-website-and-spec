@@ -1,0 +1,15 @@
+<ul class="mt-8">
+  {{ range (where site.RegularPages "Type" "blog") }}
+  <li class="mt-2 lg:mt-4">
+    <a href="{{ .Permalink }}">
+      <h5 class="font-semibold"> {{ .Params.Title }}</h5>
+      <ul>
+        <li class="mb-0"><i class="ti-pencil-alt text-primary mr-2"></i> By {{ .Params.Author }}</li>
+        <li class="mb-0"><i class="ti-calendar text-primary mr-2"></i>
+          {{ .PublishDate.Format "02 Jan, 2006" }}
+        </li>
+      </ul>
+    </a>
+  </li>
+  {{ end }}
+</ul>

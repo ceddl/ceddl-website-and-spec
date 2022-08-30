@@ -3,6 +3,11 @@ draft: false
 author: Roland Broekema
 title: Web analytics & personalization datalayer using React, Vue or Angular
 date: 2019-02-04
+description : "It can be hard to make the leap from hacking together code that works to writing code that`s organized,
+maintainable,
+reusable, and a joy to work on."
+myimage: "/img/ceddl-react-angular-vue.png"
+author: "Roland Broekema"
 ---
 
 Probably, a development teams that has invested into a front-end mv* framework is going to be the most difficult to
@@ -17,8 +22,9 @@ AngularJS</a>
 The applications demonstrate compatibility with the major front-end mv* frameworks. Show that leveraging the template
 engines and data models, greatly improves data quality and will simplify development effort.
 
+{{< rawhtml >}}
 <p><img src="/img/ceddl-react-angular-vue.png" alt="example applications using vanilla, react, vue and angular."></p>
-
+{{< /rawhtml >}}
 ### On top of TodoMVC
 
 It can be hard to make the leap from hacking together code that works to writing code that`s organized, maintainable,
