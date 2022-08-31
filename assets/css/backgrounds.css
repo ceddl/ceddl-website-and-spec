@@ -4,10 +4,7 @@
 }
 
 .usp-back {
-    background-image: url(/img/backgrounds/uspback.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background-image: linear-gradient(to right,#004c4c,#00716b)
 }
 
 .default-back {
@@ -17,57 +14,16 @@
 .invite-background {
     overflow: hidden;
     position: absolute;
-    display: flex;
     width: 100%;
-    height: calc(100% + 14rem);
+    height: calc(100% + 15rem);
     z-index: -1;
     margin-top: -5rem;
-    .hero {
+
+    svg {
+        position: absolute;
         height: 100%;
-        width: 100%;
-        background: theme('colors.green.700');
-        background: linear-gradient(100deg,  theme('colors.green.600') -20%, theme('colors.green.700') 25%, theme('colors.green.600') 75%, theme('colors.green.700') 120%);
-
-        .w {
-            position: absolute;
-            top: 100%;
-            left: -25vw;
-            right: 0px;
-            background: url(/img/backgrounds/wave.svg);
-            background-position: center;
-        }
-
-        .wave {
-            height: 200px;
-            transform: translateY(-40px);
-        }
-
-        .wave2 {
-            height: 240px;
-            transform: translateY(-80px);
-            background-size: 960px 240px;
-            opacity: 0.5;
-            left: -80vw;
-            right: -5vw;
-        }
-
-        .wave3 {
-            height: 220px;
-            transform: translateY(-120px);
-            background-size: 880px 220px;
-            opacity: 0.33;
-            left: 0vw;
-            right: -20vw;
-        }
-
-        .wave4 {
-            height: 280px;
-            transform: translateY(-160px);
-            background-size: 1120px 280px;
-            opacity: 0.1;
-            left: 0vw;
-            right: -40vw;
-        }
-
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

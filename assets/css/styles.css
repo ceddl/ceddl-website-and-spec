@@ -7,9 +7,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-a:hover {
+a.link:hover {
     color: theme('colors.green.500')
 }
+
 
 /* poppins-600 - latin */
 @font-face {
@@ -45,4 +46,34 @@ a:hover {
     html {
         -webkit-font-smoothing: antialiased;
     }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 150ms;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation-name: fadeOut;
+    animation-duration: 150ms;
 }

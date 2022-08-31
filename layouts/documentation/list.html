@@ -20,7 +20,7 @@
     <ceddl-fixed-nav>
       <nav class="lg:text-sm lg:leading-6 relative">
         <div class="sticky top-0 -ml-0.5">
-          {{- partial "blog-nav.html" . -}}
+          {{- partial "documentation-nav.html" . -}}
         </div>
       </nav>
     </ceddl-fixed-nav>
@@ -29,7 +29,7 @@
       <div class="w-full mx-auto pt-0 xl:ml-0 xl:mr-[15.5rem] xl:pr-16">
         {{ range .Pages }}
         <article
-          class="prose prose-sm md:prose-base max-w-3xl px-4 md:px-6 xl:ml-0 xl:mr-[15.5rem] xl:pr-16 mx-auto mb-12 mt-12 text-gray-600 justify-self-center">
+          class="prose prose-sm md:prose-base max-w-3xl px-4 md:px-6 xl:ml-0 xl:mr-[15.5rem] xl:pr-16 mx-auto mb-16 mt-12 text-gray-600 justify-self-center">
           <h1 class="font-big text-gray-700"><a class="text-3xl" href="{{ .Permalink }}">{{ .Params.Title }}</a></h1>
           <p>{{ .Params.Description }}</p>
           {{ if .Params.myimage }}
