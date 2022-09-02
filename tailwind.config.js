@@ -6,6 +6,25 @@ module.exports = {
     "./content/**/*.html"
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+
+      '3xl': '2200px',
+      // => @media (min-width: 2200px) { ... }
+    },
     fontFamily: {
       'big': ['Poppins', 'sans-serif'],
       'small': ['Arimo', 'sans-serif'],
@@ -86,21 +105,21 @@ module.exports = {
         '900': '#24609F'
       },
       'green': {
-        DEFAULT: '#008989',
-        '50': '#6AFFFF',
-        '100': '#56FFFF',
-        '200': '#2DFFFF',
-        '300': '#04FFFF',
-        '400': '#00DBDB',
-        '500': '#00B2B2',
-        '600': '#008989',
-        '700': '#006060',
-        '800': '#002121',
-        '900': '#000F0F'
+        DEFAULT: '#004C4C',
+        '50': '#00A8A8',
+        '100': '#009E9E',
+        '200': '#008989',
+        '300': '#007575',
+        '400': '#006060',
+        '500': '#004C4C',
+        '600': '#004242',
+        '700': '#003838',
+        '800': '#002D2D',
+        '900': '#002323'
       },
       'gray': {
         DEFAULT: '#6B7280',
-        '50': '#F3F3F5',
+        '50': '#f9f9f9',
         '100': '#E3E5E8',
         '200': '#C5C8CE',
         '300': '#A6ABB5',

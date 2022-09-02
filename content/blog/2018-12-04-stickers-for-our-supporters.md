@@ -8,6 +8,7 @@ update,
 increasing downloads require us to get a better understanding of our users."
 myimage: "/img/docs/stickers.png"
 author: "Roland Broekema"
+myType: Blog
 ---
 
 We have stickers available for the Patreon supporters.

@@ -8,6 +8,7 @@ To review the
 foundation that we have built and figure out a way forward."
 myimage: "/img/w3cgroup.png"
 author: "Roland Broekema"
+myType: News
 ---
 
 2019 is well on its way, I feel it's a appropriate moment to evaluate our developments over de last year. To review the

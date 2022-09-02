@@ -7,5 +7,4 @@ keywords: [form, expert]
 type: talk-to-an-ceddl-expert
 ---
 
-Hugo Starter Theme for Tailwindcss.
 

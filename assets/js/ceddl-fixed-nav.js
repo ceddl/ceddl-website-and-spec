@@ -1,46 +1,60 @@
+import autoBind from './utils/autobind';
+
 export class CeddlFixedNav extends HTMLElement {
+
   constructor() {
+
     super()
       .attachShadow({mode: 'open'})
       .innerHTML = `<slot></slot>`;
+    this.backdropElm = null;
 
+    autoBind(this);
     this.classList.add("ceddl-fixed-nav");
-    this.elm = this;
-    this.setOffsets = this.setOffsets.bind(this);
-    this.resetBackdrop = this.resetBackdrop.bind(this);
-    this.toggle = this.toggle.bind(this);
+  }
+
+  createBackdropElm() {
+    this.backdropElm = document.createElement('div');
+    this.backdropElm.id = 'ceddl-fixed-nav-backdrop';
+    this.backdropElm.setAttribute('ceddl-click', '');
+    this.backdropElm.classList.add('ceddl-fixed-nav-backdrop', 'fade-in');
+    this.parentNode.insertBefore(this.backdropElm, this);
+    this.backdropElm.addEventListener('click', this.toggle);
+  };
+
+  clearBackdrop() {
+    this.backdropElm.removeEventListener('animationend', this.clearBackdrop);
+    this.backdropElm = this.backdropElm.remove();
   }
 
   calcTopOffset(elem) {
     var bounding = elem.getBoundingClientRect();
     return bounding.bottom > 0 ? bounding.bottom : 0;
-  };
+  }
 
   calcBottomOffset(elem) {
     var bounding = elem.getBoundingClientRect();
     return -(bounding.top - window.innerHeight) > 0 ? -(bounding.top - window.innerHeight) : 0;
   };
 
-  resetBackdrop() {
-    const backdropElm = document.querySelector('.ceddl-fixed-nav-backdrop');
-    backdropElm.classList.add('hidden');
-    backdropElm.classList.remove('fade-out');
-    backdropElm.removeEventListener('animationend', this.resetBackdrop);
-  }
-
   toggle() {
     const backdropElm = document.querySelector('.ceddl-fixed-nav-backdrop');
     if (!this.classList.contains('ceddl-fixed-nav--vissible')) {
       this.classList.remove('ceddl-fixed-nav--hidden');
       this.classList.add('ceddl-fixed-nav--vissible');
-      backdropElm.classList.remove('hidden');
-      backdropElm.classList.add('fade-in');
+      this.createBackdropElm();
     } else {
       this.classList.add('ceddl-fixed-nav--hidden');
       this.classList.remove('ceddl-fixed-nav--vissible');
       backdropElm.classList.add('fade-out');
       backdropElm.classList.remove('fade-in');
-      backdropElm.addEventListener('animationend', this.resetBackdrop);
+      backdropElm.addEventListener('animationend', this.clearBackdrop);
+    }
+  }
+
+  closeifOpen() {
+    if (this.classList.contains('ceddl-fixed-nav--vissible')) {
+      this.toggle();
     }
   }
 
@@ -50,7 +64,7 @@ export class CeddlFixedNav extends HTMLElement {
         this.classList.add('ceddl-fixed-nav--hidden');
       }
       if (!this.classList.contains('ceddl-fixed-nav--transitions')) {
-        setTimeout(() => this.classList.add('ceddl-fixed-nav--transitions'), 10);
+        this.classList.add('ceddl-fixed-nav--transitions');
       }
       this.style.top = '0px';
       this.style.bottom = '0px';
@@ -66,9 +80,11 @@ export class CeddlFixedNav extends HTMLElement {
     this.header = document.body.querySelector('header');
     this.footer = document.body.querySelector('footer');
     document.addEventListener('scroll', this.setOffsets);
-    window.addEventListener('resize', this.setOffsets);
+    window.addEventListener('resize', () => {
+      this.setOffsets();
+      this.closeifOpen()
+    });
     this.addEventListener('toggle', this.toggle);
-    document.querySelector('.ceddl-fixed-nav-backdrop').addEventListener('click', this.toggle);
     this.setOffsets()
   }
 }

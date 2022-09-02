@@ -8,6 +8,7 @@ complete rewrite of
 the frontend datalayer solution in 2018, quality is good enough to share and open source the polyfill online.
 ,
 increasing downloads require us to get a better understanding of our users."
+myType: News
 ---
 
 The team has been working for 7 years implementing and improving website marketing systems. After a complete rewrite of

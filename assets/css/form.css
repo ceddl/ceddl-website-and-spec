@@ -26,13 +26,15 @@ ceddl-forms option {
 
 ceddl-forms input[type=text],
 ceddl-forms input[type=number],
+ceddl-forms input[type=email],
 ceddl-forms textarea,
 ceddl-forms select {
-    @apply border text-sm rounded-lg block w-full p-2.5 bg-white;
+    @apply border rounded-lg block w-full px-4 py-2.5 bg-white;
 }
 
 ceddl-forms .success input[type=text],
 ceddl-forms .success input[type=number],
+ceddl-forms .success input[type=email],
 ceddl-forms .success textarea,
 ceddl-forms .success select {
     @apply border-green-600;
@@ -40,7 +42,12 @@ ceddl-forms .success select {
 
 ceddl-forms .error input[type=text],
 ceddl-forms .error input[type=number],
+ceddl-forms .error input[type=email],
 ceddl-forms .error textarea,
 ceddl-forms .error select {
     @apply border-orange-600;
+}
+
+ceddl-forms input[type=email].inline-button {
+    @apply bg-transparent pr-32;
 }

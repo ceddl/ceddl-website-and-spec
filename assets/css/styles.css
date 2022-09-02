@@ -11,6 +11,9 @@ a.link:hover {
     color: theme('colors.green.500')
 }
 
+body {
+    overflow-x: hidden;
+}
 
 /* poppins-600 - latin */
 @font-face {

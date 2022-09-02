@@ -8,6 +8,7 @@ collection is
 not as simple a adding a mouse move listener on the body. There are lots of situations and exceptions to handle."
 myimage: "/img/heatmap.png"
 author: "Roland Broekema"
+myType: Coding
 ---
 
 Heatmap data input has been on the team bucket list from day one. We found that heatmap coordinates data collection is

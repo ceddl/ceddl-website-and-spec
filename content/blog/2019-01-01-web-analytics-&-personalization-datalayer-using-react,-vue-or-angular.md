@@ -8,6 +8,7 @@ maintainable,
 reusable, and a joy to work on."
 myimage: "/img/ceddl-react-angular-vue.png"
 author: "Roland Broekema"
+myType: Blog
 ---
 
 Probably, a development teams that has invested into a front-end mv* framework is going to be the most difficult to
