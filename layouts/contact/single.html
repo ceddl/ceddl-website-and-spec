@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='{{ .Site.LanguageCode }}'>
+{{ partial "head.html" . }}
+
+<body class="font-small flex flex-col min-h-screen text-gray-800">
+<div class="usp-back">
+  {{- partial "header-home.html" . -}}
+</div>
+<main>
+
+  <article class="flex flex-col relative text-center text-white usp-back">
+    <div class="flex flex-col items-center p-8">
+      <h1 class="font-big text-3xl md:text-5xl ml-2 mr-2 welcome-headline pt-3 md:pt-8">{{ .Title }}</h1>
+      <p class="text-2xl md-text-3xl max-w-4xl ml-4 mr-4 ">
+        {{ .Description }}
+      </p>
+    </div>
+
+  </article>
+
+  <article class="relative">
+    <div class="invite-background-two">
+      <img src="/img/backgrounds/appback2.png">
+    </div>
+    <div class="p-5 mb-14 text-gray-700">
+      <div class="max-w-7xl m-auto">
+        <div class="flex flex-wrap">
+          <div class="contact-box">
+            <a href="https://github.com/ceddl/ceddl-polyfill/discussions/" target="_blank" class="box">
+
+              <i class="ti-direction text-green-700 text-4xl text-primary mr-2"></i>
+              <h3 class="text-xl pt-6 pb-4 font-big text-gray-900">General Support</h3>
+              <p class="text-gray-500">
+                We’re using Discussions as a place for the community to connect and help each other, connect with the
+                support group.
+              </p>
+              <i class="ti-angle-double-right box-arrows"></i>
+            </a>
+          </div>
+          <div class="contact-box">
+            {{ with .Site.GetPage "/talk-to-an-ceddl-expert" }}
+            <a href="{{ .Permalink }}" class="box">
+
+              <i class="ti-plug text-green-700 text-4xl text-primary mr-2"></i>
+              <h3 class="text-xl pt-6 pb-4 font-big text-gray-900">Talk to an expert</h3>
+              <p class="text-gray-500">
+                Talk to an expert who can deliver insights and answer any questions you have.
+              </p>
+              <i class="ti-angle-double-right box-arrows"></i>
+            </a>
+            {{ end }}
+          </div>
+
+          <div class="contact-box">
+            {{ with .Site.GetPage "/sponsor-partner-up" }}
+            <a href="{{ .Permalink }}" class="box">
+
+              <i class="ti-medall text-green-700 text-4xl text-primary mr-2"></i>
+              <h3 class="text-xl pt-6 pb-4 font-big text-gray-900">Partner Program</h3>
+              <p class="text-gray-500">
+                Training, co-marketing, access to our end-to-end solutions. Ensure long term sustainability of
+                ceddl and its ecosystem.
+              </p>
+              <i class="ti-angle-double-right box-arrows"></i>
+            </a>
+            {{ end }}
+          </div>
+          <div class="contact-box">
+            {{ with .Site.GetPage "/talk-to-account" }}
+            <a href="{{ .Permalink }}" class="box">
+
+              <i class="ti-user text-green-700 text-4xl text-primary mr-2"></i>
+              <h3 class="text-xl pt-6 pb-4 font-big text-gray-900">Billing and account</h3>
+              <p class="text-gray-500">
+
+                Ask about billing, account or report workspace concerns related to our code of conduct.
+              </p>
+              <i class="ti-angle-double-right box-arrows"></i>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="bg-gray-50">
+    {{ partial "usp/subscribe.html" . }}
+  </article>
+</main>
+{{- partial "footer.html" . -}}
+</body>
+</html>

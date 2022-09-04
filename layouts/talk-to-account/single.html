@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='{{ .Site.LanguageCode }}'>
+{{ partial "head.html" . }}
+
+<body class="font-small flex flex-col min-h-screen text-gray-800">
+<div class="usp-back">
+  {{- partial "header-home.html" . -}}
+</div>
+<main>
+
+  <article class="flex flex-col relative text-center text-white usp-back">
+    <div class="flex flex-col items-center p-8">
+      <h1 class="font-big text-3xl md:text-5xl ml-2 mr-2 welcome-headline pt-3 md:pt-8">{{ .Title }}</h1>
+      <p class="text-2xl md-text-3xl max-w-4xl ml-4 mr-4 ">
+        {{ .Description }}
+      </p>
+    </div>
+
+  </article>
+
+  <article class="relative">
+    <div class="invite-background-two">
+      <img src="/img/backgrounds/appback2.png">
+    </div>
+    <div class="p-4 mb-14 text-gray-700">
+      <div class="max-w-4xl m-auto gray-box">
+        <ceddl-forms>
+          <form>
+            <div class="mb-4">
+              <label for="name">Full name</label>
+              <input type="text" id="name" placeholder="Full name">
+              <!-- <p>Alright! Username available!</p>-->
+            </div>
+            <div class="mb-4">
+              <label for="company">Company name</label>
+              <input type="text" id="company" placeholder="Company name">
+              <!-- <p>Alright! Username available!</p>-->
+            </div>
+            <div class="mb-4">
+              <label for="email">Your email</label>
+              <input type="email" id="email" placeholder="you@company.com">
+              <!-- <p>Alright! Username available!</p>-->
+            </div>
+            <div class="mb-4">
+              <label for="callback">How to contact you?</label>
+              <textarea id="callback" rows="1"></textarea>
+              <!--              <p>Oops! Username already taken!</p>-->
+            </div>
+            <div class="mb-4">
+              <label for="helping">How can we help?</label>
+              <textarea id="helping" rows="4"></textarea>
+              <!--              <p>Oops! Username already taken!</p>-->
+            </div>
+            <div class="mt-6 mb-4"><input type="submit" class="btn btn-primary w-full" value="Submit"></div>
+          </form>
+
+        </ceddl-forms>
+      </div>
+    </div>
+  </article>
+
+  <article class="bg-gray-50">
+    {{ partial "usp/subscribe.html" . }}
+  </article>
+</main>
+{{- partial "footer.html" . -}}
+</body>
+</html>
