@@ -1,14 +1,45 @@
 .header-back {
     /*background:rgba(225, 225, 225, 0.2);*/
-    height: 5rem;
 }
 
 .usp-back {
     background-image: linear-gradient(to right, #004c4c, #00716b)
 }
 
+.usp-back-two{
+    background: linear-gradient(to right, #004c4c, #00716b);
+    overflow: hidden;
+
+    .usp-back-two-interest {
+        position: absolute;
+        top: 16rem;
+        right: 0;
+        left: -10rem;
+        height: 25rem;
+        background: linear-gradient(90deg, rgba(0,137,137,0.25) 0%, rgba(0,137,137,0.16) 85%, rgba(255,255,255,0) 100%);
+        transform: rotate(-12deg);
+    }
+}
+
+
+.slope-top {
+    width: 100%;
+    height: 50%;
+    padding-top: calc(100vw * 0.15) / 2);
+    clip-path: polygon(0 0, 100% calc(100vw * 0.15), 100% 100%, 0 100%);
+    background: linear-gradient(to right, #004c4c, #00716b);
+}
+
+.slope-bottom {
+    width: 100%;
+    height: 50%;
+    padding-bottom: calc(100vw * 0.15 / 2);
+    clip-path:  polygon(0 0, 100% 0%, 100% 100%, 100% calc(100vw * 0.15));
+    background: linear-gradient(to right, #004c4c, #00716b);
+}
+
 .default-back {
-    background: linear-gradient(100deg, theme('colors.green.200') -20%, theme('colors.green.700') 25%, theme('colors.green.700') 75%, theme('colors.green.200') 120%);
+    background: linear-gradient(100deg, theme('colors.green.200') -20%, theme('colors.green.700') 25%, theme('colors.green.700') 70%, theme('colors.green.200') 120%);
 }
 
 .invite-background {
@@ -17,7 +48,7 @@
     width: 100%;
     height: calc(100% + 15rem);
     z-index: -1;
-    margin-top: -5rem;
+    margin-top: -8rem;
 
     img {
         position: absolute;

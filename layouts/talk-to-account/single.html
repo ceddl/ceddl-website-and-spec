@@ -25,33 +25,28 @@
     <div class="p-4 mb-14 text-gray-700">
       <div class="max-w-4xl m-auto gray-box">
         <ceddl-forms>
-          <form>
-            <div class="mb-4">
+          <form target="_blank" action="#" novalidate data-jsValidate="true">
+            <div class="mb-4 scroll-mt-4">
               <label for="name">Full name</label>
-              <input type="text" id="name" placeholder="Full name">
-              <!-- <p>Alright! Username available!</p>-->
+              <input type="text" id="name" required placeholder="Full name">
+              <p>Full name is a required field.</p>
             </div>
-            <div class="mb-4">
+            <div class="mb-4 scroll-mt-4">
               <label for="company">Company name</label>
               <input type="text" id="company" placeholder="Company name">
               <!-- <p>Alright! Username available!</p>-->
             </div>
-            <div class="mb-4">
+            <div class="mb-4 scroll-mt-4">
               <label for="email">Your email</label>
-              <input type="email" id="email" placeholder="you@company.com">
-              <!-- <p>Alright! Username available!</p>-->
+              <input type="email" id="email" required pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
+                     placeholder="you@company.com">
+              <p>Email is required and should be formatted as you@company.com</p>
             </div>
-            <div class="mb-4">
-              <label for="callback">How to contact you?</label>
-              <textarea id="callback" rows="1"></textarea>
-              <!--              <p>Oops! Username already taken!</p>-->
-            </div>
-            <div class="mb-4">
+            <div class="mb-4 scroll-mt-4">
               <label for="helping">How can we help?</label>
               <textarea id="helping" rows="4"></textarea>
-              <!--              <p>Oops! Username already taken!</p>-->
             </div>
-            <div class="mt-6 mb-4"><input type="submit" class="btn btn-primary w-full" value="Submit"></div>
+            <div class="mt-6 mb-4"><input type="submit" class="btn btn-primary w-full" value="Contact support"></div>
           </form>
 
         </ceddl-forms>

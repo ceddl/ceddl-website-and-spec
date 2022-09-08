@@ -2,7 +2,7 @@
     @apply flex flex-row w-full md:w-1/2 xl:w-1/4;
 
     .box {
-        box-shadow: 0 1.5rem 3rem rgb(13 21 55 / 8%);
+        box-shadow: 0 1.5rem 3rem rgb(13 21 55 / 10%);
         @apply relative transition-all m-4 pl-8 pt-8 pr-8 pb-12 flex flex-col bg-gray-50 rounded;
     }
 }
@@ -13,6 +13,7 @@
 }
 
 .gray-box {
+    box-shadow: 0 1.5rem 3rem rgb(13 21 55 / 8%);
     @apply  p-4 sm:pl-8 sm:pt-8 sm:pr-8 pb-12 bg-gray-50 rounded;
 }
 

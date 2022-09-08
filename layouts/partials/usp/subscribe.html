@@ -1,15 +1,35 @@
 <div class="flex max-w-xl m-auto justify-center">
   <div class="text-center w-full p-6 py-12 md:p-12">
     <h2 class="text-md font-big text-gray-600 mb-4">Subscribe to our release, news letter.</h2>
-    <ceddl-forms>
-      <form class="relative flex flex-grow max-w-lg" id="news-form" name="news-form" method="post"
-            action="" target="_blank">
-        <input class="inline-button w-full" id="member_email" name="member" type="email"
-               placeholder="Email address" required>
-        <div class="absolute right-[5px] top-[6px]"><input class="btn btn-sm btn-tertiary" id="news_submit"
-                                                           name="member_submit"
-                                                           type="submit" value="subscribe"></div>
+    <ceddl-forms action="/analyse/hook/s17v7vh2c1ayq5hcink78gzb3gwtdtm6" method="POST">
+      <form class="flex flex-grow max-w-lg" target="_blank" action="#" novalidate data-jsValidate="true" id="news-form"
+            name="news-form" method="post">
+        <diV class="relative w-full">
+          <input class="inline-button w-full" pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" id="member_email"
+                 name="member" type="email"
+                 placeholder="Email address" required>
+          <div class="absolute right-[5px] top-[6px]">
+            <input class="btn btn-sm btn-tertiary" id="news_submit"
+                   name="member_submit"
+                   type="submit" value="subscribe"></div>
+        </diV>
+
+        <template class="js-ceddl-form-success">
+          <div class="bg-green-50 border-l-4 border-green-500 text-green-700 p-4 mt-4" role="alert">
+            <p class="font-bold">Succesfull enroll</p>
+            <p>Thank you for subscribing!</p>
+
+          </div>
+        </template>
+        <template class="js-ceddl-form-error">
+          <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 mt-4" role="alert">
+            <p class="font-bold">Oeps: An error occurred.</p>
+          </div>
+        </template>
+
+
       </form>
+      <div class="js-ceddl-form-feedback"></div>
     </ceddl-forms>
     <p class="mt-4 text-xs text-gray-600">Get notified after every release and receive news updates as soon as they
       happen.</p>

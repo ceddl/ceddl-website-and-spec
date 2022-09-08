@@ -27,7 +27,7 @@
 }
 
 .btn-tertiary {
-    @apply text-white bg-green-600 hover:bg-green-700;
+    @apply text-white bg-green-500 hover:bg-green-700;
 }
 
 .btn-tertiary.btn-outline {

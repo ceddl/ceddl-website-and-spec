@@ -8,8 +8,18 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+a.link {
+    h2,h3,h4,h5 {
+        @apply text-gray-900;
+    }
+}
+
 a.link:hover {
-    color: theme('colors.green.500')
+    color: theme('colors.green.500');
+
+    h2,h3,h4,h5 {
+        @apply text-green-600;
+    }
 }
 
 body {
