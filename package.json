@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "hugo server -e dev"
+  },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^4.1.3",
     "@tailwindcss/typography": "^0.5.4",

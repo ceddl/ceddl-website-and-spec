@@ -1,7 +1,13 @@
 <div class="flex max-w-xl m-auto justify-center">
   <div class="text-center w-full p-6 py-12 md:p-12">
     <h2 class="text-md font-big text-gray-600 mb-4">Subscribe to our release, news letter.</h2>
-    <ceddl-forms action="/analyse/hook/s17v7vh2c1ayq5hcink78gzb3gwtdtm6" method="POST">
+    <ceddl-forms
+      {{ if eq hugo.Environment "dev" }}
+      action="http://localhost:8093/hook/s17v7vh2c1ayq5hcink78gzb3gwtdtm6"
+      {{ else }}
+      action="/analyse/hook/s17v7vh2c1ayq5hcink78gzb3gwtdtm6"
+      {{ end }}
+      method="POST">
       <form class="flex flex-grow max-w-lg" target="_blank" action="#" novalidate data-jsValidate="true" id="news-form"
             name="news-form" method="post">
         <diV class="relative w-full">
@@ -16,8 +22,8 @@
 
         <template class="js-ceddl-form-success">
           <div class="bg-green-50 border-l-4 border-green-500 text-green-700 p-4 mt-4" role="alert">
-            <p class="font-bold">Succesfull enroll</p>
-            <p>Thank you for subscribing!</p>
+            <p class="font-bold">Super! Please verify.</p>
+            <p>To finish signing up please confirm via the e-mail that was sent. This ensures we have the right email and prevents abuse.</p>
 
           </div>
         </template>
