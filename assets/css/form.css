@@ -70,3 +70,11 @@ ceddl-forms input[type=email].darkback {
 ceddl-forms .error input[type=email].darkback {
     @apply border-orange-600
 }
+
+.ceddl-forms-success {
+    @apply bg-green-25 border-l-4 border-green-500 text-green-700 p-4 mt-4;
+}
+
+.ceddl-forms-error {
+    @apply bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 mt-4;
+}

@@ -12,28 +12,33 @@
   <section class="relative usp-back-two border-b py-8">
     <div class="usp-back-two-interest"></div>
     <div class="relative max-w-7xl mx-auto">
-      <div class="flex flex-wrap pt-8 pb-16">
+      <div class="flex flex-wrap pb-16">
         <div class="w-full lg:w-7/12 p-4 sm:p-16 lg:pl-24">
           <div class="gray-box sm:pr-16 sm:pb-16">
             <h1 class="text-5xl font-big leading-tight text-5xl mt-0 mb-2">See what ceddl can do for you.</h1>
             <p class="mb-8">Tell us a little about yourself and we'll connect you with a customer journey and analytics
               expert who can deliver insights and answer any questions you have.</p>
-            <ceddl-forms>
+            <ceddl-forms method="POST"
+            {{ if eq hugo.Environment "dev" }}
+            action="http://localhost:8093/hook/w5s551d12la9g8p9o265lkp0ey40m93g"
+            {{ else }}
+            action="/analyse/hook/w5s551d12la9g8p9o265lkp0ey40m93g"
+            {{ end }}>
               <form target="_blank" action="#" novalidate data-jsValidate="true">
                 <div class="mb-4 scroll-mt-4">
                   <label for="email">Your email</label>
-                  <input type="email" id="email" required pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
+                  <input type="email" id="email" name="email" required pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
                          placeholder="you@company.com">
                   <p>Email is required and should be formatted as you@company.com</p>
                 </div>
                 <div class="mb-4 scroll-mt-4">
-                  <label for="name">Full name</label>
-                  <input required type="text" id="name" placeholder="Full name">
+                  <label for="full-name">Full name</label>
+                  <input required type="text" id="full-name" name="full-name" placeholder="Full name">
                   <p>Full name is a required field.</p>
                 </div>
                 <div class="mb-4 scroll-mt-4">
                   <label for="company">Company name</label>
-                  <input required type="text" id="company" placeholder="Company name">
+                  <input required type="text" id="company" name="company" placeholder="Company name">
                   <p>Company name is a required field.</p>
                 </div>
                 <div class="mb-4 scroll-mt-4">
@@ -294,17 +299,33 @@
                 </div>
                 <div class="mb-4 scroll-mt-4">
                   <label for="callback">How to contact you?</label>
-                  <textarea required id="callback" rows="1"></textarea>
+                  <textarea required id="callback" name="callback" rows="1"></textarea>
                   <p>Tell us how we can best reach you, and we’ll set something up.</p>
                 </div>
                 <div class="mb-4 scroll-mt-4">
-                  <label for="helping">What to talk about?</label>
-                  <textarea id="helping" rows="4"></textarea>
+                  <label for="talk-about">What to talk about?</label>
+                  <textarea id="talk-about" name="talk-about" rows="4"></textarea>
                 </div>
+
+                <div class="js-ceddl-form-feedback"></div>
+
                 <div class="mt-6 mb-4"><input type="submit" class="btn btn-primary w-full" value="TALK TO AN EXPERT">
                 </div>
-              </form>
 
+
+                <template class="js-ceddl-form-success">
+                  <div class="ceddl-forms-success fade-in" role="alert">
+                    <div class="font-bold">Super! Looking forward to our chat.</div>
+                  </div>
+                </template>
+                <template class="js-ceddl-form-error">
+                  <div class="ceddl-forms-warning fade-in" role="alert">
+                    <div class="font-bold">Oeps: An error occurred.</div>
+                  </div>
+                </template>
+
+
+              </form>
             </ceddl-forms>
           </div>
         </div>
