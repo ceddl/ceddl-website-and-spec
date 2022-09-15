@@ -25,7 +25,7 @@
     <div class="p-4 mb-14 text-gray-700">
       <div class="max-w-4xl m-auto gray-box">
         <ceddl-forms method="POST"
-                     {{ if eq hugo.Environment "dev" }}
+        {{ if eq hugo.Environment "dev" }}
         action="http://localhost:8093/hook/rt4skyiieqlsjid0rzkwrxzovuolh9v4"
         {{ else }}
         action="/analyse/hook/rt4skyiieqlsjid0rzkwrxzovuolh9v4"
@@ -59,7 +59,7 @@
             <template class="js-ceddl-form-success">
               <div class="ceddl-forms-success fade-in" role="alert">
                 <div class="font-bold">thank you!</div>
-                <div>We have received your message and will get back to you.</div>
+                <div>Thanks! Check your inbox for confirmation.</div>
               </div>
             </template>
             <template class="js-ceddl-form-error">

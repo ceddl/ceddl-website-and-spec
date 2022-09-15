@@ -1,0 +1,37 @@
+{{ define "main" }}
+<article class="flex flex-col relative text-center ">
+  <div class="flex flex-col items-center p-8 my-24">
+
+    <ceddl-subscription-processor class="flex flex-col items-center" method="POST"
+    data-member-submit="{{.Params.memberSubmit}}"
+    {{ if eq hugo.Environment "dev" }}
+    action="http://localhost:8093/hook/s17v7vh2c1ayq5hcink78gzb3gwtdtm6"
+    {{ else }}
+    action="/analyse/hook/s17v7vh2c1ayq5hcink78gzb3gwtdtm6"
+    {{ end }}>
+      <div class="relative h-4 w-4">
+        {{- partial "components/spinner.html" (dict "size" "6") -}}
+      </div>
+      <div class="p-4 font-big text-bold">Processing Request</div>
+
+      <template class="js-ceddl-success">
+        <div class="ceddl-forms-success fade-in" role="alert">
+          <div class="font-bold">Verified</div>
+          <div>{{.Params.actionSuccess}}</div>
+        </div>
+      </template>
+      <template class="js-ceddl-error">
+        <div class="ceddl-forms-error fade-in" role="alert">
+          <div class="font-bold">Oeps: An error occurred.</div>
+        </div>
+      </template>
+      <template class="js-ceddl-not-found">
+        <div class="ceddl-forms-error fade-in" role="alert">
+          <div class="font-bold">{{.Params.actionError}}</div>
+        </div>
+      </template>
+    </ceddl-subscription-processor>
+
+  </div>
+</article>
+{{ end }}

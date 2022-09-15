@@ -8,13 +8,13 @@ keywords: []
 {{< rawhtml >}}
 <p><img class="w-full" src="/img/w3cgroup.png" alt="ceddl stickers image"></p>
 {{< /rawhtml >}}
-The working group is currently promoting the concepts discribed in this polyfill. furthermore time is being invested
-into a technical specification that should allow browsers vendors to implement a frontend datalayer into the browser.
+The working group is currently promoting the concepts described in this polyfill. furthermore, time is being invested
+into a technical specification that should allow browser vendors to implement a frontend datalayer into the browser.
 Writing a technical specification is hard. What information do browser developers actually need? How detailed should the
-specification be? Should it contain a lot of context or be purely technical?
+specification be? Should it contain a lot of contexts or be purely technical?
 
-If you feel you can help/support us in any way please do not hesitate to do so. If you would like to interact with me or
-the community complete
+If you feel you can help/support us in any way, please do not hesitate to do so. If you would like to interact with me
+or the community complete
 this [github feedback issue](https://github.com/ceddl/ceddl-website-and-spec/issues/new?assignees=&labels=question&template=feedback.md&title=)
 .
 

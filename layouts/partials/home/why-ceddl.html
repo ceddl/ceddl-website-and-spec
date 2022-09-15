@@ -1,12 +1,12 @@
 <div class="usp-back p-5 py-16 mb-14 text-white">
   <div
-    class="max-w-4xl m-auto grid grid-cols-1 grid-rows-1 md:grid-rows-2 gap-4 md:grid-cols-3 md:grid-rows-1 md:gap-4">
-    <div class="box col-span-3 md:col-span-2">
+    class="max-w-5xl m-auto md:grid gap-4 md:grid-cols-5 md:grid-rows-1 md:gap-4">
+    <div class="box col-span-1 md:col-span-3 mb-8">
       <h2 class="font-big text-3xl mb-6">
         <span>Why use</span>
         <span class="text-lg">CEDDL-polyfill</span>
       </h2>
-      <p class="mb-4">The days marketers spread data around the globe without repercussions is nearing an end.
+      <p class="mb-4">The day's marketers spread data around the globe without repercussions is at an end.
         In fact, browsers like Chrome, Safari and Firefox are already blocking third-party cookies. Governments are
         under pressure to legislate the protection of citizen's data privacy. </p>
       <p class="mb-6">Practically all aspects of digital marketing will be impacted: collecting customer data,
@@ -20,10 +20,16 @@
         your company.</p>
 
       <p class="flex">
-        <a href="/talk-to-an-ceddl-expert/" class="btn btn-secondary">TALK TO AN EXPERT</a>
+        {{ with .Site.GetPage "/talk-to-an-ceddl-expert" }}
+        <a href="{{ .Permalink }}" class="btn btn-secondary">TALK TO AN EXPERT</a>
+        {{ end }}
       </p>
 
     </div>
-    <div class="box hidden md:block"><img class="-mt-[150px]" src="/img/layers.png"></div>
+    <div class="box md:col-span-2 ">
+      <img class="md:-mt-28" src="/img/start-with.svg">
+      <h3 class="font-big text-lg md:text-center mt-4">No matter what Behavioral Data Platform you use. It should start
+        at CEDDL-polyfill</h3>
+    </div>
   </div>
 </div>

@@ -107,9 +107,12 @@
           critical to ensuring the consistency and accessibility of your data. So why do other tools require you to send
           events in their specific format?
         </p>
-        <p><a class="font-bold link" href="/talk-to-an-ceddl-expert/"> Talk to a specialist</a> about building a
-          clean,
-          high-quality data so you can focus on engagement and growth.</p>
+        {{ with .Site.GetPage "/talk-to-an-ceddl-expert" }}
+        <p>
+          <a class="font-bold link" href="{{ .Permalink }}">Talk to a specialist</a> about building
+          clean, high-quality data so you can focus on engagement and growth.
+        </p>
+        {{ end }}
       </div>
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
         <img class="object-cover object-center rounded" alt="speak-as-you-do"
@@ -129,9 +132,13 @@
         <h2 class="font-big sm:text-4xl text-3xl mb-4 font-medium text-gray-900">No more release anxiety.
         </h2>
         <p class="mb-8 leading-relaxed">Do you have breaking reports and bug's in data products when it is to late?
-          Automated testing is part of the Ceddl DNA. Shift-left and test during development, at the source.</p>
-        <p><a class="font-bold link" href="/talk-to-an-ceddl-expert/"> Talk to a specialist</a> about unit and end to
-          end testing Data Layer events during development.</p>
+          Automated testing is part of the Ceddl DNA. Shift-left and test during development at the source.</p>
+        {{ with .Site.GetPage "/talk-to-an-ceddl-expert" }}
+        <p>
+          <a class="font-bold link" href="{{ .Permalink }}">Talk to a specialist</a> about unit and end to
+          end testing Data Layer events during development.
+        </p>
+        {{ end }}
       </div>
     </div>
   </section>
@@ -144,9 +151,13 @@
         </h2>
         <p class="mb-8 leading-relaxed">Customer loyalty at your fingertips with a 360 degree customer view in
           Real-time. Serve relevant communications. Make
-          impact. proving a data toolkit to every team in your company and take action at the wright time.</p>
-        <p><a class="font-bold link" href="/talk-to-an-ceddl-expert/"> Talk to a specialist</a> about personalization
-          turning customers into your biggest promoters.</p>
+          impact. Proving a data toolkit to every team in your company and take action at the right time.</p>
+        {{ with .Site.GetPage "/talk-to-an-ceddl-expert" }}
+        <p>
+          <a class="font-bold link" href="{{ .Permalink }}"> Talk to a specialist</a> about personalization
+          turning, customers into your biggest promoters.
+        </p>
+        {{ end }}
       </div>
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
         <img class="object-cover object-center rounded" alt="360 customer view" src="/img/consultancy/customer-360.png">

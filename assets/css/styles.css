@@ -74,7 +74,9 @@ body {
 
 .fade-in {
     animation-name: fadeIn;
-    animation-duration: 150ms;
+    animation-duration: 250ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fadeOut {
@@ -89,5 +91,7 @@ body {
 
 .fade-out {
     animation-name: fadeOut;
-    animation-duration: 150ms;
+    animation-duration: 250ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }

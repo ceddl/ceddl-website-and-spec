@@ -22,7 +22,9 @@
 
     <div class="flex flex-row flex-wrap justify-center p-4 pt-0 md:pb-8">
       <button class="btn btn-primary m-2 text-gray-700">RUN THE DEMO</button>
-      <a href="/talk-to-an-ceddl-expert/" class="btn btn-secondary m-2">TALK TO AN EXPERT</a>
+      {{ with .Site.GetPage "/talk-to-an-ceddl-expert" }}
+      <a href="{{ .Permalink }}" class="btn btn-secondary m-2">TALK TO AN EXPERT</a>
+      {{ end }}
     </div>
 
   </article>
