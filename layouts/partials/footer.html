@@ -40,12 +40,33 @@
         class="font-big text-lg text-gray-800 block mt-3 mb-3">Terms &amp; Policies</span>
         <ul class="list mt-4 mb-4">
           <li class="pv1"><a class="link" target="_blank"
-                             href="/https://github.com/ceddl/ceddl-polyfill/blob/1c5750631f91826ff152aeffa736add8335f9bb8/CODE_OF_CONDUCT.md">Code
+                             href="https://github.com/ceddl/ceddl-polyfill/blob/1c5750631f91826ff152aeffa736add8335f9bb8/CODE_OF_CONDUCT.md">Code
             of Conduct</a></li>
+          {{ with .Site.GetPage "privacy-policy" }}
+          <li class="pv1"><a class="link"
+                             href="{{ .Permalink }}">Privacy policy</a></li>
+          {{ end }}
+          {{ with .Site.GetPage "about-ceddl-analytics" }}
+          <li class="pv1"><a class="link"
+                             href="{{ .Permalink }}">Ceddl analytics and Cookies</a></li>
+          {{ end }}
         </ul>
+
       </div>
     </div>
   </div>
 
   <div class="w-full h-3 default-back"></div>
 </footer>
+<ceddl-cookie-alert class="shadow-lg">
+  <p>
+    We serve First-Party Cookies on site to improve and provide secured login, fraud
+    detection, traffic analysis, remarketing, personalization and remembering your preferences.
+  </p>
+  <div>
+    {{ with .Site.GetPage "privacy-policy" }}
+    <a href="{{ .Permalink }}" class="btn btn-tertiary text-gray-400 mt-4 inline-block">Read more, Disable</a>
+    {{ end }}
+    <button class="btn btn-tertiary px-10 mt-4 inline-block">OK</button>
+  </div>
+</ceddl-cookie-alert>

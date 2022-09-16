@@ -95,3 +95,13 @@ body {
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
+
+ceddl-cookie-alert:not(:defined) {
+    position: fixed;
+    opacity: 0;
+}
+
+ceddl-cookie-alert {
+    transition: opacity 0.3s ease-in-out;
+    @apply z-40 fixed text-lg md:rounded-lg text-white left-0 bottom-0 sm:m-8 p-6 pr-10 w-full sm:max-w-[450px] bg-gray-900;
+}
