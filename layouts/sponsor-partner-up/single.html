@@ -13,7 +13,7 @@
 
   <article class="flex flex-col relative text-center text-white slope">
     <div class="flex flex-col items-center p-8">
-      <h1 class="font-big text-3xl md:text-5xl ml-2 mr-2 welcome-headline pt-3 md:pt-8">{{ .Title }}</h1>
+      <h1 class="font-big text-4xl md:text-5xl ml-2 mr-2 welcome-headline pt-3 md:pt-8">{{ .Title }}</h1>
       <div class="text-xl max-w-4xl ml-4 mr-4 ">
         {{ index $content_parts 0 | safe.HTML }}
       </div>
@@ -44,13 +44,49 @@
     <article
       class="prose prose-md md:prose-lg max-w-4xl mx-auto mb-16 md:-mt-12 text-gray-600 justify-self-center">
       {{ index $content_parts 2 | safe.HTML }}
+      <div>
+        <a href="https://github.com/sponsors/ceddl" target="_blank"
+           class="btn btn-tertiary text-white no-underline inline-block">Sponser
+          now</a>
+      </div>
+
     </article>
   </div>
 
   <div class="px-4">
     <article
-      class="prose prose-md md:prose-lg max-w-4xl mx-auto mb-16 mt-12 text-gray-600 justify-self-center">
-      {{ index $content_parts 3 | safe.HTML }}
+      class="max-w-4xl mx-auto mb-16 mt-12 text-gray-600 justify-self-center">
+      <div class="prose prose-md md:prose-lg ">
+        {{ index $content_parts 3 | safe.HTML }}
+      </div>
+      <div>
+        <ceddl-forms  class="self-center lg:self-start w-full max-w-md my-8"
+                      method="POST"
+        {{ if eq hugo.Environment "dev" }}
+        action="http://localhost:8093/hook/ow70icq7nb0sg68dem8ytdnrc1lv1wso"
+        {{ else }}
+        action="/analyse/hook/ow70icq7nb0sg68dem8ytdnrc1lv1wso"
+        {{ end }}
+        redirectTo="/contact/partner-up/">
+        <form target="_blank" action="#" novalidate data-jsValidate="true"
+              class="flex flex-grow flex-col md:flex-row md:max-w-lg pt-4"
+              method="post"
+              action="" target="_blank">
+          <div class="w-full">
+            <input class="w-full" required pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
+                   id="preEmail" name="preEmail" type="email"
+                   placeholder="Business email address" required>
+            <p>Please fill out this field</p>
+          </div>
+
+          <div class="mt-4 md:mt-0 md:ml-4">
+            <input class="btn btn btn-tertiary w-full" id="preEmailSsubmit"
+                   name="preEmailSsubmit"
+                   type="submit" value="Get started">
+          </div>
+        </form>
+        </ceddl-forms>
+      </div>
     </article>
   </div>
 

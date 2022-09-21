@@ -1,8 +1,5 @@
 ---
 author: Roland Broekema
-title: Hi, and welcome.
+title: The dynamic data layer for the browser.
 date: 2019-05-15
-
 ---
-
-Live long and code.

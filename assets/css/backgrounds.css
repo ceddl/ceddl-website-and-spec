@@ -51,15 +51,47 @@
     height: calc(100% + 15rem);
     z-index: -1;
     margin-top: -8rem;
+    background: linear-gradient(to right, #004c4c, #00716b);
+    clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% calc(100% - 100vw * 0.18),
+            calc(50% + 5rem) calc(100% - 1.2rem),
+            calc(50% + 3.2rem) calc(100% - .6rem),
+            calc(50% + 2.0rem) calc(100% - .3rem),
+            calc(50% + 1.3rem) calc(100% - .15rem),
+            calc(50% + 0.8rem) calc(100% - .06rem),
+            50% calc(100% - .04rem),
+            calc(50% - 0.8rem) calc(100% - .06rem),
+            calc(50% - 1.3rem) calc(100% - .15rem),
+            calc(50% - 2.0rem) calc(100% - .3rem),
+            calc(50% - 3.2rem) calc(100% - .6rem),
+            calc(50% - 5rem) calc(100% - 1.3rem),
+            0% calc(100% - 100vw * 0.18),
+            0% 0%
+    );
+}
 
-    img {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        object-fit: fill;
-        width: 100%;
-        height: 100%;
-        min-width: 650px;
+@media (min-width: 1536px) {
+    .invite-background {
+        clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% calc(100% - 100vw * 0.13),
+                calc(50% + 8rem) calc(100% - 1.3rem),
+                calc(50% + 5rem) calc(100% - .6rem),
+                calc(50% + 3rem) calc(100% - .3rem),
+                calc(50% + 2.2rem) calc(100% - .15rem),
+                calc(50% + 1.8rem) calc(100% - .1rem),
+                50% calc(100% - .01rem),
+                calc(50% - 1.8rem) calc(100% - .1rem),
+                calc(50% - 2.2rem) calc(100% - .15rem),
+                calc(50% - 3rem) calc(100% - .3rem),
+                calc(50% - 5rem) calc(100% - .6rem),
+                calc(50% - 8rem) calc(100% - 1.2rem),
+                0% calc(100% - 100vw * 0.13),
+                0% 0%
+        );
     }
 }
 

@@ -85,6 +85,11 @@ export class CeddlForms extends HTMLElement {
       }
     })
       .then(() => {
+        if (this.redirectTo) {
+          sessionStorage.setItem("ceddl-form-redirect", JSON.stringify(body));
+          window.location.href = `${window.location.origin}${this.redirectTo}`;
+          return;
+        }
         var clone = document.importNode(this.successTemplate.content, true);
         feedbackEl.innerHTML = '';
         feedbackEl.appendChild(clone);
@@ -137,6 +142,25 @@ export class CeddlForms extends HTMLElement {
     }
   }
 
+  prefill() {
+    const redirectJson = sessionStorage.getItem("ceddl-form-redirect");
+    if (redirectJson) {
+      try {
+        const redirectData = JSON.parse(redirectJson);
+        if (redirectData.preEmail) {
+          this.inputs.forEach((input) => {
+            if (input.name === 'email') {
+              input.value = redirectData.preEmail;
+            }
+          })
+        }
+        sessionStorage.removeItem("ceddl-form-redirect");
+      } catch (e) {
+        // do nothing
+      }
+    }
+  }
+
   hasDirectResponce(elm) {
     return elm.parentElement.classList.contains('ceddl-form-touched');
   }
@@ -156,6 +180,7 @@ export class CeddlForms extends HTMLElement {
     this.inputs = this.getAllFormElements();
     this.action = this.getAttribute('action');
     this.method = this.getAttribute('method');
+    this.redirectTo = this.getAttribute('redirectTo');
     this.errorTemplate = this.querySelector('.js-ceddl-form-error');
     this.successTemplate = this.querySelector('.js-ceddl-form-success');
 
@@ -163,6 +188,7 @@ export class CeddlForms extends HTMLElement {
       throw new Error('action and method are required attributes on ceddl-forms');
     }
 
+    this.prefill();
     this.setlisteners();
   }
 }

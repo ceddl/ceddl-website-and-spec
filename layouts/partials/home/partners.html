@@ -15,12 +15,15 @@
          rel="partener">
         <img alt="innovatief Limburg" class="object-contain items-center" src="/img/sponsors/liof.png">
       </a>
+      {{ $file := .Page.File }}
       {{ with .Site.GetPage "/sponsor-partner-up" }}
-      <a class="bg-gray-50 w-full h-20 flex justify-center items-center" target="_blank"
+      {{ if ne .File $file }}
+      <a class="bg-gray-50 w-full h-20 flex justify-center items-center"
          href="{{ .Permalink }}"
          rel="partner and sponsor">
         <div class="text-xs text-bold font-big text-gray-200">Your logo</div>
       </a>
+      {{ end }}
       {{ end }}
     </div>
   </div>

@@ -23,7 +23,8 @@ independent creators of Free Open Source Software!
 
 ### How to do financial contributions
 
-Sponsorships can be done via GitHub Sponsors. Both monthly-recurring sponsorships and one-time donations are accepted.
+Sponsorships can be done via {{< rawhtml >}}<a class="link no-underline" href="https://github.com/sponsors/ceddl">GitHub
+Sponsors</a>{{</rawhtml >}} Both monthly-recurring sponsorships and one-time donations are accepted.
 For recurring sponsors and select partners. We would love to add your company logo to our website and readme files. If
 you
 are using ceddl to build a revenue-generating product, it makes business sense to sponsor its development. It ensures
@@ -33,34 +34,35 @@ payment system or contact us via the billing and account page.
 
 ### Become a select partner
 
-Help your customers implement and develop new revenue streams, making an impact with customer experience data. Integrate
-your software with ceddl polyfill or other parts of the ceddl system. Work with us for sales support, training,
-co-marketing initiatives, and proofs of concepts.
+Whether you're just learning about data management platform technology's or deciding to take the first step
+towards partnership, we'll help you lead the market and deliver valuable customer solutions, make an impact with
+customer experience data. Work with us for sales support, training, co-marketing initiatives, and proofs of concepts.
+Your success is our success.
 ||||||||||
 
 ## Tiers
 
-#### Platinum (EUR €2,000/mo):
+#### Platinum ( $2,000/mo ):
 
-* Receive a one-year license, including upgrades, for self hosting your analytics and marketing backend.
-* A year subscription to our low code workflow automation solution with hundreds of pre built integrations. (after one
+* Receive a one-year license, including upgrades, for self-hosting your analytics and marketing backend.
+* A year subscription to the low code workflow automation solution with hundreds of pre-built integrations. (after one
   month).
 * Have a direct communication line with one of our developers to help you up to speed in record time.
-* logo placement in the Readme files and on the ceddlbyexampple website.
+* Logo placement in the Readme files and on the ceddlbyexampple.com website.
 
-#### Gold (EUR €500/mo):
+#### Gold ( $500/mo ):
 
-* Receive a one-year license for self hosting your analytics and marketing backend. (after 3 months).
-* A half year subscription to our low code workflow automation solution with hundreds of pre built integrations. (after
-  3 months).
-* logo placement in the Readme files and on the ceddlbyexampple website.
+* Receive a one-year license for self-hosting your analytics and marketing backend.
+* A half-year subscription to the low code workflow automation solution with hundreds of pre-built integrations. (
+  after 3 months).
+* Logo placement in the Readme files and on the ceddlbyexampple.com website.
 
-#### Silver (EUR €250/mo):
+#### Silver ( $250/mo ):
 
-* Receive a one-year license for self hosting your analytics and marketing backend. (after 3 months).
-* logo placement in the Readme files and on the ceddlbyexampple website.
+* Receive a one-year license for self-hosting your analytics and marketing backend. (after 3 months).
+* Logo placement in the Readme files and on the ceddlbyexampple.com website.
 
-#### Generous Backer (EUR 10/mo):
+#### Generous Backer ( $10/mo ):
 
 * Name listed in the BACKERS.md file of ceddl-polyfill.
 * If shipping is allowed for your country and under €10.-- Stickers of ceddl-polyfill The Dynamic Data Layer for the

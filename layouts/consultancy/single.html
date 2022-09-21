@@ -16,26 +16,33 @@
              style="background-image:url('/img/consultancy/wave.svg')"></div>
       </div>
       <div class="flex md-full lg:w-1/2 flex-col lg:items-center p-8">
-        <h1 class="font-big text-2xl md:text-4xl welcome-headline pt-3 lg:pt-8">{{ .Title }}</h1>
+        <h1 class="font-big text-4xl md:text-5xl welcome-headline pt-3 lg:pt-8">{{ .Title }}</h1>
         <p class="text-xl md-text-3xl mb-4">
           {{ .Description }}
         </p>
-        <ceddl-forms class="self-center lg:self-start w-full max-w-md my-8">
+        <ceddl-forms  class="self-center lg:self-start w-full max-w-md my-8"
+          method="POST"
+          {{ if eq hugo.Environment "dev" }}
+          action="http://localhost:8093/hook/w5s551d12la9g8p9o265lkp0ey40m93g"
+          {{ else }}
+          action="/analyse/hook/w5s551d12la9g8p9o265lkp0ey40m93g"
+          {{ end }}
+          redirectTo="/contact/talk-to-an-ceddl-expert/">
           <form target="_blank" action="#" novalidate data-jsValidate="true"
                 class="flex flex-grow flex-col md:flex-row md:max-w-lg"
                 method="post"
                 action="" target="_blank">
             <div class="w-full">
               <input class="darkback w-full" required pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
-                     id="member_email" name="member" type="email"
+                     id="preEmail" name="preEmail" type="email"
                      placeholder="Email address" required>
               <p>Please fill out this field</p>
             </div>
 
             <div class="mt-4 md:mt-0 md:ml-4">
-              <input class="btn btn btn-secondary w-full" id="news_submit"
-                     name="member_submit"
-                     type="submit" value="See how it works">
+              <input class="btn btn btn-secondary w-full" id="preEmailSsubmit"
+                     name="preEmailSsubmit"
+                     type="submit" value="Next">
             </div>
           </form>
         </ceddl-forms>
