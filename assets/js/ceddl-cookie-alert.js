@@ -3,52 +3,49 @@ import Cookies from "./utils/cookie";
 const template = document.createElement('template');
 
 template.innerHTML = `
-<div class="">
+<div>
   <slot></slot>
 </div>`;
 
 export class CeddlCookieAlert extends HTMLElement {
+
+
   constructor() {
     super();
+    this.enableNonEssentials = this.enableNonEssentials.bind(this);
+    this.disableNonEssentials = this.disableNonEssentials.bind(this);
+    this.updateEvent = new Event('updated');
     this.attachShadow({mode: "open"});
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 
-  get message() {
-    return this._message;
-  }
-
-  set message(value) {
-    this._message = value;
-    this.setAttribute("message", value);
-  }
 
   connectedCallback() {
     const cookiesAccepted = Cookies.getCookie("ceddlbyexample-accept-cookies")
 
-    if (cookiesAccepted === "y") {
+    if (cookiesAccepted === "y" || cookiesAccepted === "n") {
       this.style.visibility = "hidden";
     } else {
-      this.querySelector("button").addEventListener("click", () => {
-        this.style.visibility = "hidden";
-        Cookies.setCookie("ceddlbyexample-accept-cookies", "y", 365);
-      });
+      this.querySelector("button").addEventListener("click", this.enableNonEssentials);
     }
   }
 
-
-  static get observedAttributes() {
-    return ["message"];
+  enableNonEssentials() {
+    this.style.visibility = "hidden";
+    Cookies.setCookie("ceddlbyexample-accept-cookies", "y", 365);
+    this.dispatchEvent(this.updateEvent);
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (oldValue !== newValue) {
-      if (name === "message") {
-        this._message = newValue;
-        if (this.childElementCount > 0) this.updateMessage();
-      }
-    }
+  disableNonEssentials() {
+    this.style.visibility = "hidden";
+    Cookies.setCookie("ceddlbyexample-accept-cookies", "n", 365);
+    this.dispatchEvent(this.updateEvent);
   }
+
+  getCurrentStatus() {
+    return Cookies.getCookie("ceddlbyexample-accept-cookies");
+  }
+
 }
 
 customElements.define("ceddl-cookie-alert", CeddlCookieAlert);

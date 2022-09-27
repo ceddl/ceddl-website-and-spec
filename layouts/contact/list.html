@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html lang='{{ .Site.LanguageCode }}'>
+<html ceddl-observe="page"
+      data-language="{{ .Site.LanguageCode }}"
+      data-segment="{{ .Params.segment }}"
+      data-sections="{{ range .Params.keywords }}{{.}} {{end}}"
+      data-page-ready="page pageMetadata"
+      lang="{{ .Site.LanguageCode }}">
 {{ partial "head.html" . }}
 
 <body class="font-small flex flex-col min-h-screen text-gray-800">
@@ -73,7 +78,7 @@
               <h3 class="text-xl pt-6 pb-4 font-big text-gray-900">Billing and account</h3>
               <p class="text-gray-500">
 
-                Ask about billing, account or report workspace concerns related to our code of conduct.
+                Ask about billing, account or report workspace concerns related to our code of conduct / policy's.
               </p>
               <i class="ti-angle-double-right box-arrows"></i>
             </a>
