@@ -113,7 +113,6 @@ Choosing not to participate to the anonymised statistics of Ceddl Analytics does
 on our sites. You can decide to withdraw or give your consent at any time. To see your current status and manage your
 consent, please see the settings on top of this page.
 
-
 ## Restricted access to information
 --------------------------------
 
@@ -121,14 +120,21 @@ All analytics data communication is encrypted via HTTPS protocol. The anonymised
 analytics can only be accessed ceddlbyexample institution staff or by duly authorised external sub-contractors, who may
 be required to analyse, develop and/or maintain certain sites.
 
-## Masking of visitors' IP addresses
----------------------------------
+[//]: # (## Masking of visitors' IP addresses)
 
-Ceddl Analytics uses an IP de-identification mechanism that automatically masks a portion of each visitor's IP address,
-effectively making it impossible to identify a particular ceddlbyexample.com visitor via the IP address.
+[//]: # (---------------------------------)
 
-Note that for statistical purposes the city and country of origin are determined from the full IP address, then stored
-and aggregated before the anonymisation mask is applied.
+[//]: # ()
+
+[//]: # (Ceddl Analytics uses an IP de-identification mechanism that automatically masks a portion of each visitor's IP address,)
+
+[//]: # (effectively making it impossible to identify a particular ceddlbyexample.com visitor via the IP address.)
+
+[//]: # ()
+
+[//]: # (Note that for statistical purposes the city and country of origin are determined from the full IP address, then stored)
+
+[//]: # (and aggregated before the anonymisation mask is applied.)
 
 ## Visitor logs
 ------------

@@ -1,8 +1,8 @@
 import {ceddl} from '@ceddl/ceddl-polyfill'
-import {PageMetadata} from '../ceddl-aditional-inputs/dist/page-metadata'
-import {PageReady} from '../ceddl-aditional-inputs/dist/page-ready'
-import {Heatmap} from '../ceddl-aditional-inputs/dist/heatmap'
-import {PerformanceTiming} from '../ceddl-aditional-inputs/dist/performance-timing'
+import {PageMetadata} from '../ceddl-aditional-inputs/dist/page-metadata';
+import {PageReady} from '../ceddl-aditional-inputs/dist/page-ready';
+import {Heatmap} from '../ceddl-aditional-inputs/dist/heatmap';
+import {PerformanceTiming} from '../ceddl-aditional-inputs/dist/performance-timing';
 import {CeddlReceiverSocket} from "./ceddl-receiver-socket";
 
 PageReady.run(ceddl);
@@ -29,6 +29,76 @@ ceddl.modelFactory.create({
   }
 });
 
+ceddl.modelFactory.create({
+  key: 'funnel',
+  root: true,
+  fields: {
+    name: {
+      type: ceddl.modelFactory.fields.StringField,
+      required: true,
+    },
+    step: {
+      type: ceddl.modelFactory.fields.NumberField,
+      required: true,
+    },
+    stepTitle: {
+      type: ceddl.modelFactory.fields.StringField,
+      required: false,
+    },
+    totalSteps: {
+      type: ceddl.modelFactory.fields.NumberField,
+      required: true,
+    },
+    timeInFunnel: {
+      type: ceddl.modelFactory.fields.NumberField,
+      required: false,
+    }
+  }
+});
+
+ceddl.modelFactory.create({
+  key: 'newsReleaseForm',
+  root: true,
+  fields: {
+    name: {
+      type: ceddl.modelFactory.fields.StringField,
+      required: true
+    },
+    errors: {
+      type: ceddl.modelFactory.fields.ListField,
+      required: false,
+      foreignModel: 'formError'
+    }
+  }
+});
+
+ceddl.modelFactory.create({
+  key: 'formError',
+  root: false,
+  fields: {
+    name: {
+      type: ceddl.modelFactory.fields.StringField,
+      required: true,
+    },
+    type: {
+      type: ceddl.modelFactory.fields.StringField,
+      required: true,
+      pattern: '^(main|field)$'
+    },
+    content: {
+      type: ceddl.modelFactory.fields.StringField,
+      required: false
+    },
+    errorCode: {
+      type: ceddl.modelFactory.fields.StringField,
+      required: false
+    },
+    transactionId: {
+      type: ceddl.modelFactory.fields.StringField,
+      required: false
+    }
+  }
+});
 
 var key = 'Y2VkZGxieWV4YW1wbGUuY29tOk9ubGluZTFNb25pdG9yaW5n';
 const socket = new CeddlReceiverSocket('')
@@ -43,12 +113,12 @@ ceddl.eventbus.on('heatmap:update', (data) => {
 });
 
 ceddl.eventbus.on('performanceTiming', (data) => {
-  console.log(performanceTiming, data);
+  console.log('performanceTiming', data);
   socket.send(data);
 });
 
 ceddl.eventbus.on('click', (data) => {
-  console.log(data);
+  console.log('click', data);
   socket.send(data);
 });
 

@@ -1,3 +1,17 @@
 {{ define "main" }}
-    <p>404 - page not found</p>
+
+<article class="max-w-5xl px-4 md:px-6 mx-auto mb-6 mt-12 text-gray-600 flex flex-col sm:flex-row">
+  <div>
+    <h1 class="font-big text-6xl mb-8text-gray-700">Oops!</h1>
+    <h3 class="font-big text-3xl md:text-4xl text-gray-700">We can't find the page you're looking for.</h3>
+    <p class="my-0">Error Message: 404</p>
+    <a href="{{ site.BaseURL }}" class="text-white btn btn-tertiary inline-block my-4 mx-0 no-underline">Return to the
+      homepage</a>
+  </div>
+  <div class="pl-4 pr-4">
+    <img alt="404 animation" src="/img/me-404.gif"/>
+  </div>
+
+</article>
+
 {{ end }}

@@ -72,9 +72,9 @@ ceddl-forms .error input[type=email].darkback {
 }
 
 .ceddl-forms-success {
-    @apply bg-green-25 border-l-4 border-green-500 text-green-700 p-4 mt-4;
+    @apply bg-green-25 border-l-4 border-green-500 text-green-700 p-4 my-4;
 }
 
 .ceddl-forms-error {
-    @apply bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 mt-4;
+    @apply bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 my-4;
 }

@@ -92,8 +92,10 @@ export class CeddlForms extends HTMLElement {
         }
         var clone = document.importNode(this.successTemplate.content, true);
         feedbackEl.innerHTML = '';
-        feedbackEl.appendChild(clone);
-      }).catch(() => {
+        this.querySelector('form').style.display = 'none';
+        this.appendChild(clone);
+        this.scrollIntoView({block: "start", behavior: "smooth"});
+      }).catch((err) => {
       var clone = document.importNode(this.errorTemplate.content, true);
       feedbackEl.innerHTML = '';
       feedbackEl.appendChild(clone);

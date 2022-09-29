@@ -8,8 +8,8 @@
       action="/analyse/hook/s17v7vh2c1ayq5hcink78gzb3gwtdtm6"
       {{ end }}
       method="POST">
-      <form class="flex flex-grow max-w-lg" target="_blank" action="#" novalidate data-jsValidate="true" id="news-form"
-            name="news-form" method="post">
+      <form class="flex flex-grow max-w-lg" target="_blank" action="#" novalidate data-jsValidate="true" id="news-release-form"
+            ceddl-observe="newsReleaseForm" data-name="news-release-form" name="news-release-form" method="post">
         <diV class="relative w-full">
           <input class="inline-button w-full" pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" id="member_email"
                  name="member" type="email"
@@ -17,18 +17,28 @@
           <div class="absolute right-[5px] top-[6px]">
             <input class="btn btn-sm btn-tertiary" id="news_submit"
                    name="member_submit"
-                   type="submit" value="subscribe"></div>
+                   type="submit" value="subscribe">
+
+          </div>
+          <p
+            ceddl-observe="formError"
+            data-type="field"
+            data-name="member_email"
+            data-content="Email is required and should be formatted as you@company.com">Email is required and should be formatted as you@company.com</p>
         </diV>
 
         <template class="js-ceddl-form-success">
           <div class="ceddl-forms-success fade-in" role="alert">
             <div class="font-bold">Super! Please verify.</div>
             <div>To finish signing up please confirm via the e-mail that was sent. This ensures we have the right email and prevents abuse.</div>
-
           </div>
         </template>
         <template class="js-ceddl-form-error">
-          <div class="ceddl-forms-error fade-in" role="alert">
+          <div
+            data-type="main"
+            data-content="Oeps: An error occurred."
+            class="ceddl-forms-error fade-in"
+            role="alert">
             <div class="font-bold">Oeps: An error occurred.</div>
           </div>
         </template>
