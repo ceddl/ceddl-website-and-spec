@@ -23,3 +23,10 @@ at [ceddl-aditional-inputs git repository](https://github.com/ceddl/ceddl-aditio
         <img src="/img/input-heatmap.jpg" alt="heatmap" width="175" height="110">
     </a>
 </div>
+
+```js
+import {ceddl} from '@ceddl/ceddl-polyfill'
+import {PageMetadata} from '@ceddl/ceddl-aditional-inputs/dist/page-metadata';
+
+PageMetadata.run(ceddl);
+```

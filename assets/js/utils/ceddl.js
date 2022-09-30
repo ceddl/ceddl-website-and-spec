@@ -1,8 +1,8 @@
 import {ceddl} from '@ceddl/ceddl-polyfill'
-import {PageMetadata} from '../ceddl-aditional-inputs/dist/page-metadata';
-import {PageReady} from '../ceddl-aditional-inputs/dist/page-ready';
-import {Heatmap} from '../ceddl-aditional-inputs/dist/heatmap';
-import {PerformanceTiming} from '../ceddl-aditional-inputs/dist/performance-timing';
+import {PageMetadata} from '@ceddl/ceddl-aditional-inputs/dist/page-metadata';
+import {PageReady} from '@ceddl/ceddl-aditional-inputs/dist/page-ready';
+import {Heatmap} from '@ceddl/ceddl-aditional-inputs/dist/heatmap';
+import {PerformanceTiming} from '@ceddl/ceddl-aditional-inputs/dist/performance-timing';
 import {CeddlReceiverSocket} from "./ceddl-receiver-socket";
 
 PageReady.run(ceddl);

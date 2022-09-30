@@ -83,7 +83,7 @@ ceddl.modelFactory.create({
     }
   }
 });
-```
+``` 
 
 Now we add a button to the page that will update the (data-*)attributes when clicked.
 

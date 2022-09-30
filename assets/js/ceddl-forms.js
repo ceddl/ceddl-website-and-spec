@@ -75,8 +75,17 @@ export class CeddlForms extends HTMLElement {
   }
 
   handleSubmit() {
-    var body = this.formSerialize(this.form);
     var feedbackEl = this.querySelector('.js-ceddl-form-feedback');
+
+    if (this.querySelector('form').classList.contains('shepherd-enabled')) {
+      var clone = this.createDynamicErrorElement('Oops! No submit possible during demo');
+      feedbackEl.innerHTML = '';
+      feedbackEl.appendChild(clone);
+      return;
+    }
+    
+    var body = this.formSerialize();
+
     new MicroXhr(this.action, {
       m: this.method,
       b: JSON.stringify(body),
@@ -131,6 +140,20 @@ export class CeddlForms extends HTMLElement {
     });
   }
 
+  createDynamicErrorElement(message) {
+    var div = document.createElement('div');
+    div.innerHTML = `<div
+            ceddl-observe="formError"
+            data-name="${this.querySelector('form').name}-feedback"
+            data-type="main"
+            data-content="${message}"
+            class="ceddl-forms-error fade-in"
+            role="alert">
+            <div class="font-bold">${message}</div>
+          </div>`;
+    return div.firstChild;
+  }
+
   enableDirectResponce(elm) {
     return () => {
       if (!this.hasDirectResponce(elm)) {
@@ -170,11 +193,15 @@ export class CeddlForms extends HTMLElement {
   renderOK(Elm) {
     Elm.parentElement.classList.remove('error');
     Elm.parentElement.classList.add('success');
+    Elm.parentElement.querySelectorAll('p')
+      .forEach((errorElm) => errorElm.removeAttribute('ceddl-observe'))
   }
 
   renderError(Elm) {
     Elm.parentElement.classList.remove('success');
     Elm.parentElement.classList.add('error');
+    Elm.parentElement.querySelectorAll('p')
+      .forEach((errorElm) => errorElm.setAttribute('ceddl-observe', 'formError'))
   }
 
   connectedCallback() {

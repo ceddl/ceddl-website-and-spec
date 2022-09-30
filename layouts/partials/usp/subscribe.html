@@ -8,7 +8,7 @@
       action="/analyse/hook/s17v7vh2c1ayq5hcink78gzb3gwtdtm6"
       {{ end }}
       method="POST">
-      <form class="flex flex-grow max-w-lg" target="_blank" action="#" novalidate data-jsValidate="true" id="news-release-form"
+      <form class="flex flex-wrap flex-grow max-w-lg" target="_blank" action="#" novalidate data-jsValidate="true" id="news-release-form"
             ceddl-observe="newsReleaseForm" data-name="news-release-form" name="news-release-form" method="post">
         <diV class="relative w-full">
           <input class="inline-button w-full" pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" id="member_email"
@@ -21,7 +21,6 @@
 
           </div>
           <p
-            ceddl-observe="formError"
             data-type="field"
             data-name="member_email"
             data-content="Email is required and should be formatted as you@company.com">Email is required and should be formatted as you@company.com</p>
@@ -35,6 +34,8 @@
         </template>
         <template class="js-ceddl-form-error">
           <div
+            ceddl-observe="formError"
+            data-name="news-release-form-feedback"
             data-type="main"
             data-content="Oeps: An error occurred."
             class="ceddl-forms-error fade-in"
@@ -43,9 +44,9 @@
           </div>
         </template>
 
-
+        <div class="js-ceddl-form-feedback text-left basis-full w-full"></div>
       </form>
-      <div class="js-ceddl-form-feedback"></div>
+
     </ceddl-forms>
     <p class="mt-4 text-xs text-gray-600">Get notified after every release and receive news updates as soon as they
       happen.</p>

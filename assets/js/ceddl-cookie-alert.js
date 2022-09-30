@@ -24,20 +24,20 @@ export class CeddlCookieAlert extends HTMLElement {
     const cookiesAccepted = Cookies.getCookie("ceddlbyexample-accept-cookies")
 
     if (cookiesAccepted === "y" || cookiesAccepted === "n") {
-      this.style.visibility = "hidden";
+      this.style.display = "none";
     } else {
       this.querySelector("button").addEventListener("click", this.enableNonEssentials);
     }
   }
 
   enableNonEssentials() {
-    this.style.visibility = "hidden";
+    this.style.display = "none";
     Cookies.setCookie("ceddlbyexample-accept-cookies", "y", 365);
     this.dispatchEvent(this.updateEvent);
   }
 
   disableNonEssentials() {
-    this.style.visibility = "hidden";
+    this.style.display = "none";
     Cookies.setCookie("ceddlbyexample-accept-cookies", "n", 365);
     this.dispatchEvent(this.updateEvent);
   }

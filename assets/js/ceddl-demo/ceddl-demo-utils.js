@@ -1,11 +1,16 @@
 import {ceddl} from '@ceddl/ceddl-polyfill'
 
-export const renderJson = (object, nesting = 0) => {
+
+export const renderJson = (object) => {
+  return `<div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${renderJsonLoop(object)}</div>`;
+}
+
+const renderJsonLoop = (object, nesting = 0) => {
   let html = '';
   for (const [key, value] of Object.entries(object)) {
     if (typeof value === 'object') {
-      html = html + `<span class="font-big shepherd-text-green mr-2">${key}:<br /> `
-      html = html + renderJson(value, nesting + 1);
+      html = html + `<span  style="margin-left:${nesting * 10}px" class="font-big shepherd-text-green mr-2">${key}:<br /> `
+      html = html + renderJsonLoop(value, nesting + 2);
     } else {
       html = html + `<span style="margin-left:${nesting * 10}px" class="font-big shepherd-text-green mr-2">${key}:</span><span class="font-big shepherd-text-orange">"${value}"</span><br /> `
     }
