@@ -37,11 +37,30 @@ export const getCeddlObject = (type) => {
 export const setCurrentAnalyticsState = (tour) => {
   document.querySelectorAll('[ceddl-observe="funnel"]').forEach((el) => {
     el.removeAttribute('ceddl-observe');
-  })
+  });
+  tour.currentStep.el.setAttribute('id', `${tour.options.id}-${tour.steps.indexOf(tour.currentStep) + 1}`);
   tour.currentStep.el.setAttribute('ceddl-observe', 'funnel');
   tour.currentStep.el.setAttribute('data-name', tour.options.tourName);
   tour.currentStep.el.setAttribute('data-step', tour.steps.indexOf(tour.currentStep) + 1);
   tour.currentStep.el.setAttribute('data-step-title', tour.currentStep.options.title ? tour.currentStep.options.title : '');
   tour.currentStep.el.setAttribute('data-total-steps', tour.steps.length);
   tour.currentStep.el.setAttribute('data-time-in-funnel', Date.now() - tour.startTime);
+}
+
+export const scrollToHandler = (scrolltoElm) => {
+  const box = scrolltoElm.getBoundingClientRect();
+  const yCenter = (box.top + box.bottom) / 2
+  const goingUp = document.body.scrollTop > yCenter;
+
+  if (box.top >= 0 && box.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+    return; // within viewport
+  }
+  if (goingUp === true) {
+    window.scrollTo({top: document.documentElement.scrollTop + box.top - 45, behavior: 'smooth'});
+  } else {
+    window.scrollTo({
+      top: document.documentElement.scrollTop + box.bottom - window.innerHeight + 45,
+      behavior: 'smooth'
+    });
+  }
 }

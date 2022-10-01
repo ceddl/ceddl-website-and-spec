@@ -1,10 +1,9 @@
 import Shepherd from "./shepherd";
 import {ceddl} from '@ceddl/ceddl-polyfill'
-import {renderJson, getCeddlObject, setCurrentAnalyticsState} from "./ceddl-demo-utils";
+import {renderJson, getCeddlObject, setCurrentAnalyticsState, scrollToHandler} from "./ceddl-demo-utils";
 
 let funnelBaseText;
 const showFunnel = (funnel) => {
-  debugger;
   funnel.timeInFunnel = `${funnel.timeInFunnel / 1000} seconds`;
   ceddlPolyfillTour.currentStep.updateStepOptions({
     text: funnelBaseText + `<br /> <br /> ${renderJson(funnel)}`
@@ -18,12 +17,14 @@ const showForm = (form) => {
 }
 
 const ceddlPolyfillTour = new Shepherd.Tour({
+  id: 'ceddl-polyfill-basics',
   tourName: 'Ceddl polyfill basics',
   useModalOverlay: true,
   defaultStepOptions: {
     cancelIcon: {
       enabled: true
     },
+    scrollToHandler,
     classes: ''
   }
 });
@@ -35,6 +36,9 @@ ceddlPolyfillTour.addSteps([
     attachTo: {
       element: '#demo-start',
       on: 'bottom'
+    },
+    scrollTo: {
+      behavior: "smooth",
     },
     cancelIcon: {
       enabled: false
@@ -66,6 +70,9 @@ ceddlPolyfillTour.addSteps([
     attachTo: {
       element: '#demo-start',
       on: 'bottom'
+    },
+    scrollTo: {
+      behavior: "smooth",
     },
     popperOptions: {
       modifiers: [{name: 'offset', options: {offset: [0, 22]}}]
@@ -146,7 +153,7 @@ ceddlPolyfillTour.addSteps([
   }, {
     title: 'Data structure of ceddl-observe',
     text: () => {
-      return `To make sure observed "things" are according spec it need structure. Nothing more frustrating than broken product/report after a production release wright. <br /><br />
+      return `To make sure observed "things" are according spec it needs structure. Nothing more frustrating than broken product/report after a production release wright. <br /><br />
       <div class="prose prose-sm highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">ceddl</span>.<span style="color:#a6e22e">modelFactory</span>.<span style="color:#a6e22e">create</span>({
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">key</span><span style="color:#f92672">:</span> <span style="color:#e6db74">'newsReleaseForm'</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">root</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
@@ -169,8 +176,7 @@ ceddlPolyfillTour.addSteps([
       on: 'top'
     },
     scrollTo: {
-      behavior: "smooth",
-      block: "end"
+      behavior: "smooth"
     },
     popperOptions: {
       modifiers: [{name: 'offset', options: {offset: [0, 22]}}]
@@ -203,7 +209,6 @@ ceddlPolyfillTour.addSteps([
     },
     scrollTo: {
       behavior: "smooth",
-      block: "end"
     },
     popperOptions: {
       modifiers: [{name: 'offset', options: {offset: [0, 22]}}]
@@ -244,7 +249,6 @@ ceddlPolyfillTour.addSteps([
     },
     scrollTo: {
       behavior: "smooth",
-      block: "center"
     },
     popperOptions: {
       modifiers: [{name: 'offset', options: {offset: [0, 22]}}]
@@ -268,8 +272,9 @@ ceddlPolyfillTour.addSteps([
   }, {
     title: 'The basics covered',
     text: () => {
-      return `You got it! All the basics of ceddl-polyfill, wright here on the ceddlbyexample homepage. <br /><br />
-      <h3>Take back control</h3> of your customer's digital footprint or <a class="font-bold link" href="/contact/talk-to-an-ceddl-expert/">Talk to a specialist</a> about building
+      return `<i class="ti-medall text-green-700 text-4xl text-primary mr-2"></i>
+             You got it! All the basics of ceddl-polyfill, wright here on the ceddlbyexample homepage. <br /><br />
+      Take back control of your customer's digital footprint or <a class="font-bold link" href="/contact/talk-to-an-ceddl-expert/">Talk to a specialist</a> about building
           clean, high-quality data, so you can focus on engagement and growth.
       `;
     },
@@ -279,7 +284,6 @@ ceddlPolyfillTour.addSteps([
     },
     scrollTo: {
       behavior: "smooth",
-      block: "center"
     },
     popperOptions: {
       modifiers: [{name: 'offset', options: {offset: [0, 22]}}]
@@ -296,7 +300,7 @@ ceddlPolyfillTour.addSteps([
         secondary: true
       },
       {
-        text: 'Next',
+        text: 'Exit Demo',
         action: ceddlPolyfillTour.next
       }
     ]
