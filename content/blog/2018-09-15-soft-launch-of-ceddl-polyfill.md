@@ -6,8 +6,9 @@ date: 2018-09-15
 description : "The team has been working for 7 years implementing and improving website marketing systems. After a
 complete rewrite of
 the frontend datalayer solution in 2018, quality is good enough to share and open source the polyfill online.
-,
-increasing downloads require us to get a better understanding of our users."
+, increasing downloads require us to get a better understanding of our users."
+keywords: [blog, news]
+segment: general
 myType: News
 ---
 
@@ -24,6 +25,4 @@ that browsers will be able to implement.
 The current state of the polyfill is to incubate on ideas, assist in writing a technical specification. Wondering what a
 polyfill is? <a href="https://www.w3.org/2001/tag/doc/polyfills/">Read more here</a>.
 
-Please do not hesitate to join, ask questions on
-the <a href="https://join.slack.com/t/ceddl/shared_invite/enQtNDgzMTMxMDg1NTA2LTU1OGNkNGI5ZTkyYmIxYzNlZjUwOTQzNTA2YzBjN2QzZjFmNjhhZGJjY2VlYmUwNTkzYjkwYjZmMGRkZGY1NjU" title="Join our slack chanel"><span>
-slack channel</span></a>.
+Please do not hesitate send us a message via the w3c mailing list of contact forms on this site.

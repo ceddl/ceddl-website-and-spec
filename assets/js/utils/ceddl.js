@@ -100,57 +100,32 @@ ceddl.modelFactory.create({
   }
 });
 
-var key = 'Y2VkZGxieWV4YW1wbGUuY29tOk9ubGluZTFNb25pdG9yaW5n';
-const socket = new CeddlReceiverSocket('')
+const ID = 'Y2VkZGxieWV4YW1wbGUuY29tOk9ubGluZTFNb25pdG9yaW5n';
+const socket = new CeddlReceiverSocket(ID)
 
 ceddl.eventbus.on('pageready', (data) => {
-  console.log('pageready', data);
-  socket.send(data);
-});
-
-ceddl.eventbus.on('heatmap:update', (data) => {
-  console.log(data);
+  const mydata = {...data.page, ...data.pageMetadata}
+  mydata.indice = 'page_ready';
+  console.log(mydata);
+  socket.send(mydata);
 });
 
 ceddl.eventbus.on('performanceTiming', (data) => {
-  console.log('performanceTiming', data);
+  data.indice = 'performance_timing';
   socket.send(data);
 });
 
 ceddl.eventbus.on('click', (data) => {
-  console.log('click', data);
+  data.indice = 'page_ready';
   socket.send(data);
 });
 
-ceddl.eventbus.on('initialize', (data) => {
-  console.log('initialize', data);
+ceddl.eventbus.on('funnel', (data) => {
+  data.indice = 'funnel';
+  socket.send(data);
 });
 
-window.addEventListener('beforeunload', (event) => {
-  console.log('unload', event)
-});
 
-var pushPageMetadata = function (data) {
-  data.indice = 'page_ready';
-  checkReceiverSocket(data, function (data) {
-    receiverSocket.send(JSON.stringify(data));
-  });
-};
-
-var pushPerformanceTiming = function (data) {
-  data.indice = 'performance_timing';
-  data.url = window.location.href;
-  checkReceiverSocket(data, function (data) {
-    receiverSocket.send(JSON.stringify(data));
-  });
-};
-
-var pushClick = function (data) {
-  data.indice = 'click';
-  checkReceiverSocket(data, function (data) {
-    receiverSocket.send(JSON.stringify(data));
-  });
-};
 ceddl.initialize();
 
 export {

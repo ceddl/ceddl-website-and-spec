@@ -32,7 +32,7 @@
           <h1 class="font-big text-gray-700"><a class="text-3xl" href="{{ .Permalink }}">{{ .Params.Title }}</a></h1>
           <p>{{ .Params.Description }}</p>
           {{ if .Params.myimage }}
-          <img class="img-fluid" src="{{ .Params.myimage | absURL }}" alt="">
+          <img class="img-fluid" src="{{ .Params.image | absURL }}" alt="">
           {{ end }}
         </article>
         {{ end }}

@@ -22,7 +22,26 @@
     {{- if .Params.Author }}
     <meta name="author" content="{{ .Params.Author}}" />
     {{ end -}}
-    {{ hugo.Generator }}
+
+    <meta property="og:title" content="{{- .Title }} - {{ .Site.Title -}}">
+    <meta property="og:type" content="website">
+    <meta property="site_name" content="ceddlbyexample.com">
+    <meta property="og:url" content="{{ .Page.Permalink }}">
+    <meta property="og:image" content="{{ if isset .Params "image" }}{{ .Params.Image | absURL }}{{ else }}{{ .Site.Params.image | absURL  }}{{ end }}">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
+    <meta property="og:image:type" content="image/png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@ceddl_polyfill">
+    <meta name="twitter:site" content="@ceddl_polyfill">
+    <meta name="twitter:title" content="{{- .Title }} - {{ .Site.Title -}}">
+    <meta itemprop="name" content="ceddl-polyfill">
+    <meta itemprop="image" content="{{ if isset .Params "image" }}{{ .Params.Image | absURL }}{{ else }}{{ .Site.Params.image | absURL  }}{{ end }}">
+    <link href="/index.xml" rel="alternate" title="CEDDL RSS FEED" type="application/atom+xml">
+
+
+
+
 
     {{ "<!-- Web Components -->" | safeHTML }}
     {{ $webComponent := resources.Get "js/web-components.js" | js.Build }}
@@ -40,3 +59,4 @@
 
 
 </head>
+

@@ -1,8 +1,9 @@
 ---
 author: Roland Broekema
-title: About Ceddl-polyfill
+title: About the origins of Ceddl-polyfill
 date: 2022-10-01
-description: About the origins of Ceddl-polyfill
+description: "Enterprise customer journey analytics without the privacy concerns. It feels like it is time for a new
+direction. A strategy that shows by example and is not limited to the browser."
 keywords: [about, creator]
 segment: general
 type: about

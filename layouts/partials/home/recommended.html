@@ -11,7 +11,7 @@
             {{ .Params.myType }}
           </label>
           <div class="bg-cover bg-center flex-grow h-[250px] lg:h-[350px]"
-               style="background-image:url('{{ .Params.myimage }}')"></div>
+               style="background-image:url('{{ .Params.image }}')"></div>
           <div class="flex-grow p-4">
             <h4 class="font-big text-lg mb-4">{{ .Params.Title }}</h4>
             <p>{{ .Params.Description | truncate 140 }}</p>
@@ -25,7 +25,7 @@
         <a href="{{ .Permalink }}"
            class="transition-transform hover:-translate-y-[8px] flex flex-col lg:flex-row w-full h-full relative bg-gray-50">
           <div class="bg-cover bg-center w-full lg:w-1/2 h-[250px] lg:h-full"
-               style="background-image:url('{{ .Params.myimage }}')"></div>
+               style="background-image:url('{{ .Params.image }}')"></div>
           <label class="absolute left-0 top-0 text-white bg-green-500 px-4 py-2">
             {{ .Params.myType }}
           </label>
@@ -42,7 +42,7 @@
         <a href="{{ .Permalink }}"
            class="transition-transform hover:-translate-y-[8px] flex flex-col w-full h-full relative md:bg-green-900 bg-gray-50">
           <div class="w-full h-[270] bg-cover bg-center flex-grow md:opacity-[0.5]"
-               style="background-image:url('{{ .Params.myimage }}')"></div>
+               style="background-image:url('{{ .Params.image }}')"></div>
           <label class="absolute left-0 top-0 text-white bg-green-500 px-4 py-2">
             {{ .Params.myType }}
           </label>
@@ -59,7 +59,7 @@
         <a href="{{ .Permalink }}"
            class="transition-transform hover:-translate-y-[8px] flex flex-col w-full h-full relative md:bg-green-900 bg-gray-50">
           <div class="w-full h-[270] bg-cover bg-center flex-grow md:opacity-[0.5]"
-               style="background-image:url('{{ .Params.myimage }}')"></div>
+               style="background-image:url('{{ .Params.image }}')"></div>
           <label class="absolute left-0 top-0 text-white bg-green-500 px-4 py-2">
             {{ .Params.myType }}
           </label>

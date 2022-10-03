@@ -6,8 +6,10 @@ date: 2019-02-04
 description : "It can be hard to make the leap from hacking together code that works to writing code that`s organized,
 maintainable,
 reusable, and a joy to work on."
-myimage: "/img/ceddl-react-angular-vue.png"
+image: "/img/ceddl-react-angular-vue.png"
 author: "Roland Broekema"
+keywords: [blog, news]
+segment: general
 myType: Blog
 ---
 

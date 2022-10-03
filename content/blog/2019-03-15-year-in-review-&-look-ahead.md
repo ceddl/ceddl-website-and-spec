@@ -6,8 +6,10 @@ date: 2019-03-15
 description : "2019 is well on its way, I feel it's a appropriate moment to evaluate our developments over de last year.
 To review the
 foundation that we have built and figure out a way forward."
-myimage: "/img/w3cgroup.png"
+image: "/img/w3cgroup.png"
 author: "Roland Broekema"
+keywords: [blog, news]
+segment: general
 myType: News
 ---
 
