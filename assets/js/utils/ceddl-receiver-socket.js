@@ -49,13 +49,15 @@ export class CeddlReceiverSocket {
       return;
     }
 
+    const mypushAndRemove = pushAndRemove.bind(this);
+
     function pushAndRemove() {
       callback(data);
-      this.receiverSocket.removeEventListener('open', pushAndRemove, false);
+      this.receiverSocket.removeEventListener('open', mypushAndRemove, false);
     }
 
     this.receiverSocket = this.createSocket();
-    this.receiverSocket.addEventListener('open', pushAndRemove, false);
+    this.receiverSocket.addEventListener('open', mypushAndRemove, false);
   }
 
   logAndIgnore(event) {

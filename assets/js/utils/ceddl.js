@@ -106,7 +106,6 @@ const socket = new CeddlReceiverSocket(ID)
 ceddl.eventbus.on('pageready', (data) => {
   const mydata = {...data.page, ...data.pageMetadata}
   mydata.indice = 'page_ready';
-  console.log(mydata);
   socket.send(mydata);
 });
 
