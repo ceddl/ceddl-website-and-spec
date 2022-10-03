@@ -1,6 +1,6 @@
 {
   "name": "ceddl-analytics-service",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "scripts": {
     "build": "hugo",
     "dev": "hugo server -e dev",
