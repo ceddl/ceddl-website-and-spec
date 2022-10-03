@@ -1,0 +1,78 @@
+<div class="p-5 mb-14 text-gray-700">
+  <div class="max-w-4xl m-auto">
+    <h3 class="font-big text-3xl mb-6">Recommended for you</h3>
+    <div class="grid md:grid-rows-3 grid-cols-2 grid-rows-4 lg:grid-cols-4 lg:grid-rows-2 gap-4">
+      {{ range $index, $value := first 4 (where site.RegularPages "Type" "blog") }}
+      {{ if eq $index 0}}
+      <div class="box lg:row-span-2 col-span-2">
+        <a href="{{ .Permalink }}"
+           class="transition-transform hover:-translate-y-[8px] flex flex-col w-full h-full relative bg-gray-50">
+          <label class="absolute left-0 top-0 text-white bg-green-500 px-4 py-2">
+            {{ .Params.myType }}
+          </label>
+          <div class="bg-cover bg-center flex-grow h-[250px] lg:h-[350px]"
+               style="background-image:url('{{ .Params.image }}')"></div>
+          <div class="flex-grow p-4">
+            <h4 class="font-big text-lg mb-4">{{ .Params.Title }}</h4>
+            <p>{{ .Params.Description | truncate 140 }}</p>
+          </div>
+          <i class="ti-angle-double-right box-arrows"></i>
+        </a>
+      </div>
+      {{end}}
+      {{ if eq $index 1}}
+      <div class="box col-span-2 lg:col-start-3 lg:col-end-5">
+        <a href="{{ .Permalink }}"
+           class="transition-transform hover:-translate-y-[8px] flex flex-col lg:flex-row w-full h-full relative bg-gray-50">
+          <div class="bg-cover bg-center w-full lg:w-1/2 h-[250px] lg:h-full"
+               style="background-image:url('{{ .Params.image }}')"></div>
+          <label class="absolute left-0 top-0 text-white bg-green-500 px-4 py-2">
+            {{ .Params.myType }}
+          </label>
+          <div class="w-full lg:w-1/2 p-4">
+            <h4 class="font-big text-lg mb-4">{{ .Params.Title }}</h4>
+            <p>{{ .Params.Description| truncate 140 }}</p>
+          </div>
+          <i class="ti-angle-double-right box-arrows"></i>
+        </a>
+      </div>
+      {{end}}
+      {{ if eq $index 2}}
+      <div class="box col-span-2 md:col-span-1">
+        <a href="{{ .Permalink }}"
+           class="transition-transform hover:-translate-y-[8px] flex flex-col w-full h-full relative md:bg-green-900 bg-gray-50">
+          <div class="w-full h-[270] bg-cover bg-center flex-grow md:opacity-[0.5]"
+               style="background-image:url('{{ .Params.image }}')"></div>
+          <label class="absolute left-0 top-0 text-white bg-green-500 px-4 py-2">
+            {{ .Params.myType }}
+          </label>
+          <div class="w-full p-4 md:text-white md:absolute left-0 bottom-0">
+            <h4 class="font-big text-lg">{{ .Params.Title }}</h4>
+            <p class="md:hidden">{{ .Params.Description | truncate 140 }}</p>
+          </div>
+          <i class="ti-angle-double-right box-arrows"></i>
+        </a>
+      </div>
+      {{end}}
+      {{ if eq $index 3}}
+      <div class="box col-span-2 md:col-span-1">
+        <a href="{{ .Permalink }}"
+           class="transition-transform hover:-translate-y-[8px] flex flex-col w-full h-full relative md:bg-green-900 bg-gray-50">
+          <div class="w-full h-[270] bg-cover bg-center flex-grow md:opacity-[0.5]"
+               style="background-image:url('{{ .Params.image }}')"></div>
+          <label class="absolute left-0 top-0 text-white bg-green-500 px-4 py-2">
+            {{ .Params.myType }}
+          </label>
+          <div class="w-full p-4 md:text-white md:absolute left-0 bottom-0">
+            <h4 class="font-big text-lg">{{ .Params.Title }}</h4>
+            <p class="md:hidden">{{ .Params.Description | truncate 140 }}</p>
+          </div>
+          <i class="ti-angle-double-right box-arrows"></i>
+        </a>
+      </div>
+      {{end}}
+      {{end}}
+    </div>
+  </div>
+</div>
+

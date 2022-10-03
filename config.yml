@@ -1,0 +1,5 @@
+baseURL: 'https://www.ceddlbyexample.com/'
+languageCode: 'en-us'
+title: 'CEDDL-Polyfill'
+params:
+  image: '/img/og.png'

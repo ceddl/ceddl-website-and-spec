@@ -1,19 +1,18 @@
-FROM node:8.11.4-alpine
+FROM nginx:1.19.10-alpine
 
 # Create www-data user
 RUN set -x ; \
   addgroup -g 82 -S www-data ; \
   adduser -u 82 -D -S -G www-data www-data && exit 0 ; exit 1
 
+FROM nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+
 # Upload application
-ADD . /var/www/ceddlbyexample.com/
+ADD ./public /var/www/ceddlbyexample.com/
+RUN chmod -R 777 /var/www/ceddlbyexample.com
+# Start nginx
+EXPOSE 80
 
-# Set permissions for nginx
-RUN chgrp www-data -R /var/www
-RUN chmod g+s /var/www
-RUN chmod u+s /var/www
-
-# Start nginx and nodejs app.
-CMD cd /var/www/ceddlbyexample.com/ && node server.js && tail -f /dev/null
-EXPOSE 8090
-
+CMD nginx

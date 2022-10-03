@@ -1,0 +1,80 @@
+ceddl-forms p {
+    @apply mt-2 text-sm;
+}
+
+ceddl-forms label {
+    @apply block mb-2 text-sm font-medium font-bold;
+}
+
+ceddl-forms form p {
+    @apply hidden;
+}
+
+ceddl-forms form .success p {
+    @apply text-green-600;
+}
+
+ceddl-forms form .error p {
+    @apply text-orange-600 block;
+}
+
+ceddl-forms select:invalid,
+ceddl-forms select:required:invalid {
+    @apply text-gray-400;
+}
+
+ceddl-forms option {
+    @apply text-gray-800;
+}
+
+ceddl-forms input[type=submit] {
+    cursor: pointer;
+}
+
+ceddl-forms input[type=text],
+ceddl-forms input[type=number],
+ceddl-forms input[type=email],
+ceddl-forms input[type=tel],
+ceddl-forms textarea,
+ceddl-forms select {
+    @apply border rounded-lg block w-full px-4 py-2.5 bg-white;
+}
+
+ceddl-forms .success input[type=text],
+ceddl-forms .success input[type=number],
+ceddl-forms .success input[type=email],
+ceddl-forms .success input[type=tel],
+ceddl-forms .success textarea,
+ceddl-forms .success select {
+    @apply border-green-400;
+}
+
+ceddl-forms .error input[type=text],
+ceddl-forms .error input[type=number],
+ceddl-forms .error input[type=email],
+ceddl-forms .error input[type=tel],
+ceddl-forms .error textarea,
+ceddl-forms .error select {
+    @apply border-orange-600;
+}
+
+
+ceddl-forms input[type=email].inline-button {
+    @apply bg-transparent pr-32;
+}
+
+ceddl-forms input[type=email].darkback {
+    @apply bg-white/10 border-transparent text-white placeholder-gray-200;
+}
+
+ceddl-forms .error input[type=email].darkback {
+    @apply border-orange-600
+}
+
+.ceddl-forms-success {
+    @apply bg-green-25 border-l-4 border-green-500 text-green-700 p-4 my-4;
+}
+
+.ceddl-forms-error {
+    @apply bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 my-4;
+}

@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div>
+  <div class="relative max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8">
+    <ceddl-local-nav>
+      <div class="flex w-full max-w-[90rem] justify-between border-b border-gray-200 px-6 content-center lg:hidden">
+        <button slot="menu" class="flex items-center py-4 pr-6 transition-colors text-gray-500 hover:text-gray-700 ">
+          <svg class="w-4 h-4 mr-2" style="fill: currentColor;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+               focusable="false" viewBox="0 0 24 24" data-v-250f982d="">
+            <path d="M17,11H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,11,17,11z"></path>
+            <path d="M21,7H3C2.4,7,2,6.6,2,6s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,7,21,7z"></path>
+            <path d="M21,15H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,15,21,15z"></path>
+            <path d="M17,19H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,19,17,19z"></path>
+          </svg>
+          <span class="menu-text">Menu</span>
+        </button>
+        <a class="text-gray-500 hover:text-gray-700 transition-colors self-center py-4 pl-6" href="#">Return to top</a>
+      </div>
+    </ceddl-local-nav>
+    <ceddl-fixed-nav>
+      <nav class="text-sm lg:leading-6 relative">
+        <div class="sticky top-0 -ml-0.5">
+          {{- partial "documentation-nav.html" . -}}
+        </div>
+      </nav>
+    </ceddl-fixed-nav>
+
+    <div class="lg:pl-[19.5rem] mt-24 lg:mt-0">
+      <div class="w-full mx-auto pt-0 xl:ml-0 xl:mr-[15.5rem] xl:pr-16">
+        {{ range .Pages }}
+        <article
+          class="prose prose-sm md:prose-base max-w-3xl px-4 md:px-6 xl:ml-0 xl:mr-[15.5rem] xl:pr-16 mx-auto mb-16 mt-12 text-gray-600 justify-self-center">
+          <h1 class="font-big text-gray-700"><a class="text-3xl" href="{{ .Permalink }}">{{ .Params.Title }}</a></h1>
+          <p>{{ .Params.Description }}</p>
+          {{ if .Params.myimage }}
+          <img class="img-fluid" src="{{ .Params.image | absURL }}" alt="">
+          {{ end }}
+        </article>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}

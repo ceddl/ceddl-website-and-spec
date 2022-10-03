@@ -1,0 +1,62 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>{{ block "title" . }}
+    {{- .Title }} - {{ .Site.Title -}}
+    {{ end }}</title>
+    {{- if .Description }}
+    <meta name="description" content="{{ .Description }}" />
+    {{ end -}}
+    {{- if .Keywords }}
+    <meta name="keywords" content="{{ delimit .Keywords "," }}" />
+    {{ end -}}
+    {{- if .Params.Author }}
+    <meta name="author" content="{{ .Params.Author}}" />
+    {{ end -}}
+
+    <meta property="og:title" content="{{- .Title }} - {{ .Site.Title -}}">
+    <meta property="og:type" content="website">
+    <meta property="site_name" content="ceddlbyexample.com">
+    <meta property="og:url" content="{{ .Page.Permalink }}">
+    <meta property="og:image" content="{{ if isset .Params "image" }}{{ .Params.Image | absURL }}{{ else }}{{ .Site.Params.image | absURL  }}{{ end }}">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
+    <meta property="og:image:type" content="image/png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@ceddl_polyfill">
+    <meta name="twitter:site" content="@ceddl_polyfill">
+    <meta name="twitter:title" content="{{- .Title }} - {{ .Site.Title -}}">
+    <meta itemprop="name" content="ceddl-polyfill">
+    <meta itemprop="image" content="{{ if isset .Params "image" }}{{ .Params.Image | absURL }}{{ else }}{{ .Site.Params.image | absURL  }}{{ end }}">
+    <link href="/index.xml" rel="alternate" title="CEDDL RSS FEED" type="application/atom+xml">
+
+
+
+
+
+    {{ "<!-- Web Components -->" | safeHTML }}
+    {{ $webComponent := resources.Get "js/web-components.js" | js.Build }}
+    <script type="text/javascript" src="{{ $webComponent.RelPermalink }}" defer></script>
+
+    {{ $styles := resources.Get "css/styles.css" }}
+    {{ $styles = $styles | resources.PostCSS }}
+    {{ if hugo.IsProduction }}
+    {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+    {{ else }}
+    {{ $styles = $styles | resources.ExecuteAsTemplate (printf "css/styles.dev.%v.css" now.UnixMilli) .}}
+    {{ end }}
+    <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+
+
+
+</head>
+

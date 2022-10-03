@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html
+  ceddl-observe="page"
+  data-language="{{ .Site.LanguageCode }}"
+  data-segment="{{ .Params.segment }}"
+  data-sections="{{ delimit .Keywords " ," }}"
+data-page-ready=" page pageMetadata"
+lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+
+<body class="font-small flex flex-col min-h-screen text-gray-800">
+{{- partial "header-home.html" . -}}
+<main>
+
+  <article class="flex flex-col relative text-center mb-44 text-white">
+    <div class="invite-background"></div>
+
+    <div class="flex flex-col items-center p-8">
+      <h1 class="font-big text-4xl md:text-5xl ml-2 mr-2 welcome-headline pt-3 md:pt-8">The Dynamic Data
+        Layer</h1>
+      <p class="text-2xl md:text max-w-4xl ml-4 mr-4">
+        A <b>real-time</b> data collection system that speaks your <b>business Language</b>. <b>Impact</b> and
+        <b>analyse</b> customer journey's, make <b>real connections</b>.
+      </p>
+    </div>
+
+
+    <div class="flex flex-row flex-wrap justify-center p-4 pt-0 md:pb-8">
+      <button id="demo-start" data-demo-version="1.1.0" class="btn btn-primary m-2 text-gray-700">RUN THE DEMO</button>
+      {{ with .Site.GetPage "/talk-to-an-ceddl-expert" }}
+      <a href="{{ .Permalink }}" class="btn btn-secondary m-2">TALK TO AN EXPERT</a>
+      {{ end }}
+    </div>
+
+  </article>
+
+  {{ partial "home/main-nav.html" . }}
+
+  {{ partial "home/why-ceddl.html" . }}
+
+  {{ partial "home/partners.html" . }}
+
+  {{ partial "home/recommended.html" . }}
+
+  <article class="bg-gray-50">
+    {{ partial "usp/subscribe.html" . }}
+  </article>
+
+</main>
+{{- partial "footer.html" . -}}
+</body>
+
+</html>

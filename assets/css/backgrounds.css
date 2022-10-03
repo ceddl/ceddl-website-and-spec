@@ -1,0 +1,140 @@
+.header-back {
+    /*background:rgba(225, 225, 225, 0.2);*/
+}
+
+.usp-back {
+    background-image: linear-gradient(to right, #004c4c, #00716b)
+}
+
+.usp-back-two{
+    background: linear-gradient(to right, #004c4c, #00716b);
+    overflow: hidden;
+
+    .usp-back-two-interest {
+        position: absolute;
+        top: 16rem;
+        right: 0;
+        left: -10rem;
+        height: 25rem;
+        background: linear-gradient(90deg, rgba(0,137,137,0.25) 0%, rgba(0,137,137,0.16) 85%, rgba(255,255,255,0) 100%);
+        transform: rotate(-12deg);
+    }
+}
+
+
+.slope-top {
+    width: 100%;
+    padding-top: calc(100vw * 0.15 / 2);
+    clip-path: polygon(0 0, 100% calc(100vw * 0.15), 100% 100%, 0 100%);
+    background: linear-gradient(to right, #004c4c, #00716b);
+}
+
+.slope-bottom {
+    width: 100%;
+    padding-bottom: calc(100vw * 0.15 );
+    clip-path:  polygon(0% 0%, 100% 0%, 100% 100%, 0 calc(100% - 100vw * 0.15));
+    background: linear-gradient(to right, #004c4c, #00716b);
+}
+
+.slope {
+    background: linear-gradient(to right, #004c4c, #00716b);
+}
+
+.default-back {
+    background: linear-gradient(100deg, theme('colors.green.200') -20%, theme('colors.green.700') 25%, theme('colors.green.700') 70%, theme('colors.green.200') 120%);
+}
+
+.invite-background {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 15rem);
+    z-index: -1;
+    margin-top: -8rem;
+    background: linear-gradient(to right, #004c4c, #00716b);
+    clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% calc(100% - 100vw * 0.18),
+            calc(50% + 7rem) calc(100% - 1.4rem),
+            calc(50% + 5.5rem) calc(100% - .95rem),
+            calc(50% + 4rem) calc(100% - .6rem),
+            calc(50% + 2.0rem) calc(100% - .25rem),
+            calc(50% + 1.3rem) calc(100% - .15rem),
+            calc(50% + 0.8rem) calc(100% - .1rem),
+            50% calc(100% - .06rem),
+            calc(50% - 0.8rem) calc(100% - .1rem),
+            calc(50% - 1.3rem) calc(100% - .15rem),
+            calc(50% - 2.0rem) calc(100% - .25rem),
+            calc(50% - 4rem) calc(100% - .6rem),
+            calc(50% - 5.5rem) calc(100% - .95rem),
+            calc(50% - 7rem) calc(100% - 1.4rem),
+            0% calc(100% - 100vw * 0.18),
+            0% 0%
+    );
+}
+
+@media (max-width: 700px) {
+    .invite-background {
+        clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% calc(100% - 100vw * 0.18),
+                calc(50% + 7rem) calc(100% - 1.6rem),
+                calc(50% + 5.5rem) calc(100% - 1rem),
+                calc(50% + 4rem) calc(100% - .6rem),
+                calc(50% + 2.0rem) calc(100% - .25rem),
+                calc(50% + 1.3rem) calc(100% - .15rem),
+                calc(50% + 0.8rem) calc(100% - .1rem),
+                50% calc(100% - .06rem),
+                calc(50% - 0.8rem) calc(100% - .1rem),
+                calc(50% - 1.3rem) calc(100% - .15rem),
+                calc(50% - 2.0rem) calc(100% - .25rem),
+                calc(50% - 4rem) calc(100% - .6rem),
+                calc(50% - 5.5rem) calc(100% - 1rem),
+                calc(50% - 7rem) calc(100% - 1.6rem),
+                0% calc(100% - 100vw * 0.18),
+                0% 0%
+        );
+    }
+}
+
+@media (min-width: 1536px) {
+    .invite-background {
+        clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% calc(100% - 100vw * 0.13),
+                calc(50% + 8rem) calc(100% - 1.3rem),
+                calc(50% + 5rem) calc(100% - .6rem),
+                calc(50% + 3rem) calc(100% - .3rem),
+                calc(50% + 2.2rem) calc(100% - .15rem),
+                calc(50% + 1.8rem) calc(100% - .1rem),
+                50% calc(100% - .01rem),
+                calc(50% - 1.8rem) calc(100% - .1rem),
+                calc(50% - 2.2rem) calc(100% - .15rem),
+                calc(50% - 3rem) calc(100% - .3rem),
+                calc(50% - 5rem) calc(100% - .6rem),
+                calc(50% - 8rem) calc(100% - 1.2rem),
+                0% calc(100% - 100vw * 0.13),
+                0% 0%
+        );
+    }
+}
+
+.invite-background-two {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: fill;
+        width: 100%;
+        height: 80%;
+        min-width: 700px;
+    }
+
+}

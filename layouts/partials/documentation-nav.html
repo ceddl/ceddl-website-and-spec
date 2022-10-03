@@ -1,0 +1,15 @@
+{{ with .Site.GetPage "documentation" }}
+<div class="mt-8">
+  {{ range .Sections }}
+  <div class="pt-4">
+    <div class="my-2"><h3 class="font-semibold text-gray-900">{{ .Params.title }}</h3></div>
+
+    {{ range .Pages}}
+
+    <div class="my-2"><a class="link" href="{{ .Permalink }}">{{ .Params.title }}</a></div>
+
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

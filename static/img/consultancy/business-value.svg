@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+        width="100%"
+        viewBox="0 0 189 150"
+        version="1.1"
+        id="svg5"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+            id="defs2">
+        <rect
+                x="971.97156"
+                y="599.63562"
+                width="1119.2058"
+                height="567.05487"
+                id="rect63566"/>
+        <rect
+                x="125.01848"
+                y="-64.648392"
+                width="647.94177"
+                height="658.06"
+                id="rect60712"/>
+        <linearGradient
+                id="linearGradient3149">
+            <stop
+                    style="stop-color:#ffffff;stop-opacity:1;"
+                    offset="0"
+                    id="stop3145"/>
+            <stop
+                    style="stop-color:#ffffff;stop-opacity:0;"
+                    offset="1"
+                    id="stop3147"/>
+        </linearGradient>
+        <linearGradient
+                xlink:href="#linearGradient3149"
+                id="linearGradient3151"
+                x1="64.638657"
+                y1="185.81636"
+                x2="76.235016"
+                y2="-78.859489"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(2.3916037,2.863334)"/>
+    </defs>
+    <g
+            id="layer1">
+        <path
+                id="rect1026"
+                style="fill:url(#linearGradient3151);fill-opacity:1;stroke-width:0.283295"
+                d="M 76.886281,3.063839 62.680427,30.363463 H 91.092134 Z M 61.119287,33.36328 47.589877,59.363243 H 106.18269 L 92.653274,33.36328 Z M 46.028216,62.363576 32.498811,88.363539 H 121.27376 L 107.74435,62.363576 Z M 30.937663,91.363356 17.408258,117.36332 H 136.36431 L 122.83491,91.363356 Z M 15.847113,120.36313 2.4360457,146.1352 H 151.33653 l -13.41107,-25.77207 z"/>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;-inkscape-font-specification:'sans-serif Bold';fill:#004c4c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="70.290642"
+                y="19.058788"
+                id="text16808"><tspan
+         id="tspan16806"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;-inkscape-font-specification:'sans-serif Bold';fill:#004c4c;fill-opacity:1;stroke-width:0.264583"
+         x="70.290642"
+         y="19.058788">Data</tspan></text>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.05694px;line-height:1.25;-inkscape-font-specification:sans-serif;fill:#004c4c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="69.033882"
+                y="23.503582"
+                id="text22884"><tspan
+         id="tspan22882"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.05694px;-inkscape-font-specification:sans-serif;fill:#004c4c;fill-opacity:1;stroke-width:0.264583"
+         x="69.033882"
+         y="23.503582">Product</tspan></text>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;-inkscape-font-specification:'sans-serif Bold';fill:#004c4c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="60.799923"
+                y="45.764629"
+                id="text28738"><tspan
+         id="tspan28736"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;-inkscape-font-specification:'sans-serif Bold';fill:#004c4c;fill-opacity:1;stroke-width:0.264583"
+         x="60.799923"
+         y="45.764629">Automation</tspan></text>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.05694px;line-height:1.25;-inkscape-font-specification:sans-serif;fill:#004c4c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="55.460537"
+                y="50.848846"
+                id="text30092"><tspan
+         id="tspan30090"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.05694px;-inkscape-font-specification:sans-serif;fill:#004c4c;fill-opacity:1;stroke-width:0.264583"
+         x="55.460537"
+         y="50.848846">Expose API's, reports</tspan></text>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;-inkscape-font-specification:'sans-serif Bold';fill:#004c4c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="58.927341"
+                y="74.419899"
+                id="text32436"><tspan
+         id="tspan32434"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;-inkscape-font-specification:'sans-serif Bold';fill:#004c4c;fill-opacity:1;stroke-width:0.264583"
+         x="58.927341"
+         y="74.419899">Analytics / BI</tspan></text>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.05694px;line-height:1.25;-inkscape-font-specification:sans-serif;fill:#004c4c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="39.695312"
+                y="79.449219"
+                id="text33562"><tspan
+         id="tspan33560"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.05694px;-inkscape-font-specification:sans-serif;fill:#004c4c;fill-opacity:1;stroke-width:0.264583"
+         x="39.695312"
+         y="79.449219">Descriptive and exploratory analysis</tspan></text>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;-inkscape-font-specification:'sans-serif Bold';fill:#004c4c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="34.523491"
+                y="103.95864"
+                id="text35720"><tspan
+         id="tspan35718"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;-inkscape-font-specification:'sans-serif Bold';fill:#004c4c;fill-opacity:1;stroke-width:0.264583"
+         x="34.523491"
+         y="103.95864">Data infrastructure / Modeling</tspan></text>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.05694px;line-height:1.25;-inkscape-font-specification:sans-serif;fill:#004c4c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="36.11879"
+                y="108.68975"
+                id="text37340"><tspan
+         id="tspan37338"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.05694px;-inkscape-font-specification:sans-serif;fill:#004c4c;fill-opacity:1;stroke-width:0.264583"
+         x="36.11879"
+         y="108.68975">Data cleaning, storrage and enrichment</tspan></text>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;line-height:1.25;-inkscape-font-specification:'sans-serif Bold';fill:#004c4c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="57.222363"
+                y="132.46184"
+                id="text40632"><tspan
+         id="tspan40630"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;-inkscape-font-specification:'sans-serif Bold';fill:#004c4c;fill-opacity:1;stroke-width:0.264583"
+         x="57.222363"
+         y="132.46184">Infrastructure</tspan></text>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.05694px;line-height:1.25;-inkscape-font-specification:sans-serif;fill:#004c4c;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="35.736473"
+                y="137.05499"
+                id="text42868"><tspan
+         id="tspan42866"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.05694px;-inkscape-font-specification:sans-serif;fill:#004c4c;fill-opacity:1;stroke-width:0.264583"
+         x="35.736473"
+         y="137.05499">Client, security access, servers, network </tspan></text>
+        <text
+                xml:space="preserve"
+                transform="scale(0.26458333)"
+                id="text60710"
+                style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;white-space:pre;shape-inside:url(#rect60712);fill:#000000;fill-opacity:1;stroke:none"/>
+        <text
+                xml:space="preserve"
+                transform="scale(0.26458333)"
+                id="text63564"
+                style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;white-space:pre;shape-inside:url(#rect63566);fill:#000000;fill-opacity:1;stroke:none"/>
+        <path
+                style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98501"
+                d="m 158.15025,32.935626 10.01861,-12.095718 9.48973,11.998895"
+                id="path137116"/>
+        <path
+                style="fill:none;stroke:#ffffff;stroke-width:1.95651;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98501"
+                d="m 167.9297,121.57145 0.1156,-94.124778"
+                id="path136108"/>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88056px;line-height:1.25;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="151.52101"
+                y="13.634051"
+                id="text143356"><tspan
+         id="tspan143354"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88056px;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.264583"
+         x="151.52101"
+         y="13.634051">Business value</tspan></text>
+        <text
+                xml:space="preserve"
+                style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88056px;line-height:1.25;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                x="167.76704"
+                y="132.57602"
+                id="text145142"><tspan
+         id="tspan145140"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88056px;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="167.76704"
+         y="132.57602">Required for</tspan>
+            <tspan
+                    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.88056px;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+                    x="167.76704"
+                    y="137.42671"
+                    id="tspan145144">systems to work</tspan></text>
+    </g>
+</svg>
