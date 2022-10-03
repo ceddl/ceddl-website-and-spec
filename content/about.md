@@ -1,9 +1,10 @@
 ---
 author: Roland Broekema
 title: About Ceddl-polyfill
-date: 2019-05-13
+date: 2022-10-01
 description: About the origins of Ceddl-polyfill
 keywords: [about, creator]
+segment: general
 type: about
 ---
 

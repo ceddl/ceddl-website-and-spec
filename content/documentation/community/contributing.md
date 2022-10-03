@@ -4,6 +4,7 @@ title: Contributing
 date: 2022-08-31
 description: "You are capable of contributing to customer experience digital datalayer."
 keywords: [documentation, contributing]
+segment: general
 ---
 
 There are a number of Customer Experience Digital Data Layer polyfill projects.

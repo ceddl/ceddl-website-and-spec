@@ -2,7 +2,7 @@
 <html ceddl-observe="page"
       data-language="{{ .Site.LanguageCode }}"
       data-segment="{{ .Params.segment }}"
-      data-sections="{{ range .Params.keywords }}{{.}} {{end}}"
+      data-sections="{{ delimit .Keywords "," }}"
       data-page-ready="page pageMetadata"
       lang="{{ .Site.LanguageCode }}">
 {{ partial "head.html" . }}
@@ -15,7 +15,7 @@
 
 
   <section class="relative usp-back-two border-b py-8">
-    <div class="usp-back-two-interest"></div>
+    <div class="usp-back-two-interest move-around"></div>
     <div class="relative max-w-7xl mx-auto">
       <div class="flex flex-wrap pb-16">
         <div class="w-full lg:w-7/12 p-4 sm:p-16 lg:pl-24">

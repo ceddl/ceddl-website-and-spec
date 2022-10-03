@@ -2,9 +2,9 @@
 <html ceddl-observe="page"
       data-language="{{ .Site.LanguageCode }}"
       data-segment="{{ .Params.segment }}"
-      data-sections="{{ range .Params.keywords }}{{.}} {{end}}"
-      data-page-ready="page pageMetadata"
-      lang="{{ .Site.LanguageCode }}">
+      data-sections="{{ delimit .Keywords " ," }}"
+data-page-ready=" page pageMetadata"
+lang="{{ .Site.LanguageCode }}">
 {{- partial "head.html" . -}}
 <body>
 {{- partial "header.html" . -}}

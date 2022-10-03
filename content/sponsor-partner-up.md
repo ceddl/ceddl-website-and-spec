@@ -1,8 +1,10 @@
 ---
 author: Roland Broekema
 title:  Select Partner and sponsorship
-date: 2019-05-13
-description: lorum ipsum
+date: 2022-10-01
+description: "Partnering or sponsoring us is a great way to give back to the community and contribute to the long-term
+sustainability of the project. Hey! With your help, we might even get customer experience digital datalayer embedded in
+every browser on the planet. Thank you for supporting independent creators of Free Open Source Software!"
 keywords: [form, sponsor, partner]
 segment: partnership
 type: sponsor-partner-up

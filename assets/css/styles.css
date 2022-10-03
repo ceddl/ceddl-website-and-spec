@@ -90,6 +90,27 @@ body {
     }
 }
 
+@keyframes moveAround {
+    from {
+        transform: translateY(0rem) translateX(0rem) rotate(-3deg);
+    }
+    to {
+        transform: translateY(8rem) translateX(-8rem) rotate(10deg);
+    }
+}
+
+.move-around {
+    filter: blur(4px);
+    animation-name: moveAround;
+    animation-duration: 25500ms;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+
+
 .fade-out {
     animation-name: fadeOut;
     animation-duration: 250ms;

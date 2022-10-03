@@ -2,7 +2,8 @@
 author: Roland Broekema
 title: W3C Working Group
 date: 2022-08-25
-keywords: []
+keywords: [form, sponsor, partner]
+segment: partnership
 ---
 
 {{< rawhtml >}}
@@ -14,8 +15,8 @@ Writing a technical specification is hard. What information do browser developer
 specification be? Should it contain a lot of contexts or be purely technical?
 
 If you feel you can help/support us in any way, please do not hesitate to do so. If you would like to interact with me
-or the community complete
-this [github feedback issue](https://github.com/ceddl/ceddl-website-and-spec/issues/new?assignees=&labels=question&template=feedback.md&title=)
+or the community send us a message
+on  [github feedback issue](https://github.com/ceddl/ceddl-website-and-spec/issues/new?assignees=&labels=question&template=feedback.md&title=)
 .
 
 {{< rawhtml >}}

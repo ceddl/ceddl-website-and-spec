@@ -4,7 +4,8 @@ title: Single Page Applications
 date: 2022-08-30
 description: "If you are using a router framework in your application implement virtual-pageviews. frontend frameworks
 emit events or have a callback function on route change. On page change tell the datalayer to initialize."
-keywords: [documentation, ind-depth]
+keywords: [documentation, in-depth]
+segment: in-depth
 ---
 
 A single-page application (SPA) is a web application or web site that interacts with the user by dynamically rewriting

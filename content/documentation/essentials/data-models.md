@@ -5,6 +5,7 @@ date: 2022-08-30
 description: "Bad names and structure prevent data from clearly communicating its intent. Define data models in your
 business language."
 keywords: [documentation, essentials]
+segment: general
 ---
 
 

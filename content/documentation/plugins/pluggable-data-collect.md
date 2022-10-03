@@ -4,6 +4,7 @@ title: Pluggable Data Collection
 date: 2022-08-31
 description: "have a pluggable ceddl data collect solutions at an arm's length."
 keywords: [documentation, plugins]
+segment: in-depth
 ---
 
 Many of the inputs / data objects you need in a web datalayer are not part of the spec. But it is nice to have plug and

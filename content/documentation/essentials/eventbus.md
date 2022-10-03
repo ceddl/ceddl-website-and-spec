@@ -5,6 +5,7 @@ date: 2022-08-28
 description: "de-couple your application's data stream in a way not possible with other data modelling strategies. The
 eventbus enforce better overall architectural design and clean code"
 keywords: [documentation, essentials]
+segment: general
 ---
 
 Using a local message bus can enable you to de-couple your web application's components in a way not possible with

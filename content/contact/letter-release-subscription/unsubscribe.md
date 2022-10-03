@@ -1,9 +1,10 @@
 ---
 author: Roland Broekema
 title: news letter and release notes
-date: 2019-05-13
+date: 2019-01-01
 description: unsubscribe on your subscription
-keywords: [newsletter, releasenotes]
+keywords: [contact, newsletter, releasenotes]
+segment: general
 type: contact/letter-release-subscription
 memberSubmit: unsubscribe
 actionSuccess: Your subscription has been removed.

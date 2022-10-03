@@ -1,9 +1,10 @@
----
+cc---
 author: Roland Broekema
 title: API reference
 date: 2022-08-28
 description: "low level JavaScript api operations"
-keywords: [documentation, ind-depth]
+keywords: [documentation, in-depth]
+segment: in-depth
 ---
 
 The core global API functions are attached to the ceddl object. These core functions are useful for low level JavaScript

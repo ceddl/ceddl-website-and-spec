@@ -5,6 +5,7 @@ date: 2022-08-31
 description: "Customer Experience Digital Data Layer. Start surfacing data for marketing. analytics, personalization,
 and DMP implementations."
 keywords: [documentation, essentials]
+segment: general
 ---
 
 ### What is CEDDL-polyfill?
