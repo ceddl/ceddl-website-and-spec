@@ -104,24 +104,19 @@ const ID = 'Y2VkZGxieWV4YW1wbGUuY29tOk9ubGluZTFNb25pdG9yaW5n';
 const socket = new CeddlReceiverSocket(ID)
 
 ceddl.eventbus.on('pageready', (data) => {
-  const mydata = {...data.page, ...data.pageMetadata}
-  mydata.indice = 'page_ready';
-  socket.send(mydata);
+  socket.send({...data.page, ...data.pageMetadata, ...{indice: 'page_ready'}});
 });
 
 ceddl.eventbus.on('performanceTiming', (data) => {
-  data.indice = 'performance_timing';
-  socket.send(data);
+  socket.send({...data, ...{indice: 'performance_timing'}});
 });
 
 ceddl.eventbus.on('click', (data) => {
-  data.indice = 'page_ready';
-  socket.send(data);
+  socket.send({...data, ...{indice: 'click'}});
 });
 
 ceddl.eventbus.on('funnel', (data) => {
-  data.indice = 'funnel';
-  socket.send(data);
+  socket.send({...data, ...{indice: 'funnel'}});
 });
 
 
