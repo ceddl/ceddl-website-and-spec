@@ -3,8 +3,8 @@ draft: false
 author: Roland Broekema
 title: Our New Website is here!
 date: 2022-10-03
-description : "This update if fully responsive has many new way of making contact, providing you with live demo, the
-latest news as well as keeping you up to date on our range of consultancy services, partnership options."
+description : "This essential update has many new ways of making contact, providing you with a in-page demo, the
+latest news as well as keeping you up to date on our range of consultancy services and partnership options."
 image: "/img/og.png"
 author: "Roland Broekema"
 keywords: [blog, news]
@@ -14,8 +14,14 @@ myType: News
 
 We are absolutely thrilled to announce that our New Website has arrived!
 
-The update if fully responsive has many new way of making contact, providing you with live demo, the latest news as well
-as keeping you up to date on our range of consultancy services, partnership options.
+This essential update has many new ways of making contact, providing you with a in-page demo, the latest news
+as well as keeping you up to date on our range of consultancy services and partnership options.
+
+Some of the major changes in this release:
+
+* The introduction of github discussions for general help.
+* The official announcement of the ceddl-analytics business solution.
+* New processes for sponsering or partnering up with the ceddl-polyfill team.
 
 Check it out and let us know what you think!
 
