@@ -2,6 +2,10 @@
     @apply font-big px-5 py-3 cursor-pointer shadow-sm transition ease-in-out duration-300 drop-shadow-md hover:drop-shadow-sm rounded leading-snug whitespace-nowrap text-base font-semibold;
 }
 
+.btn:disabled {
+
+}
+
 .btn.btn-sm {
     @apply px-4 py-2 text-sm;
 }

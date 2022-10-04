@@ -97,5 +97,5 @@
 }
 
 .ceddl-fixed-nav-backdrop {
-    @apply bg-black/[.6] fixed z-10 left-0 right-0 top-0 bottom-0;
+    @apply bg-black/20 backdrop-blur-sm fixed z-10 left-0 right-0 top-0 bottom-0;
 }

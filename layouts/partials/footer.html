@@ -21,20 +21,30 @@
     <div class="flex flex-row flex-wrap w-full">
       <div class="flex-auto leading-8 p-4 w-full sm:w-1/2 lg:w-auto"><span
         class="font-big text-lg text-gray-800 block mt-3 mb-3">Support</span>
-        <ul class="list mt-4 mb-4 leading-8">
-          <li class="pv1"><a class="link" href="/documentation/essentials/getting-started/">Docs</a>
+        <ul class="list mt-4 mb-4">
+          {{ with .Site.GetPage "getting-started" }}
+          <li class="pv1"><a class="link" href="{{ .Permalink }}">Docs</a>
           </li>
-          <li class="pv1"><a target="_blank" class="link" href="https://github.com/ceddl/ceddl-polyfill/discussions">Help</a>
+          {{ end }}
+          <li class="pv1"><a target="_blank" class="link" href="https://github.com/ceddl/ceddl-polyfill/discussions/">Help</a>
           </li>
-          <li class="pv1"><a class="link" href="/contact">Contact</a></li>
+          {{ with .Site.GetPage "contact" }}
+          <li class="pv1"><a class="link" href="{{ .Permalink }}">Contact</a></li>
+          {{ end }}
         </ul>
       </div>
       <div class="flex-auto leading-8 p-4 w-full sm:w-1/2 lg:w-auto"><span
         class="font-big text-lg text-gray-800 block mt-3 mb-3">Company</span>
         <ul class="list mt-4 mb-4">
-          <li class="pv1"><a class="link" href="/about">About</a></li>
-          <li class="pv1"><a class="link" href="/blog">Blog</a></li>
-          <li class="pv1"><a class="link" href="/sponsor-partner-up">Select Partner & Sponsorship</a></li>
+          {{ with .Site.GetPage "about" }}
+          <li class="pv1"><a class="link" href="{{ .Permalink }}">About</a></li>
+          {{ end }}
+          {{ with .Site.GetPage "blog" }}
+          <li class="pv1"><a class="link" href="{{ .Permalink }}">Blog</a></li>
+          {{ end }}
+          {{ with .Site.GetPage "sponsor-partner-up" }}
+          <li class="pv1"><a class="link" href="{{ .Permalink }}">Select Partner & Sponsorship</a></li>
+          {{ end }}
         </ul>
       </div>
       <div class="flex-auto leading-8 p-4 w-full sm:w-1/2 lg:w-auto"><span
@@ -44,12 +54,10 @@
                              href="https://github.com/ceddl/ceddl-polyfill/blob/1c5750631f91826ff152aeffa736add8335f9bb8/CODE_OF_CONDUCT.md">Code
             of Conduct</a></li>
           {{ with .Site.GetPage "privacy-policy" }}
-          <li class="pv1"><a class="link"
-                             href="{{ .Permalink }}">Privacy policy</a></li>
+          <li class="pv1"><a class="link" href="{{ .Permalink }}">Privacy policy</a></li>
           {{ end }}
           {{ with .Site.GetPage "about-ceddl-analytics" }}
-          <li class="pv1"><a class="link"
-                             href="{{ .Permalink }}">Ceddl analytics and Cookies</a></li>
+          <li class="pv1"><a class="link" href="{{ .Permalink }}">Ceddl analytics and Cookies</a></li>
           {{ end }}
         </ul>
 

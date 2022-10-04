@@ -75,6 +75,7 @@ export class CeddlForms extends HTMLElement {
   }
 
   handleSubmit() {
+    this.setDisabled();
     var feedbackEl = this.querySelector('.js-ceddl-form-feedback');
 
     if (this.querySelector('form').classList.contains('shepherd-enabled')) {
@@ -83,7 +84,7 @@ export class CeddlForms extends HTMLElement {
       feedbackEl.appendChild(clone);
       return;
     }
-    
+
     var body = this.formSerialize();
 
     new MicroXhr(this.action, {
@@ -94,6 +95,7 @@ export class CeddlForms extends HTMLElement {
       }
     })
       .then(() => {
+        this.removeDisabled();
         if (this.redirectTo) {
           sessionStorage.setItem("ceddl-form-redirect", JSON.stringify(body));
           window.location.href = `${window.location.origin}${this.redirectTo}`;
@@ -105,12 +107,24 @@ export class CeddlForms extends HTMLElement {
         this.appendChild(clone);
         this.scrollIntoView({block: "start", behavior: "smooth"});
       }).catch((err) => {
+      this.removeDisabled();
       var clone = document.importNode(this.errorTemplate.content, true);
       feedbackEl.innerHTML = '';
       feedbackEl.appendChild(clone);
     });
   }
 
+  setDisabled() {
+    this.querySelectorAll('input[type=submit]').forEach((elm) => {
+      elm.setAttribute('disabled', '');
+    })
+  }
+
+  removeDisabled() {
+    this.querySelectorAll('input[type=submit]').forEach((elm) => {
+      elm.removeAttribute('disabled');
+    })
+  }
 
   setlisteners() {
     this.querySelector('form').addEventListener('submit', (event) => {
