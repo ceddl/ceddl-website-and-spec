@@ -18,7 +18,6 @@ export class CeddlMainNav extends HTMLElement {
 
 
   connectedCallback() {
-    console.log('main nav')
     this.querySelectorAll('.js-main-nav-toggle').forEach((elm) => {
       elm.addEventListener('click', this.toggle);
     })
