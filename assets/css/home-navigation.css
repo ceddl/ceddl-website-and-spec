@@ -3,8 +3,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @apply text-2xl
+    @apply text-2xl;
 }
+
+@media (max-width: 300px) {
+    .home-nav-title {
+        @apply text-lg;
+    }
+}
+
 
 .home-nav img {
     transition-property: filter;
@@ -64,10 +71,10 @@
 
 
 #consult-main .home-nav-title {
-    top: 31%;
-    left: 48%;
+    top: 20%;
+    left: 45%;
     max-width: 125px;
-    transform: rotate(-2deg) translate(-50%, -50%);
+    transform: rotate(-4deg) translate(-50%, -50%);
     @apply leading-5 text-center;
 }
 

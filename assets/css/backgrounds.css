@@ -36,6 +36,12 @@
     background: linear-gradient(to right, #004c4c, #00716b);
 }
 
+.slope-middle {
+    width: 100%;
+    clip-path:  polygon(0% 0%, 100% 0%, 100% 85%, 0 calc(85% - 100vw * 0.15));
+    background: linear-gradient(to right, #004c4c, #00716b);
+}
+
 .slope {
     background: linear-gradient(to right, #004c4c, #00716b);
 }
@@ -120,21 +126,4 @@
                 0% 0%
         );
     }
-}
-
-.invite-background-two {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    img {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        object-fit: fill;
-        width: 100%;
-        height: 80%;
-        min-width: 700px;
-    }
-
 }
