@@ -6,13 +6,13 @@ let funnelBaseText;
 const showFunnel = (funnel) => {
   funnel.timeInFunnel = `${funnel.timeInFunnel / 1000} seconds`;
   ceddlPolyfillTour.currentStep.updateStepOptions({
-    text: funnelBaseText + `<br /> <br /> ${renderJson(funnel)}`
+    text: funnelBaseText + `<br /> <div class="text-sm mt-2"> ${renderJson(funnel)}</div>`
   })
 }
 let formBaseText;
 const showForm = (form) => {
   ceddlPolyfillTour.currentStep.updateStepOptions({
-    text: formBaseText + `<br /> <br /> ${renderJson(form)}`
+    text: formBaseText + `<br /> <div class="text-sm mt-2">${renderJson(form)}</div>`
   })
 }
 
@@ -31,8 +31,7 @@ const ceddlPolyfillTour = new Shepherd.Tour({
 
 ceddlPolyfillTour.addSteps([
   {
-    text: 'Ceddl-polyfill is a system for extracting user behavior data for websites and apps. It uses browser events and html data attributes.\n' +
-      '\n' + 'In this demo we will give you an idea of all the features Ceddl-polyfill provides.',
+    text: 'Ceddl-polyfill is a system for extracting user behaviour data for websites and apps. It uses browser events and HTML data attributes. This demo will give you an idea of all the features Ceddl-polyfill provides.',
     attachTo: {
       element: '#demo-start',
       on: 'bottom'
@@ -65,7 +64,7 @@ ceddlPolyfillTour.addSteps([
   }, {
     title: 'Journey click events (ceddl-click)',
     text: () => {
-      return `Events are "things" that happen. All clicks generate these events, Like when you clicked to enter this demo. <br /> <br /> ${renderJson(getCeddlObject(1))}`;
+      return `Events are "things" that happen. All clicks generate these events, Like when you clicked to enter this demo. <br /> <div class="text-sm mt-2">${renderJson(getCeddlObject(1))}</div>`;
     },
     attachTo: {
       element: '#demo-start',
@@ -124,7 +123,7 @@ ceddlPolyfillTour.addSteps([
   }, {
     title: 'The dynamic Web/App (ceddl-observe)',
     text: () => {
-      funnelBaseText = `The web these days is a dynamic place. How to measure a journey during all this change? You observe it! Below the observed data for this demo step.`;
+      funnelBaseText = `The web these days is a dynamic place. How to measure a journey during all this change? You observe it! Below you can inspect the observed data for this demo step.`;
       return funnelBaseText;
     },
     popperOptions: {
@@ -153,22 +152,18 @@ ceddlPolyfillTour.addSteps([
   }, {
     title: 'Data structure of ceddl-observe',
     text: () => {
-      return `To make sure observed "things" are according spec it needs structure. Nothing more frustrating than broken product/report after a production release wright. <br /><br />
-      <div class="prose prose-sm highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">ceddl</span>.<span style="color:#a6e22e">modelFactory</span>.<span style="color:#a6e22e">create</span>({
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">key</span><span style="color:#f92672">:</span> <span style="color:#e6db74">'newsReleaseForm'</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">root</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fields</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ceddl</span>.<span style="color:#a6e22e">modelFactory</span>.<span style="color:#a6e22e">fields</span>.<span style="color:#a6e22e">StringField</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">required</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">errors</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ceddl</span>.<span style="color:#a6e22e">modelFactory</span>.<span style="color:#a6e22e">fields</span>.<span style="color:#a6e22e">ListField</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">required</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">foreignModel</span><span style="color:#f92672">:</span> <span style="color:#e6db74">'formError'</span>
-</span></span><span style="display:flex;"><span>    }
+      return `To ensure observed events are according to spec, it needs structure. Nothing is more frustrating than a broken product/report after a production release.<br /><br />
+      <div class="prose prose-sm highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span> <span style="color:#a6e22e">fields:</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ceddl</span>.<span style="color:#a6e22e">modelFactory</span>.<span style="color:#a6e22e">fields</span>.<span style="color:#a6e22e">StringField</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">required</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">errors</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ceddl</span>.<span style="color:#a6e22e">modelFactory</span>.<span style="color:#a6e22e">fields</span>.<span style="color:#a6e22e">ListField</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">required</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">foreignModel</span><span style="color:#f92672">:</span> <span style="color:#e6db74">'formError'</span>
 </span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>`;
     },
     attachTo: {
@@ -200,7 +195,7 @@ ceddlPolyfillTour.addSteps([
   }, {
     title: 'The dynamic Web/App (ceddl-observe)',
     text: () => {
-      formBaseText = `A practical example is form behaviour. Where do users get stuck? Play around with the form below. Two errors are possible. Don't worry the form has been disabled for this demo.`;
+      formBaseText = `A practical example is form behaviour. Play around with the form below. Two errors are possible. Don't worry. The input is disabled.`;
       return formBaseText;
     },
     attachTo: {

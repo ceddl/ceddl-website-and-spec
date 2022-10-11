@@ -9,7 +9,7 @@ const renderJsonLoop = (object, nesting = 0) => {
   let html = '';
   for (const [key, value] of Object.entries(object)) {
     if (typeof value === 'object') {
-      html = html + `<span  style="margin-left:${nesting * 10}px" class="font-big shepherd-text-green mr-2">${key}:<br /> `
+      html = html + `<span style="margin-left:${nesting * 10}px" class="font-big shepherd-text-green mr-2">${key}:<br /> `
       html = html + renderJsonLoop(value, nesting + 2);
     } else {
       html = html + `<span style="margin-left:${nesting * 10}px" class="font-big shepherd-text-green mr-2">${key}:</span><span class="font-big shepherd-text-orange">"${value}"</span><br /> `

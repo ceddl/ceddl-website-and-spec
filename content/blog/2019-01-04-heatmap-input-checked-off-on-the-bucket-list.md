@@ -14,13 +14,13 @@ myType: Coding
 ---
 
 Heatmap data input has been on the team bucket list from day one. We found that heatmap coordinates data collection is
-not as simple a adding a mouse move listener on the body. There are lots of situations and exceptions to handle:
+not as simple as adding a mouse move listener on the body. There are lots of situations and exceptions to handle:
 
 * Is the user using a mouse?
 * When should we send data to the eventbus (backend).
-* How to handle users leaving or closing the browser window.
+* How to manage users leaving or closing the browser window.
 * Separating click for touch devices and mouse move heatmap.
-* Users mouse idle time.
+* User's mouse idle time.
 
 {{< rawhtml >}}
 <p><img src="/img/heatmap.png" alt="ceddl stickers image"></p>
