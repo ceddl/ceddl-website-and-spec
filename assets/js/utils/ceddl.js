@@ -2,6 +2,8 @@ import {ceddl} from '@ceddl/ceddl-polyfill'
 import {PageMetadata} from '@ceddl/ceddl-aditional-inputs/dist/page-metadata';
 import {PageReady} from '@ceddl/ceddl-aditional-inputs/dist/page-ready';
 import {Heatmap} from '@ceddl/ceddl-aditional-inputs/dist/heatmap';
+import {UrchinTracking} from '@ceddl/ceddl-aditional-inputs/dist/urchin-tracking';
+
 import {PerformanceTiming} from '@ceddl/ceddl-aditional-inputs/dist/performance-timing';
 import {CeddlReceiverSocket} from "./ceddl-receiver-socket";
 
@@ -9,6 +11,15 @@ PageReady.run(ceddl);
 PageMetadata.run(ceddl);
 Heatmap.run(ceddl);
 PerformanceTiming.run(ceddl);
+UrchinTracking.run(ceddl);
+
+
+const defaultMeta = {
+  title: document.title,
+  url: window.location.href,
+  path: document.location.pathname,
+  width: Math.round(parseInt(screen.width, 10) * devicePixelRatio)
+};
 
 ceddl.modelFactory.create({
   key: 'page',
@@ -108,17 +119,22 @@ ceddl.eventbus.on('pageready', (data) => {
 });
 
 ceddl.eventbus.on('performanceTiming', (data) => {
-  socket.send({...data, ...{indice: 'performance_timing'}});
+  socket.send({...defaultMeta, ...data, ...{indice: 'performance_timing'}});
 });
 
 ceddl.eventbus.on('click', (data) => {
-  socket.send({...data, ...{indice: 'click'}});
+  socket.send({...defaultMeta, ...data, ...{indice: 'click'}});
 });
 
 ceddl.eventbus.on('funnel', (data) => {
-  socket.send({...data, ...{indice: 'funnel'}});
+  socket.send({...defaultMeta, ...data, ...{indice: 'funnel'}});
 });
 
+ceddl.eventbus.once('urchinTracking', (data) => {
+  ceddl.eventbus.once('page', (pageData) => {
+    socket.send({...defaultMeta, ...data, ...pageData, ...{indice: 'campaigns'}});
+  });
+});
 
 ceddl.initialize();
 
