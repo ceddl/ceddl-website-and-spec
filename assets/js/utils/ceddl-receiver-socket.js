@@ -2,6 +2,8 @@ export class CeddlReceiverSocket {
 
   constructor(key) {
     this.wsUri = this.getWsURi(key);
+    this.creatingSocket = false;
+    this.sendStore = [];
   }
 
   send(data) {
@@ -18,7 +20,7 @@ export class CeddlReceiverSocket {
     } else {
       wsUri = 'ws:';
     }
-    wsUri += '//' + loc.host;
+    wsUri += '//' + 'localhost:8092';   // loc.host;
     wsUri += '/connector';
     wsUri += `?key=${key}`;
 
@@ -36,7 +38,6 @@ export class CeddlReceiverSocket {
     return myReceiverSocket;
   }
 
-
   /**
    * We make sure that the socket connection is open here.
    * some browsers will silently close the connection due
@@ -49,15 +50,28 @@ export class CeddlReceiverSocket {
       return;
     }
 
-    const mypushAndRemove = pushAndRemove.bind(this);
+    this.sendStore.push({
+      data, callback
+    })
 
-    function pushAndRemove() {
-      callback(data);
-      this.receiverSocket.removeEventListener('open', mypushAndRemove, false);
+    if (!this.creatingSocket) {
+      this.creatingSocket = true;
+      const myPushAndRemove = pushAndRemove.bind(this);
+
+      function pushAndRemove() {
+        debugger;
+        this.creatingSocket = false;
+        this.sendStore.forEach((obj) => {
+          obj.callback(data);
+        });
+        this.sendStore = [];
+        this.receiverSocket.removeEventListener('open', myPushAndRemove, false);
+      }
+
+      this.receiverSocket = this.createSocket();
+      this.receiverSocket.addEventListener('open', myPushAndRemove, false);
     }
 
-    this.receiverSocket = this.createSocket();
-    this.receiverSocket.addEventListener('open', mypushAndRemove, false);
   }
 
   logAndIgnore(event) {
