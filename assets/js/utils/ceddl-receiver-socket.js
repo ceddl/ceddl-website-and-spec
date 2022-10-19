@@ -20,7 +20,7 @@ export class CeddlReceiverSocket {
     } else {
       wsUri = 'ws:';
     }
-    wsUri += '//' + 'localhost:8092';   // loc.host;
+    wsUri += '//' + loc.host;
     wsUri += '/connector';
     wsUri += `?key=${key}`;
 
