@@ -59,7 +59,6 @@ export class CeddlReceiverSocket {
       const myPushAndRemove = pushAndRemove.bind(this);
 
       function pushAndRemove() {
-        debugger;
         this.creatingSocket = false;
         this.sendStore.forEach((obj) => {
           obj.callback(data);
