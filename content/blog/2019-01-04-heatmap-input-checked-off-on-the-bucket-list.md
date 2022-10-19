@@ -4,8 +4,8 @@ author: Roland Broekema
 title: Heatmap input checked off on the bucket list
 date: 2019-02-04
 description: "Heatmap data input has been on the team bucket list from day one. We found that heatmap coordinates data
-collection is
-not as simple a adding a mouse move listener on the body. There are lots of situations and exceptions to handle."
+collection is not as simple a adding a mouse move listener on the body. There are lots of situations and exceptions to
+handle."
 image: "/img/heatmap.png"
 author: "Roland Broekema"
 keywords: [blog, news]
