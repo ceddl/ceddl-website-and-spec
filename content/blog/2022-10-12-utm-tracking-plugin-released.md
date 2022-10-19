@@ -8,7 +8,7 @@ image: "/img/utm-link-tracking.png"
 author: "Roland Broekema"
 keywords: [blog, news]
 segment: general
-myType: Coding
+myType: Blog
 ---
 
 UTM stands for Urchin tracking parameters. The Urchin company added little pieces of data to our URLs to see where
@@ -55,7 +55,7 @@ A long link can be confusing to your audience or look messy. Even for the initia
 them out of the flow. You can combat this by creating branded links. This displays a much shorter URL to users,
 rather than a long string of words and numbers. It visually appealing and often customizable. Many businesses host a
 open source open shortener like [Kutt.it](https://kutt.it/) or [shlink](https://shlink.io/). But even if you do not have
-the opportunity to host your own services like bitly or lnnkin are valid option.
+the opportunity to host your own. Services like bitly or lnnkin are valid option.
 
 ```
 https://www.ceddlbyexample.com/?utm_source=site&utm_medium=blog&utm_campaign=main&utm_content=a01
