@@ -61,7 +61,7 @@ export class CeddlReceiverSocket {
       function pushAndRemove() {
         this.creatingSocket = false;
         this.sendStore.forEach((obj) => {
-          obj.callback(data);
+          obj.callback(obj.data);
         });
         this.sendStore = [];
         this.receiverSocket.removeEventListener('open', myPushAndRemove, false);
