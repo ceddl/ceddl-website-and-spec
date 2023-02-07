@@ -1,79 +1,85 @@
 <ceddl-main-nav class="text-gray-800 h-full">
-  <div class="js-main-nav-toggle flex items-center justify-center h-full">
-    <button type="button"
-            class="w-8 h-8 flex">
-      <span class="sr-only">Navigation</span>
-      <svg class="stroke-white w-8 h-812" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
-          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    </button>
-  </div>
-
-  <div class="js-main-nav hidden fixed z-50 inset-0" role="dialog" aria-modal="true">
-    <div ceddl-click class="js-main-nav-toggle fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
-         aria-hidden="true"></div>
+  <div class="flex">
     <div
-      class="fixed top-4 right-4 w-full max-w-xs bg-white rounded shadow-lg p-6 text-base font-semibold text-slate-900 dark:bg-slate-800 dark:text-slate-400 dark:highlight-white/5">
+      class="js-main-nav-toggle transition hover:bg-green-400 rounded duration-200 flex items-center justify-center h-full">
       <button type="button"
-              class="js-main-nav-toggle absolute top-5 right-5 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-              tabindex="0"><span class="sr-only">Close navigation</span>
-        <svg viewBox="0 0 10 10" class="w-2.5 h-2.5 overflow-visible" aria-hidden="true">
-          <path d="M0 0L10 10M10 0L0 10" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round"></path>
+              class="w-8 h-8 flex">
+        <span class="sr-only">Navigation</span>
+        <svg class="stroke-white w-8 h-812" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
       </button>
-      <ul class="space-y-6">
-        {{ with .Site.GetPage "getting-started" }}
-        <li><a class="hover:text-gray-500 dark:hover:text-gray-400" href="{{ .Permalink }}">Docs</a></li>
-        {{ end }}
-        <li class="pv1"><a target="_blank" class="hover:text-gray-500 dark:hover:text-gray-400"
-                           href="https://github.com/ceddl/ceddl-polyfill/discussions/">Help</a>
-        </li>
-        {{ with .Site.GetPage "blog" }}
-        <li><a class="hover:text-gray-500 dark:hover:text-gray-400" href="{{ .Permalink }}">Blog</a></li>
-        {{ end }}
-        {{ with .Site.GetPage "sponsor-partner-up" }}
-        <li><a class="hover:text-gray-500 dark:hover:text-gray-400" href="{{ .Permalink }}">Partner & Sponsorship</a>
-        </li>
-        {{ end }}
-      </ul>
-      <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-200/10 flex">
-        <a class="inline-block w-6 mr-2" target="_blank" title="linkedin" rel="noopener noreferrer nofollow"
-           href="https://nl.linkedin.com/in/rolandbroekema">
-          <svg class="fill-green-600" aria-hidden="true" role="img" class="" viewBox="0 0 32 32"
-               style="display:inline-block;user-select:none;vertical-align:top">
-            <path style="transform: translate(-7px, -7px)"
-                  d="M20.9716667,33.5527338 L25.001,33.5527338 L25.001,27.1328007 C25.001,25.439485 25.3213333,23.7988354 27.4206667,23.7988354 C29.491,23.7988354 29.517,25.7351486 29.517,27.2404662 L29.517,33.5527338 L33.5506667,33.5527338 L33.5506667,26.4341413 C33.5506667,22.9381777 32.796,20.2505391 28.711,20.2505391 C26.7483333,20.2505391 25.432,21.3265278 24.8943333,22.3471839 L24.839,22.3471839 L24.839,20.5725357 L20.9716667,20.5725357 L20.9716667,33.5527338 Z M16.423,14.1202696 C15.1273333,14.1202696 14.0823333,15.1682587 14.0823333,16.4595785 C14.0823333,17.7508984 15.1273333,18.7992208 16.423,18.7992208 C17.7133333,18.7992208 18.761,17.7508984 18.761,16.4595785 C18.761,15.1682587 17.7133333,14.1202696 16.423,14.1202696 L16.423,14.1202696 Z M14.4026667,33.5527338 L18.4406667,33.5527338 L18.4406667,20.5725357 L14.4026667,20.5725357 L14.4026667,33.5527338 Z M9.76633333,40 C8.79033333,40 8,39.2090082 8,38.2336851 L8,9.76631493 C8,8.79065843 8.79033333,8 9.76633333,8 L38.234,8 C39.2093333,8 40,8.79065843 40,9.76631493 L40,38.2336851 C40,39.2090082 39.2093333,40 38.234,40 L9.76633333,40 Z"></path>
+    </div>
+
+    <div class="js-main-nav hidden fixed z-50 inset-0" role="dialog" aria-modal="true">
+      <div ceddl-click class="js-main-nav-toggle fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
+           aria-hidden="true"></div>
+      <div
+        class="fixed top-4 right-4 w-full max-w-xs bg-white rounded shadow-lg p-6 text-base font-semibold text-slate-900 dark:bg-slate-800 dark:text-slate-400 dark:highlight-white/5">
+        <button type="button"
+                class="js-main-nav-toggle absolute top-5 right-5 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+                tabindex="0"><span class="sr-only">Close navigation</span>
+          <svg viewBox="0 0 10 10" class="w-2.5 h-2.5 overflow-visible" aria-hidden="true">
+            <path d="M0 0L10 10M10 0L0 10" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round"></path>
           </svg>
-        </a>
-        <a class="inline-block w-6 mr-2" target="_blank" title="Twitter" rel="noopener noreferrer nofollow"
-           href="https://twitter.com/ceddl_polyfill">
-          <svg class="fill-green-600" aria-hidden="true" role="img" class="" viewBox="0 0 16 16"
-               style="display:inline-block;user-select:none;vertical-align:top">
-            <path
-              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-          </svg>
-        </a>
-        <a class="inline-block w-6 mr-2" target="_blank" title="GitHub" rel="noopener noreferrer nofollow"
-           href="https://github.com/ceddl/ceddl-polyfill">
-          <svg class="fill-green-600" aria-hidden="true" role="img" class="" viewBox="0 0 16 16"
-               style="display:inline-block;user-select:none;vertical-align:top">
-            <path fill-rule="evenodd"
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-          </svg>
-        </a>
-        <a class="inline-block w-6 mr-2" target="_blank" title="npm repository" rel="noopener noreferrer nofollow"
-           href="https://www.npmjs.com/package/@ceddl/ceddl-polyfill">
-          <svg class="fill-green-600" viewBox="0 0 27.23 27.23">
-            <rect width="27.23" height="27.23" rx="2"></rect>
-            <polygon fill="#fff"
-                     points="5.8 21.75 13.66 21.75 13.67 9.98 17.59 9.98 17.58 21.76 21.51 21.76 21.52 6.06 5.82 6.04 5.8 21.75"></polygon>
-          </svg>
-        </a>
+        </button>
+        <ul class="space-y-6">
+          {{ with .Site.GetPage "getting-started" }}
+          <li><a class="hover:text-gray-500 dark:hover:text-gray-400" href="{{ .Permalink }}">Docs</a></li>
+          {{ end }}
+          <li class="pv1"><a target="_blank" class="hover:text-gray-500 dark:hover:text-gray-400"
+                             href="https://github.com/ceddl/ceddl-polyfill/discussions/">Help</a>
+          </li>
+          {{ with .Site.GetPage "blog" }}
+          <li><a class="hover:text-gray-500 dark:hover:text-gray-400" href="{{ .Permalink }}">Blog</a></li>
+          {{ end }}
+          {{ with .Site.GetPage "sponsor-partner-up" }}
+          <li><a class="hover:text-gray-500 dark:hover:text-gray-400" href="{{ .Permalink }}">Partner & Sponsorship</a>
+          </li>
+          {{ end }}
+        </ul>
+        <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-200/10 flex">
+          <a class="inline-block w-6 mr-2" target="_blank" title="linkedin" rel="noopener noreferrer nofollow"
+             href="https://nl.linkedin.com/in/rolandbroekema">
+            <svg class="fill-green-600" aria-hidden="true" role="img" class="" viewBox="0 0 32 32"
+                 style="display:inline-block;user-select:none;vertical-align:top">
+              <path style="transform: translate(-7px, -7px)"
+                    d="M20.9716667,33.5527338 L25.001,33.5527338 L25.001,27.1328007 C25.001,25.439485 25.3213333,23.7988354 27.4206667,23.7988354 C29.491,23.7988354 29.517,25.7351486 29.517,27.2404662 L29.517,33.5527338 L33.5506667,33.5527338 L33.5506667,26.4341413 C33.5506667,22.9381777 32.796,20.2505391 28.711,20.2505391 C26.7483333,20.2505391 25.432,21.3265278 24.8943333,22.3471839 L24.839,22.3471839 L24.839,20.5725357 L20.9716667,20.5725357 L20.9716667,33.5527338 Z M16.423,14.1202696 C15.1273333,14.1202696 14.0823333,15.1682587 14.0823333,16.4595785 C14.0823333,17.7508984 15.1273333,18.7992208 16.423,18.7992208 C17.7133333,18.7992208 18.761,17.7508984 18.761,16.4595785 C18.761,15.1682587 17.7133333,14.1202696 16.423,14.1202696 L16.423,14.1202696 Z M14.4026667,33.5527338 L18.4406667,33.5527338 L18.4406667,20.5725357 L14.4026667,20.5725357 L14.4026667,33.5527338 Z M9.76633333,40 C8.79033333,40 8,39.2090082 8,38.2336851 L8,9.76631493 C8,8.79065843 8.79033333,8 9.76633333,8 L38.234,8 C39.2093333,8 40,8.79065843 40,9.76631493 L40,38.2336851 C40,39.2090082 39.2093333,40 38.234,40 L9.76633333,40 Z"></path>
+            </svg>
+          </a>
+          <a class="inline-block w-6 mr-2" target="_blank" title="Twitter" rel="noopener noreferrer nofollow"
+             href="https://twitter.com/ceddl_polyfill">
+            <svg class="fill-green-600" aria-hidden="true" role="img" class="" viewBox="0 0 16 16"
+                 style="display:inline-block;user-select:none;vertical-align:top">
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg>
+          </a>
+          <a class="inline-block w-6 mr-2" target="_blank" title="GitHub" rel="noopener noreferrer nofollow"
+             href="https://github.com/ceddl/ceddl-polyfill">
+            <svg class="fill-green-600" aria-hidden="true" role="img" class="" viewBox="0 0 16 16"
+                 style="display:inline-block;user-select:none;vertical-align:top">
+              <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+          </a>
+          <a class="inline-block w-6 mr-2" target="_blank" title="npm repository" rel="noopener noreferrer nofollow"
+             href="https://www.npmjs.com/package/@ceddl/ceddl-polyfill">
+            <svg class="fill-green-600" viewBox="0 0 27.23 27.23">
+              <rect width="27.23" height="27.23" rx="2"></rect>
+              <polygon fill="#fff"
+                       points="5.8 21.75 13.66 21.75 13.67 9.98 17.59 9.98 17.58 21.76 21.51 21.76 21.52 6.06 5.82 6.04 5.8 21.75"></polygon>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 
+    <div>
+      <ceddl-user-info-and-menu></ceddl-user-info-and-menu>
+    </div>
+  </div>
 </ceddl-main-nav>
