@@ -21,7 +21,7 @@ export class CeddlReceiverSocket {
       wsUri = 'ws:';
     }
     wsUri += '//' + loc.host;
-    wsUri += '/connector';
+    wsUri += '/connector/';
     wsUri += `?key=${key}`;
 
     return wsUri;

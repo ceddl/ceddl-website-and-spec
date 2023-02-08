@@ -27,6 +27,7 @@ template.innerHTML = `
       border-radius: 50%;
       padding: 2px;
       height: 24px;
+      width: 24px;
     }
    
     .ceddl-user-info-and-menu-gavatar svg {
