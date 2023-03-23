@@ -115,14 +115,10 @@ analytics suite and allows monitoring of errors on live systems.
 Let's add a new required field called frameworkVersion to the page model and restrict the data entered.
 
 ```js
-    frameworkVersion: {
+frameworkVersion: {
   type: ceddl.modelFactory.fields.StringField,
-    required
-:
-  true,
-    pattern
-:
-  '^(0\.9\.[1-9]|1)$',
+  required: true,
+  pattern: '^(0\.9\.[1-9]|1)$',
 }
 ```
 
