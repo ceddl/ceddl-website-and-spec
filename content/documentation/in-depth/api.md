@@ -11,6 +11,7 @@ The core global API functions are attached to the ceddl object. These core funct
 operations within your application.
 
 <div id="initialize"> </div>
+
 ### ceddl.initialize()
 
 The initialize function makes it possible to do async loading of the model definitions and initialize the html interface
@@ -22,6 +23,7 @@ ceddl.initialize();
 ```
 
 <div id="emitevent"> </div>
+
 ### ceddl.emitEvent(key, data)
 
 * ***Arguments:***
@@ -42,6 +44,7 @@ ceddl.emitEvent('poll:start', {
 ```
 
 <div id="emitmodel"> </div>
+
 ### ceddl.emitModel(key, data)
 
 * ***Arguments:***
@@ -72,6 +75,7 @@ ceddl.emitModel('funnel', {
   testable solution.
 
 <div id="getevents"> </div>
+
 ### ceddl.getEvents()
 
 * ***Returns:*** A deep clone of the array containing the events.
@@ -79,6 +83,7 @@ ceddl.emitModel('funnel', {
 This function will return the current state of the event store.
 
 <div id="getmodels"> </div>
+
 ### ceddl.getModels()
 
 * ***Returns:*** A deep clone of the js data objects in the models.
@@ -86,6 +91,7 @@ This function will return the current state of the event store.
 This function will return the current state of the model store.
 
 <div id="eventbus"> </div>
+
 ### ceddl.eventbus.on(name, callback, scope)
 
 Bind a callback function to an object. The callback will be invoked whenever the event is fired.
@@ -136,6 +142,7 @@ ceddl.eventbus.emit('chatservice:open', {test: 'testdata'});
 ```
 
 <div id="modelfactory"> </div>
+
 ### ceddl.modelFactory.fields
 
 There are currently 5 supported field types that allow you to describe a json data structure.
